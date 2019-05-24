@@ -77,15 +77,15 @@ switch (_nbr) do {
         };
 
         // Base #1 back
-        _handle = ["base1_spawn_back", "PATROL", 6, ["base1_back", "P"]] spawn fw_fnc_spawnTemplate;
+        _handle = ["base1_spawn_back", "PATROL", 1, ["base1_back", "P"]] spawn fw_fnc_spawnTemplate;
         waitUntil {
             scriptDone _handle
         };
-        _handle = ["base1_spawn_back", "PATROL", 6, ["base1_back", "P"]] spawn fw_fnc_spawnTemplate;
+        _handle = ["base1_spawn_back", "PATROL", 7, ["base1_back", "P"]] spawn fw_fnc_spawnTemplate;
         waitUntil {
             scriptDone _handle
         };
-        _handle = ["base1_spawn_back", "PATROL", 6, ["base1_back", "P"]] spawn fw_fnc_spawnTemplate;
+        _handle = ["base1_spawn_back", "PATROL", 1, ["base1_back", "P"]] spawn fw_fnc_spawnTemplate;
         waitUntil {
             scriptDone _handle
         };
@@ -94,6 +94,29 @@ switch (_nbr) do {
             scriptDone _handle
         };
 
+        // Patrol base 1
+        _handle = ["base1_spawn_middle", "PATROL", 4, ["west_base_patrol", "P"]] spawn fw_fnc_spawnTemplate;
+        waitUntil {
+            scriptDone _handle
+        };
+        _handle = ["base1_spawn_middle", "PATROL", 3, ["west_base_patrol", "P"]] spawn fw_fnc_spawnTemplate;
+        waitUntil {
+            scriptDone _handle
+        };
+        _handle = ["base1_spawn_middle", "PATROL", 1, ["west_base_patrol", "P"]] spawn fw_fnc_spawnTemplate;
+        waitUntil {
+            scriptDone _handle
+        };
+        _handle = ["base1_spawn_middle", "PATROL", 7, ["west_base_patrol", "P"]] spawn fw_fnc_spawnTemplate;
+        waitUntil {
+            scriptDone _handle
+        };
+        _handle = ["base1_spawn_middle", "PATROL", 2, ["west_base_patrol", "P"]] spawn fw_fnc_spawnTemplate;
+        waitUntil {
+            scriptDone _handle
+        };
+
+        // Snipers at house.
         _handle = ["spawn_marksman", "PATROL", 11, ["patrol_marksman", "P"]] spawn fw_fnc_spawnTemplate;
         waitUntil {
             scriptDone _handle
@@ -119,6 +142,7 @@ switch (_nbr) do {
                 sleep 5;
             };
 
+            // RAMPAGE!!
             _handle = [selectRandom _counter_spawn_points, "PATROL", selectRandom _counter_forces_infantry, ["town_attack_area", "RP"]] spawn fw_fnc_spawnTemplate;
             waitUntil {
                 scriptDone _handle
@@ -182,6 +206,21 @@ switch (_nbr) do {
         waitUntil {
             scriptDone _handle
         };
+                sleep 2;
+        _handle = ["house_spawn", "PATROL", 1, ["house_area", "P"]] spawn fw_fnc_spawnTemplate;
+        waitUntil {
+            scriptDone _handle
+        };
+        sleep 2;
+        _handle = ["house_spawn", "PATROL", 1, ["house_area", "P"]] spawn fw_fnc_spawnTemplate;
+        waitUntil {
+            scriptDone _handle
+        };
+        sleep 2;
+        _handle = ["house_spawn", "PATROL", 1, ["house_area", "P"]] spawn fw_fnc_spawnTemplate;
+        waitUntil {
+            scriptDone _handle
+        };
         sleep 2;
         _handle = ["house_spawn", "GARRISON", 2, [150]] spawn fw_fnc_spawnTemplate;
         waitUntil {
@@ -189,6 +228,24 @@ switch (_nbr) do {
         };
         sleep 2;
         _handle = ["house_spawn", "GARRISON", 3, [150]] spawn fw_fnc_spawnTemplate;
+        waitUntil {
+            scriptDone _handle
+        };
+
+        sleep 2;
+        _handle = ["house_spawn", "PATROL", 1, ["south_road_patrol", "P"]] spawn fw_fnc_spawnTemplate;
+        waitUntil {
+            scriptDone _handle
+        };
+
+        sleep 2;
+        _handle = ["house_spawn", "PATROL", 1, ["south_road_patrol", "P"]] spawn fw_fnc_spawnTemplate;
+        waitUntil {
+            scriptDone _handle
+        };
+
+        sleep 2;
+        _handle = ["house_spawn", "PATROL", 1, ["south_road_patrol", "P"]] spawn fw_fnc_spawnTemplate;
         waitUntil {
             scriptDone _handle
         };
@@ -234,19 +291,19 @@ switch (_nbr) do {
         };
         sleep 2;
 
-        _handle = ["base_spawn", "PATROL", 6, ["base_patrol_area", "P"]] spawn fw_fnc_spawnTemplate;
+        _handle = ["base_spawn", "PATROL", 1, ["base_patrol_area", "P"]] spawn fw_fnc_spawnTemplate;
         waitUntil {
             scriptDone _handle
         };
         sleep 2;
 
-        _handle = ["base_spawn", "PATROL", 6, ["base_patrol_area", "P"]] spawn fw_fnc_spawnTemplate;
+        _handle = ["base_spawn", "PATROL", 2, ["base_patrol_area", "P"]] spawn fw_fnc_spawnTemplate;
         waitUntil {
             scriptDone _handle
         };
         sleep 2;
 
-        _handle = ["base_spawn", "PATROL", 6, ["base_patrol_area", "P"]] spawn fw_fnc_spawnTemplate;
+        _handle = ["base_spawn", "PATROL", 3, ["base_patrol_area", "P"]] spawn fw_fnc_spawnTemplate;
         waitUntil {
             scriptDone _handle
         };
@@ -257,8 +314,8 @@ switch (_nbr) do {
 
         _base_counter_spawns = ["base_reinforce_1", "base_reinforce_2"];
 
-        for "_x" from 1 to 3 do {
-            _handle = [selectRandom _counter_spawn_points, "PATROL", 5, ["base_reinforce_area", "R"]] spawn fw_fnc_spawnTemplate;
+        for "_x" from 1 to 5 do {
+            _handle = [selectRandom _counter_spawn_points, "PATROL", 1, ["base_reinforce_area", "R"]] spawn fw_fnc_spawnTemplate;
             waitUntil {
                 scriptDone _handle
             };
