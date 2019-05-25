@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={325.27444,16.90217,3018.8909};
-		dir[]={0.12925608,-0.75318944,0.64514047};
-		up[]={0.14797229,0.65773916,0.73855692};
-		aside[]={0.98060989,2.4659093e-006,-0.1964757};
+		pos[]={318.49658,10.718678,3028.7593};
+		dir[]={0.17057687,-0.42397124,0.88958359};
+		up[]={0.079865441,0.90560317,0.41651341};
+		aside[]={0.98220193,-4.2161264e-007,-0.1883439};
 	};
 };
 binarizationWanted=0;
@@ -1915,7 +1915,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addaction [""Platoon Leader"", ""loadouts\bw_pl.sqf""]; " \n "this addaction [""Platoon FAC"", ""loadouts\bw_p_fac.sqf""]; " \n "this addaction [""Platoon Engineer (Demo)"", ""loadouts\bw_p_e_demo.sqf""]; " \n "this addaction [""Platoon Engineer (EOD)"", ""loadouts\bw_p_e_eod.sqf""]; " \n "this addaction [""Platoon Engineer (Fortification)"", ""loadouts\bw_p_e_fort.sqf""]; " \n "this addaction [""Platoon Engineer (Repair)"", ""loadouts\bw_p_e_rep.sqf""]; " \n "this addaction [""Platoon DMR"", ""loadouts\bw_p_dmr.sqf""]; " \n "this addaction [""Platoon Medic"", ""loadouts\bw_p_medic.sqf""]; " \n "this addaction [""Squad Leader"", ""loadouts\bw_sl.sqf""]; " \n "this addaction [""Combat Medic"", ""loadouts\bw_medic.sqf""]; " \n "this addaction [""Operator Rifle"", ""loadouts\bw_o_r.sqf""]; " \n "this addaction [""Operator AR"", ""loadouts\bw_o_ar.sqf""]; " \n "this addaction [""Operator Light AT"", ""loadouts\bw_o_lat.sqf""]; " \n "this addaction [""Operator MMG"", ""loadouts\bw_o_mmg.sqf""]; " \n "this addaction [""Operator Asst. MMG"", ""loadouts\bw_o_mmg_ab.sqf""]; " \n "this addaction [""Operator Medium AT"", ""loadouts\bw_o_mat.sqf""]; " \n "this addaction [""Operator Asst. Medium AT"", ""loadouts\bw_o_mat_ab.sqf""]; " \n "this addaction [""Operator Grenadier"", ""loadouts\bw_o_g.sqf""]; " \n "this addaction [""Operator DMR (5.56)"", ""loadouts\bw_o_dmr.sqf""]; " \n "this addaction [""Operator Battlerifle (G3)"", ""loadouts\bw_o_br.sqf""]; " \n "this addaction [""Operator Specialist (G36K)"", ""loadouts\bw_o_spc.sqf""]; " \n "this addaction [""Operator UAV"", ""loadouts\bw_o_uav.sqf""]; " \n "this addaction [""Operator Breacher"", ""loadouts\bw_o_breacher.sqf""]; " \n "this addaction [""Operator Engineer (Demo)"", ""loadouts\bw_o_e_demo.sqf""]; " \n "this addaction [""Operator Engineer (EOD)"", ""loadouts\bw_o_e_eod.sqf""]; " \n "this addaction [""Operator Engineer (Fortification)"", ""loadouts\bw_o_e_fort.sqf""]; " \n "this addaction [""Operator Engineer (Repair)"", ""loadouts\bw_o_e_rep.sqf""]; " \n "this addaction [""Fox Commander"", ""loadouts\bw_f_com.sqf""]; " \n "this addaction [""Fox Crewman"", ""loadouts\bw_f_crew.sqf""]; " \n "this addaction [""Fox Technician"", ""loadouts\bw_f_tech.sqf""]; " \n "}";
+				init="call{this addaction [""Platoon Leader"", ""loadouts\bw_pl.sqf""]; " \n "this addaction [""Platoon Engineer (Demo)"", ""loadouts\bw_p_e_demo.sqf""]; " \n "this addaction [""Platoon Engineer (EOD)"", ""loadouts\bw_p_e_eod.sqf""]; " \n "this addaction [""Platoon Engineer (Fortification)"", ""loadouts\bw_p_e_fort.sqf""]; " \n "this addaction [""Platoon Engineer (Repair)"", ""loadouts\bw_p_e_rep.sqf""]; " \n "this addaction [""Platoon DMR"", ""loadouts\bw_p_dmr.sqf""]; " \n "this addaction [""Platoon Medic"", ""loadouts\bw_p_medic.sqf""]; " \n "this addaction [""Squad Leader"", ""loadouts\bw_sl.sqf""]; " \n "this addaction [""Combat Medic"", ""loadouts\bw_medic.sqf""]; " \n "this addaction [""Operator Rifle"", ""loadouts\bw_o_r.sqf""]; " \n "this addaction [""Operator AR"", ""loadouts\bw_o_ar.sqf""]; " \n "this addaction [""Operator Light AT"", ""loadouts\bw_o_lat.sqf""]; " \n "this addaction [""Operator MMG"", ""loadouts\bw_o_mmg.sqf""]; " \n "this addaction [""Operator Asst. MMG"", ""loadouts\bw_o_mmg_ab.sqf""]; " \n "this addaction [""Operator Medium AT"", ""loadouts\bw_o_mat.sqf""]; " \n "this addaction [""Operator Asst. Medium AT"", ""loadouts\bw_o_mat_ab.sqf""]; " \n "this addaction [""Operator Grenadier"", ""loadouts\bw_o_g.sqf""]; " \n "this addaction [""Operator DMR (5.56)"", ""loadouts\bw_o_dmr.sqf""]; " \n "this addaction [""Operator Battlerifle (G3)"", ""loadouts\bw_o_br.sqf""]; " \n "this addaction [""Operator Specialist (G36K)"", ""loadouts\bw_o_spc.sqf""]; " \n "this addaction [""Operator UAV"", ""loadouts\bw_o_uav.sqf""]; " \n "this addaction [""Operator Breacher"", ""loadouts\bw_o_breacher.sqf""]; " \n "this addaction [""Operator Engineer (Demo)"", ""loadouts\bw_o_e_demo.sqf""]; " \n "this addaction [""Operator Engineer (EOD)"", ""loadouts\bw_o_e_eod.sqf""]; " \n "this addaction [""Operator Engineer (Fortification)"", ""loadouts\bw_o_e_fort.sqf""]; " \n "this addaction [""Operator Engineer (Repair)"", ""loadouts\bw_o_e_rep.sqf""]; " \n "this addaction [""Fox Commander"", ""loadouts\bw_f_com.sqf""]; " \n "this addaction [""Fox Crewman"", ""loadouts\bw_f_crew.sqf""]; " \n "this addaction [""Fox Technician"", ""loadouts\bw_f_tech.sqf""]; " \n "}";
 				disableSimulation=1;
 			};
 			id=36;
@@ -2149,7 +2149,7 @@ class Mission
 			text="Respawn West";
 			type="Empty";
 			colorName="default";
-			angle=48.147598;
+			angle=48.147591;
 			id=39;
 			atlOffset=4.948685e+011;
 		};

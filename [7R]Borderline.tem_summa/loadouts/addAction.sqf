@@ -1,5 +1,4 @@
 this addaction ["Platoon Leader", "loadouts\bw_pl.sqf"];
-this addaction ["Platoon FAC", "loadouts\bw_p_fac.sqf"];
 this addaction ["Platoon Engineer (Demo)", "loadouts\bw_p_e_demo.sqf"];
 this addaction ["Platoon Engineer (EOD)", "loadouts\bw_p_e_eod.sqf"];
 this addaction ["Platoon Engineer (Fortification)", "loadouts\bw_p_e_fort.sqf"];
