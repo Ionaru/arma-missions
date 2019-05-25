@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={352.53207,10.881472,3075.1331};
-		dir[]={0.16289775,-0.60035819,0.78308207};
-		up[]={0.12228677,0.79966003,0.58785886};
-		aside[]={0.97912836,3.2261596e-007,-0.20368652};
+		pos[]={325.27444,16.90217,3018.8909};
+		dir[]={0.12925608,-0.75318944,0.64514047};
+		up[]={0.14797229,0.65773916,0.73855692};
+		aside[]={0.98060989,2.4659093e-006,-0.1964757};
 	};
 };
 binarizationWanted=0;
@@ -2069,13 +2069,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={322.15076,5.9968514,3037.7649};
-				angles[]={0,5.484221,0.0099949092};
+				angles[]={0,5.4842257,0.010000736};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="call{if(isServer) then {   " \n "clearweaponcargoGlobal this;   " \n "clearmagazinecargoGlobal this;   " \n "clearitemcargoGlobal this;  " \n "clearBackpackCargoGlobal this;  " \n "this addmagazinecargoGlobal [""rhs_200rnd_556x45_M_SAW"", 40];     " \n "this addmagazinecargoGlobal [""rhsusf_100Rnd_556x45_soft_pouch"", 40];   " \n "this addmagazinecargoGlobal [""rhsusf_100Rnd_762x51_m80a1epr"", 40];   " \n "this addmagazinecargoGlobal [""MRAWS_HEAT_F"", 10];   " \n "this addmagazinecargoGlobal [""MRAWS_HE_F"", 10]; " \n "this addWeaponcargoGlobal [""BWA3_RGW90"", 20]; " \n "this additemcargoGlobal [""SatchelCharge_Remote_Mag"", 6];   " \n "this additemcargoGlobal [""DemoCharge_Remote_Mag"", 12];   " \n "}; " \n "}";
+				init="call{if(isServer) then {   " \n "clearweaponcargoGlobal this;   " \n "clearmagazinecargoGlobal this;   " \n "clearitemcargoGlobal this;  " \n "clearBackpackCargoGlobal this;      " \n "this addmagazinecargoGlobal [""rhsusf_100Rnd_556x45_soft_pouch"", 40];  this addmagazinecargoGlobal [""rhsusf_100Rnd_762x51_m80a1epr"", 40];   this addmagazinecargoGlobal [""MRAWS_HEAT_F"", 10];   " \n "this addmagazinecargoGlobal [""MRAWS_HE_F"", 10]; " \n "this addWeaponcargoGlobal [""BWA3_RGW90"", 20]; " \n "this additemcargoGlobal [""SatchelCharge_Remote_Mag"", 6];   " \n "this additemcargoGlobal [""DemoCharge_Remote_Mag"", 12];   " \n "}; " \n "}";
 			};
 			id=38;
 			type="B_CargoNet_01_ammo_F";
@@ -2149,7 +2149,7 @@ class Mission
 			text="Respawn West";
 			type="Empty";
 			colorName="default";
-			angle=48.147606;
+			angle=48.147598;
 			id=39;
 			atlOffset=4.948685e+011;
 		};
