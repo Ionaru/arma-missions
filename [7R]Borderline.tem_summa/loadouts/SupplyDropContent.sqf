@@ -43,6 +43,7 @@ if (_type == 1) then {
 	_box addItemCargoGlobal ["SR_Bandage_Pack", 5];
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 5];
 	_box addItemCargoGlobal ["SR_BloodIV_Pack", 5];
+	_box addBackpackCargoGlobal ["B_UAV_01_backpack_F", 1];
 };
 
 // Vehicle Supply
