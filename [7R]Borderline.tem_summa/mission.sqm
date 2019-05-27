@@ -10924,7 +10924,7 @@ class Mission
 			dataType="Marker";
 			position[]={2685.2461,9.7959995,3144.27};
 			name="compound_2";
-			text="Commander's Estate";
+			text="Officer's Estate";
 			type="hd_destroy";
 			colorName="ColorRed";
 			alpha=0;
