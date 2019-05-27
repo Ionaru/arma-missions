@@ -3074,7 +3074,7 @@ class Mission
 			{
 				text="Intel objective complete";
 				condition="call{[""intel_task""] call BIS_fnc_taskState == ""Succeeded""}";
-				onActivation="call{radio setMarkerAlpha 0;}";
+				onActivation="call{""radio"" setMarkerAlpha 0;}";
 				sizeA=0;
 				sizeB=0;
 			};
@@ -8957,7 +8957,7 @@ class Mission
 			{
 				text="Counter attack start";
 				condition="call{this}";
-				onActivation="call{radio setMarkerAlpha 1;" \n "nul = [2] spawn fw_fnc_missionManager;}";
+				onActivation="call{""radio"" setMarkerAlpha 1;" \n "nul = [2] spawn fw_fnc_missionManager;}";
 				sizeC=5;
 				activationBy="ANYPLAYER";
 			};
