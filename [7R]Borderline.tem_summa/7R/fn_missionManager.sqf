@@ -115,12 +115,6 @@ switch (_nbr) do {
         waitUntil {
             scriptDone _handle
         };
-
-        // Snipers at house.
-        _handle = ["spawn_marksman", "PATROL", 11, ["patrol_marksman", "P"]] spawn fw_fnc_spawnTemplate;
-        waitUntil {
-            scriptDone _handle
-        };
     };
     case 2: {
 
