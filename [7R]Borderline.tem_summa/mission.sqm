@@ -11010,7 +11010,7 @@ class Mission
 				condition="call{[""intel_task""] call BIS_fnc_taskState == ""Succeeded""}";
 				sizeA=0;
 				sizeB=0;
-				timeout[]={10,10,10};
+				timeout[]={900,900,900};
 			};
 			id=828;
 			type="EmptyDetector";
