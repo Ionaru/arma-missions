@@ -13616,7 +13616,6 @@ class Mission
 				onActivation="call{""end1"" call BIS_fnc_endMission}";
 				sizeA=0;
 				sizeB=0;
-				timeout[]={3,3,3};
 			};
 			id=1041;
 			type="EmptyDetector";
