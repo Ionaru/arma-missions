@@ -133,7 +133,7 @@ switch (_nbr) do {
                     scriptDone _handle
                 };
 
-                sleep 5;
+                sleep 3;
             };
 
             // RAMPAGE!!
