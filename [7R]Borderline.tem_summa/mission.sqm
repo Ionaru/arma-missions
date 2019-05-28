@@ -5245,6 +5245,7 @@ class Mission
 			{
 				text="Base 1 clear";
 				condition="call{((count thisList) < 5)}";
+				onActivation="call{""compound_1"" setMarkerAlpha 0;}";
 				sizeA=350;
 				sizeB=200;
 				activationBy="EAST";
@@ -12847,7 +12848,7 @@ class Mission
 			{
 				text="Phase 3 complete";
 				condition="call{((count thisList) < 5)}";
-				onActivation="call{nul = [4] spawn fw_fnc_missionManager;}";
+				onActivation="call{nul = [4] spawn fw_fnc_missionManager;" \n """compound_2"" setMarkerAlpha 0;}";
 				sizeA=250;
 				sizeB=250;
 				timeout[]={10,10,10};
@@ -12865,7 +12866,7 @@ class Mission
 			{
 				text="Phase 4/5 complete";
 				condition="call{((count thisList) < 5)}";
-				onActivation="call{{ " \n " [_x] spawn { " \n "  _unit = _this select 0; " \n " " \n "  _unit setCaptive true; " \n " " \n "  _weaponHolder = ""GroundWeaponHolder_Scripted"" createVehicle (getPosASL _unit); " \n " " \n "  _unit action [""DropWeapon"", _weaponHolder, currentWeapon _unit]; " \n " " \n "  waitUntil { " \n "   sleep 1; " \n " " \n "   !(alive _unit) or {(currentWeapon _unit) == """"} " \n "  }; " \n " " \n "  if (alive _unit) then {_unit playMove ""AmovPercMstpSsurWnonDnon"";}; " \n " }; " \n "} forEach thisList;}";
+				onActivation="call{{ " \n " [_x] spawn { " \n "  _unit = _this select 0; " \n " " \n "  _unit setCaptive true; " \n " " \n "  _weaponHolder = ""GroundWeaponHolder_Scripted"" createVehicle (getPosASL _unit); " \n " " \n "  _unit action [""DropWeapon"", _weaponHolder, currentWeapon _unit]; " \n " " \n "  waitUntil { " \n "   sleep 1; " \n " " \n "   !(alive _unit) or {(currentWeapon _unit) == """"} " \n "  }; " \n " " \n "  if (alive _unit) then {_unit playMove ""AmovPercMstpSsurWnonDnon"";}; " \n " }; " \n "} forEach thisList;" \n """radio"" setMarkerAlpha 0;}";
 				sizeA=300;
 				sizeB=300;
 				timeout[]={10,10,10};
@@ -13574,11 +13575,11 @@ class Mission
 		class Item155
 		{
 			dataType="Trigger";
-			position[]={2021.1376,6.340878,1698.7943};
+			position[]={2021.1379,6.340867,1698.7939};
 			class Attributes
 			{
 				text="End debrief";
-				condition="call{([""military_base""] call BIS_fnc_taskState == ""Succeeded"") && ((player == platoon_lead) || (player == alpha_lead))}";
+				condition="call{([""military_base""] call BIS_fnc_taskState == ""Succeeded"") && (player == platoon_lead || player == alpha_lead)}";
 				sizeA=0;
 				sizeB=0;
 				repeatable=1;
