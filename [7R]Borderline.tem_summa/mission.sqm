@@ -12866,7 +12866,7 @@ class Mission
 			{
 				text="Phase 4/5 complete";
 				condition="call{((count thisList) < 5)}";
-				onActivation="call{{ " \n " [_x] spawn { " \n "  _unit = _this select 0; " \n " " \n "  _unit setCaptive true; " \n " " \n "  _weaponHolder = ""GroundWeaponHolder_Scripted"" createVehicle (getPosASL _unit); " \n " " \n "  _unit action [""DropWeapon"", _weaponHolder, currentWeapon _unit]; " \n " " \n "  waitUntil { " \n "   sleep 1; " \n " " \n "   !(alive _unit) or {(currentWeapon _unit) == """"} " \n "  }; " \n " " \n "  if (alive _unit) then {_unit playMove ""AmovPercMstpSsurWnonDnon"";}; " \n " }; " \n "} forEach thisList;" \n """radio"" setMarkerAlpha 0;}";
+				onActivation="call{{ " \n " [_x] spawn { " \n "  _unit = _this select 0; " \n " " \n "  _unit setCaptive true; " \n " " \n "  _weaponHolder = ""GroundWeaponHolder_Scripted"" createVehicle (getPosASL _unit); " \n " " \n "  _unit action [""DropWeapon"", _weaponHolder, currentWeapon _unit]; " \n " " \n "  waitUntil { " \n "   sleep 1; " \n " " \n "   !(alive _unit) or {(currentWeapon _unit) == """"} " \n "  }; " \n " " \n "  if (alive _unit) then {_unit playMove ""AmovPercMstpSsurWnonDnon"";}; " \n " }; " \n "} forEach thisList;}";
 				sizeA=300;
 				sizeB=300;
 				timeout[]={10,10,10};
