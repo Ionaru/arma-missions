@@ -218,15 +218,13 @@ switch (_nbr) do {
 
 		[[blufor, "HQ"], "Files received, PL-1, wait one."] remoteExec ["sideChat", 0];
 
-		// Redirect still alive opfor units to final position and guard it. (Final battle setup)
 		createGuardedPoint [opfor, getMarkerPos "opfor_rally", -1, objNull];
 		{
 			private _group = _x;
 			if (side _group == opfor && _group != helo1 && _group != helo2) then
 			{
-				{ deleteWaypoint _x } forEach waypoints _group;
-				_waypoint = _group addWaypoint [getMarkerPos "opfor_rally", 0];
-				_waypoint setWaypointType "GUARD";
+				_x setVariable ["SR_PatrolMode","RP"];
+				deleteWaypoint [_x, 1];
 			};
 		} forEach allGroups;
 
