@@ -594,7 +594,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=176;
+		items=175;
 		class Item0
 		{
 			dataType="Marker";
@@ -15719,36 +15719,6 @@ class Mission
 				};
 				nAttributes=19;
 			};
-		};
-		class Item175
-		{
-			dataType="Group";
-			side="Civilian";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={3300.1541,229.08017,2937.5962};
-					};
-					side="Civilian";
-					flags=7;
-					class Attributes
-					{
-					};
-					id=1463;
-					type="C_man_p_beggar_F";
-					atlOffset=-3.0517578e-005;
-				};
-			};
-			class Attributes
-			{
-			};
-			id=1462;
-			atlOffset=-3.0517578e-005;
 		};
 	};
 	class Connections
