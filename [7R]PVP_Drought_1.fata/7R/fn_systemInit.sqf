@@ -21,6 +21,8 @@ SR_Camo_Coef = 0.75; // for Night Missions, default: 0.75
 ace_medical_poisonKit = true;
 ace_medical_gasMask = "Mask_M50";
 
+// Vehicle Supply Drop Setup [Display Name, Vehicle Class, Loadout Number]
+SR_Vehicle_Drop = [];
 
 // ======================================================================================
 /*
