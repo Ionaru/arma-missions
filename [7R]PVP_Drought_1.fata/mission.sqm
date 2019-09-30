@@ -189,7 +189,6 @@ class ScenarioData
 	author="Ionaru";
 	overviewText="US marines infiltrate a Russian base to destroy two high-tech drones";
 	overviewTextLocked="US marines infiltrate a Russian base to destroy two high-tech drones";
-	overViewPicture="drought.paa";
 	overViewPictureLocked="drought.paa";
 	onLoadMission="US marines infiltrate a Russian base to destroy two high-tech drones";
 	loadScreen="drought.paa";
