@@ -3742,7 +3742,7 @@ class Mission
 				onActivation="call{this globalChat ""Grace period ended. Enjoy!"";" \n "deleteVehicle eq_box_opfor;" \n "deleteVehicle eq_box_blufor;" \n "deleteVehicle u_box_opfor;" \n "deleteVehicle u_box_blufor;" \n "deleteVehicle b_box_opfor;" \n "deleteVehicle b_box_blufor;}";
 				sizeA=0;
 				sizeB=0;
-				timeout[]={6,6,6};
+				timeout[]={600,600,600};
 			};
 			id=229;
 			type="EmptyDetector";
