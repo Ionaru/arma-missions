@@ -8,14 +8,18 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=236;
+		nextID=262;
+	};
+	class MarkerIDProvider
+	{
+		nextID=2;
 	};
 	class Camera
 	{
-		pos[]={3923.9426,38.73753,509.83795};
-		dir[]={0.67157435,-0.51654381,-0.53139299};
-		up[]={0.40514481,0.8561933,-0.32057983};
-		aside[]={-0.62057513,4.3131877e-007,-0.78428066};
+		pos[]={5173.9844,219.21732,4347.9883};
+		dir[]={-0.35972455,-0.4974345,-0.78948313};
+		up[]={-0.20628062,0.86745965,-0.45271873};
+		aside[]={-0.91004604,6.8917871e-008,0.41465273};
 	};
 };
 binarizationWanted=0;
@@ -39,13 +43,16 @@ addons[]=
 	"ace_chemlights",
 	"A3_Weapons_F_Items",
 	"ace_medical",
-	"A3_Modules_F_Intel"
+	"A3_Modules_F_Intel",
+	"acex_fortify",
+	"rhsusf_vehicles",
+	"plp_containers"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=19;
 		class Item0
 		{
 			className="A3_Air_F_Exp";
@@ -157,6 +164,23 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item16
+		{
+			className="acex_fortify";
+			name="acex_fortify";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item17
+		{
+			className="rhsusf_vehicles";
+			name="rhsusf_vehicles";
+		};
+		class Item18
+		{
+			className="plp_containers";
+			name="plp_containers";
+		};
 	};
 };
 randomSeed=9599520;
@@ -188,19 +212,22 @@ class Mission
 	};
 	class Entities
 	{
-		items=31;
+		items=46;
 		class Item0
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5235.6709,137.75595,4012.0732};
+				position[]={5238.1592,137.75595,4010.1543};
 				angles[]={0,3.6501117,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
 				name="uav1";
 				reportRemoteTargets=1;
 				reportOwnPosition=1;
@@ -219,6 +246,9 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
 				name="uav2";
 				reportRemoteTargets=1;
 				reportOwnPosition=1;
@@ -1378,18 +1408,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5272.7085,136.51938,3999.8137};
-				angles[]={0,3.6592767,0};
+				position[]={5272.708,136.51913,3999.814};
+				angles[]={0,3.6592746,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{this addaction [""Platoon Leader"", ""loadouts\rus_pl.sqf""]; " \n "this addaction [""Platoon FAC"", ""loadouts\rus_p_fac.sqf""]; " \n "this addaction [""Platoon Engineer (Demo)"", ""loadouts\rus_p_e_demo.sqf""]; " \n "this addaction [""Platoon Engineer (EOD)"", ""loadouts\rus_p_e_eod.sqf""]; " \n "this addaction [""Platoon Engineer (Fortification)"", ""loadouts\rus_p_e_fort.sqf""]; " \n "this addaction [""Platoon Engineer (Repair)"", ""loadouts\rus_p_e_rep.sqf""]; " \n "this addaction [""Platoon DMR"", ""loadouts\rus_p_dmr.sqf""]; " \n "this addaction [""Platoon Driver"", ""loadouts\rus_p_d.sqf""]; " \n "this addaction [""Platoon AR"", ""loadouts\rus_p_ar.sqf""]; " \n "this addaction [""Platoon Medic"", ""loadouts\rus_p_medic.sqf""]; " \n "this addaction [""Squad Leader"", ""loadouts\rus_sl.sqf""]; " \n "this addaction [""Combat Medic"", ""loadouts\rus_medic.sqf""]; " \n "this addaction [""Operator Rifle"", ""loadouts\rus_o_r.sqf""]; " \n "this addaction [""Operator AR"", ""loadouts\rus_o_ar.sqf""]; " \n "this addaction [""Operator Light AT"", ""loadouts\rus_o_lat.sqf""]; " \n "this addaction [""Operator MMG"", ""loadouts\rus_o_mmg.sqf""]; " \n "this addaction [""Operator Asst. MMG"", ""loadouts\rus_o_mmg_ab.sqf""]; " \n "this addaction [""Operator Medium AT"", ""loadouts\rus_o_mat.sqf""]; " \n "this addaction [""Operator Asst. Medium AT"", ""loadouts\rus_o_mat_ab.sqf""]; " \n "this addaction [""Operator Grenadier"", ""loadouts\rus_o_g.sqf""]; " \n "this addaction [""Operator DMR (VSS)"", ""loadouts\rus_o_dmr.sqf""]; " \n "this addaction [""Operator Battlerifle (AK-104)"", ""loadouts\rus_o_br.sqf""]; " \n "this addaction [""Operator Specialist (AS Val)"", ""loadouts\rus_o_spc.sqf""]; " \n "this addaction [""Operator Breacher"", ""loadouts\rus_o_breacher.sqf""]; " \n "this addaction [""Operator Engineer (Demo)"", ""loadouts\rus_o_e_demo.sqf""]; " \n "this addaction [""Operator Engineer (EOD)"", ""loadouts\rus_o_e_eod.sqf""]; " \n "this addaction [""Operator Engineer (Fortification)"", ""loadouts\rus_o_e_fort.sqf""]; " \n "this addaction [""Operator Engineer (Repair)"", ""loadouts\rus_o_e_rep.sqf""]; " \n "this addaction [""Echo Rifleman"", ""loadouts\rus_e_r.sqf""]; " \n "this addaction [""Echo AR"", ""loadouts\rus_e_ar.sqf""]; " \n "this addaction [""Echo Engineer (Demo)"", ""loadouts\rus_e_e_demo.sqf""]; " \n "this addaction [""Echo Engineer (EOD)"", ""loadouts\rus_e_e_eod.sqf""]; " \n "this addaction [""Echo Engineer (Fortification)"", ""loadouts\rus_e_e_fort.sqf""]; " \n "this addaction [""Echo Engineer (Repair)"", ""loadouts\rus_e_e_rep.sqf""]; " \n "this addaction [""Echo Heavy Weapons (Mortar)"", ""loadouts\rus_e_mor.sqf""]; " \n "this addaction [""Echo Asst. Heavy Weapons (Mortar)"", ""loadouts\rus_e_mor_ab.sqf""]; " \n "this addaction [""Echo Heavy Weapons (HAT)"", ""loadouts\rus_e_hat.sqf""]; " \n "this addaction [""Echo Asst. Heavy Weapons (HAT)"", ""loadouts\rus_e_hat_ab.sqf""]; " \n "this addaction [""Echo Driver"", ""loadouts\rus_e_d.sqf""]; " \n "this addaction [""Fox Commander"", ""loadouts\rus_f_com.sqf""]; " \n "this addaction [""Fox Crewman"", ""loadouts\rus_f_crew.sqf""]; " \n "this addaction [""Fox Technician"", ""loadouts\rus_f_tech.sqf""]; " \n "this addaction [""Sierra Sniper"", ""loadouts\rus_sniper.sqf""]; " \n "this addaction [""Sierra Spotter"", ""loadouts\rus_spotter.sqf""]; " \n "this addaction [""<t color=""""#0000FF"""">"" +""Save Loadout"", {(_this select 1) setVariable [""SR_Loadout"",getUnitLoadout (_this select 1)];}]; " \n "this addaction [""<t color=""""#0000FF"""">"" +""Load Loadout"", {(_this select 1)  setUnitLoadout ((_this select 1)  getVariable [""SR_Loadout"",[]]);}]; " \n " " \n "}";
 				disableSimulation=1;
 			};
 			id=145;
 			type="Box_NATO_Uniforms_F";
-			atlOffset=0.0012512207;
+			atlOffset=0.0010070801;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1426,7 +1457,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -1458,12 +1489,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5270.7632,136.51813,3996.2791};
-				angles[]={0,3.6592767,0};
+				angles[]={0,3.6592746,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{ " \n "this addaction [""<t color=""""#00FF00"""">"" +""1p63"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_1p63""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""ekp1"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_ekp1""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""pkas"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_pkas""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""ekp8"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_ekp8_02""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RM: 1p78"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_1p78""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RM: nita"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_nita""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""PL DMR: pso1m2"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_pso1m2""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""PL DMR: pso1m21"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_pso1m21""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""UAV Terminal"", ""loadouts\7R_EQ.sqf"",[""O_UavTerminal""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Vector"", ""loadouts\7R_EQ.sqf"",[""ACE_Vector""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Laserdesignator"", ""loadouts\7R_EQ.sqf"",[""Laserdesignator""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Lockpick"", ""loadouts\7R_EQ.sqf"",[""ACE_key_lockpick""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Entreching Tool"", ""loadouts\7R_EQ.sqf"",[""ACE_EntrenchingTool""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RADIO PRC152 (SLs, 2ic)"", ""loadouts\7R_EQ.sqf"",[""ACRE_PRC152""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RADIO PRC148 (Air, Sup, Mech)"", ""loadouts\7R_EQ.sqf"",[""ACRE_PRC148""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RADIO PRC117F (Long Range)"", ""loadouts\7R_EQ.sqf"",[""ACRE_PRC117F""]];}";
 				disableSimulation=1;
 			};
 			id=146;
@@ -1504,7 +1536,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -1535,13 +1567,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5269.0947,136.9619,3992.5813};
-				angles[]={0,2.0884805,0};
+				position[]={5269.0952,136.9619,3992.5811};
+				angles[]={0,2.0884786,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{if(isServer) then {   " \n "clearweaponcargoGlobal this;   " \n "clearmagazinecargoGlobal this;   " \n "clearitemcargoGlobal this;  " \n "clearBackpackCargoGlobal this;    " \n "this addmagazinecargoGlobal [""SR_60Rnd_545x39_rpk"", 60];   " \n "this addmagazinecargoGlobal [""rhs_100Rnd_762x54mmR"", 40];   " \n "this addmagazinecargoGlobal [""rhs_rpg7_PG7VL_mag"", 20]; " \n "this addmagazinecargoGlobal [""rhs_rpg7_PG7VR_mag"", 10]; " \n "this addmagazinecargoGlobal [""rhs_rpg7_OG7V_mag"", 10]; " \n "this addweaponcargoGlobal [""rhs_weap_rpg26"", 10]; " \n "this addweaponcargoGlobal [""rhs_weap_rshg2"", 10]; " \n "this additemcargoGlobal [""SatchelCharge_Remote_Mag"", 6];   " \n "this additemcargoGlobal [""DemoCharge_Remote_Mag"", 12];   " \n "}; " \n "}";
 			};
 			id=147;
 			type="B_CargoNet_01_ammo_F";
@@ -1581,7 +1614,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -1610,7 +1643,7 @@ class Mission
 		class Item10
 		{
 			dataType="Marker";
-			position[]={5272.2588,4.948685e+011,3989.6184};
+			position[]={5275.4487,4.948685e+011,4008.0876};
 			name="respawn_east";
 			text="Respawn East";
 			type="Empty";
@@ -1624,8 +1657,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5263.3955,136.13959,3990.5234};
-				angles[]={0,2.0884805,0};
+				position[]={5264.5391,136.13959,3991.2817};
+				angles[]={-0,2.0884805,0};
 			};
 			name="zeus";
 			id=149;
@@ -1736,8 +1769,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5258.1978,136.1366,3986.6587};
-				angles[]={0,2.0884805,0};
+				position[]={5259.3413,136.1366,3987.417};
+				angles[]={-0,2.0884805,0};
 			};
 			name="HC";
 			isPlayable=1;
@@ -2868,19 +2901,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3930.2563,32.858128,501.25842};
+				position[]={3930.2563,32.857128,501.25842};
 				angles[]={6.2711945,0.51370275,0.0095993113};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="call{this addaction [""Platoon Leader"", ""loadouts\us_pl.sqf""]; " \n "this addaction [""Platoon FAC"", ""loadouts\us_p_fac.sqf""]; " \n "this addaction [""Platoon Engineer (Demo)"", ""loadouts\us_p_e_demo.sqf""]; " \n "this addaction [""Platoon Engineer (EOD)"", ""loadouts\us_p_e_eod.sqf""]; " \n "this addaction [""Platoon Engineer (Fortification)"", ""loadouts\us_p_e_fort.sqf""]; " \n "this addaction [""Platoon Engineer (Repair)"", ""loadouts\us_p_e_rep.sqf""]; " \n "this addaction [""Platoon DMR"", ""loadouts\us_p_dmr.sqf""]; " \n "this addaction [""Platoon Driver"", ""loadouts\us_p_d.sqf""]; " \n "this addaction [""Platoon AR"", ""loadouts\us_p_ar.sqf""]; " \n "this addaction [""Platoon Medic"", ""loadouts\us_p_medic.sqf""]; " \n "this addaction [""Squad Leader"", ""loadouts\us_sl.sqf""]; " \n "this addaction [""Combat Medic"", ""loadouts\us_medic.sqf""]; " \n "this addaction [""Operator Rifle"", ""loadouts\us_o_r.sqf""]; " \n "this addaction [""Operator AR"", ""loadouts\us_o_ar.sqf""]; " \n "this addaction [""Operator Light AT"", ""loadouts\us_o_lat.sqf""]; " \n "this addaction [""Operator MMG"", ""loadouts\us_o_mmg.sqf""]; " \n "this addaction [""Operator Asst. MMG"", ""loadouts\us_o_mmg_ab.sqf""]; " \n "this addaction [""Operator Medium AT"", ""loadouts\us_o_mat.sqf""]; " \n "this addaction [""Operator Asst. Medium AT"", ""loadouts\us_o_mat_ab.sqf""]; " \n "this addaction [""Operator Grenadier"", ""loadouts\us_o_g.sqf""]; " \n "this addaction [""Operator DMR (5.56)"", ""loadouts\us_o_dmr.sqf""]; " \n "this addaction [""Operator Battlerifle (M14)"", ""loadouts\us_o_br.sqf""]; " \n "this addaction [""Operator Specialist (M4)"", ""loadouts\us_o_spc.sqf""]; " \n "this addaction [""Operator Breacher"", ""loadouts\us_o_breacher.sqf""]; " \n "this addaction [""Operator Engineer (Demo)"", ""loadouts\us_o_e_demo.sqf""]; " \n "this addaction [""Operator Engineer (EOD)"", ""loadouts\us_o_e_eod.sqf""]; " \n "this addaction [""Operator Engineer (Fortification)"", ""loadouts\us_o_e_fort.sqf""]; " \n "this addaction [""Operator Engineer (Repair)"", ""loadouts\us_o_e_rep.sqf""]; " \n "this addaction [""Echo Rifleman"", ""loadouts\us_e_r.sqf""]; " \n "this addaction [""Echo AR"", ""loadouts\us_e_ar.sqf""]; " \n "this addaction [""Echo Engineer (Demo)"", ""loadouts\us_e_e_demo.sqf""]; " \n "this addaction [""Echo Engineer (EOD)"", ""loadouts\us_e_e_eod.sqf""]; " \n "this addaction [""Echo Engineer (Fortification)"", ""loadouts\us_e_e_fort.sqf""]; " \n "this addaction [""Echo Engineer (Repair)"", ""loadouts\us_e_e_rep.sqf""]; " \n "this addaction [""Echo Heavy Weapons (Mortar)"", ""loadouts\us_e_mor.sqf""]; " \n "this addaction [""Echo Asst. Heavy Weapons (Mortar)"", ""loadouts\us_e_mor_ab.sqf""]; " \n "this addaction [""Echo Heavy Weapons (HAT)"", ""loadouts\us_e_hat.sqf""]; " \n "this addaction [""Echo Asst. Heavy Weapons (HAT)"", ""loadouts\us_e_hat_ab.sqf""]; " \n "this addaction [""Echo Driver"", ""loadouts\us_e_d.sqf""]; " \n "this addaction [""Fox Commander"", ""loadouts\us_f_com.sqf""]; " \n "this addaction [""Fox Crewman"", ""loadouts\us_f_crew.sqf""]; " \n "this addaction [""Fox Technician"", ""loadouts\us_f_tech.sqf""]; " \n "this addaction [""<t color=""""#0000FF"""">"" +""Save Loadout"", {(_this select 1) setVariable [""SR_Loadout"",getUnitLoadout (_this select 1)];}]; " \n "this addaction [""<t color=""""#0000FF"""">"" +""Load Loadout"", {(_this select 1)  setUnitLoadout ((_this select 1)  getVariable [""SR_Loadout"",[]]);}]; " \n " " \n "}";
+				init="call{this addaction [""Platoon Leader"", ""loadouts\usmc_pl.sqf""]; " \n "this addaction [""Platoon FAC"", ""loadouts\usmc_p_fac.sqf""]; " \n "this addaction [""Platoon Engineer (Demo)"", ""loadouts\usmc_p_e_demo.sqf""]; " \n "this addaction [""Platoon Engineer (EOD)"", ""loadouts\usmc_p_e_eod.sqf""]; " \n "this addaction [""Platoon Engineer (Fortification)"", ""loadouts\usmc_p_e_fort.sqf""]; " \n "this addaction [""Platoon Engineer (Repair)"", ""loadouts\usmc_p_e_rep.sqf""]; " \n "this addaction [""Platoon DMR"", ""loadouts\usmc_p_dmr.sqf""]; " \n "this addaction [""Platoon Driver"", ""loadouts\usmc_p_d.sqf""]; " \n "this addaction [""Platoon AR"", ""loadouts\usmc_p_ar.sqf""]; " \n "this addaction [""Platoon Medic"", ""loadouts\usmc_p_medic.sqf""]; " \n "this addaction [""Squad Leader"", ""loadouts\usmc_sl.sqf""]; " \n "this addaction [""Combat Medic"", ""loadouts\usmc_medic.sqf""]; " \n "this addaction [""Operator Rifle"", ""loadouts\usmc_o_r.sqf""]; " \n "this addaction [""Operator AR"", ""loadouts\usmc_o_ar.sqf""]; " \n "this addaction [""Operator Light AT"", ""loadouts\usmc_o_lat.sqf""]; " \n "this addaction [""Operator MMG"", ""loadouts\usmc_o_mmg.sqf""]; " \n "this addaction [""Operator Asst. MMG"", ""loadouts\usmc_o_mmg_ab.sqf""]; " \n "this addaction [""Operator Medium AT"", ""loadouts\usmc_o_mat.sqf""]; " \n "this addaction [""Operator Asst. Medium AT"", ""loadouts\usmc_o_mat_ab.sqf""]; " \n "this addaction [""Operator Grenadier"", ""loadouts\usmc_o_g.sqf""]; " \n "this addaction [""Operator DMR (M27)"", ""loadouts\usmc_o_dmr.sqf""]; " \n "this addaction [""Operator Battlerifle (SCAR-H)"", ""loadouts\usmc_o_br.sqf""]; " \n "this addaction [""Operator Specialist (M4A1)"", ""loadouts\usmc_o_spc.sqf""]; " \n "this addaction [""Operator Breacher"", ""loadouts\usmc_o_breacher.sqf""]; " \n "this addaction [""Operator Engineer (Demo)"", ""loadouts\usmc_o_e_demo.sqf""]; " \n "this addaction [""Operator Engineer (EOD)"", ""loadouts\usmc_o_e_eod.sqf""]; " \n "this addaction [""Operator Engineer (Fortification)"", ""loadouts\usmc_o_e_fort.sqf""]; " \n "this addaction [""Operator Engineer (Repair)"", ""loadouts\usmc_o_e_rep.sqf""]; " \n "this addaction [""Echo Rifleman"", ""loadouts\usmc_e_r.sqf""]; " \n "this addaction [""Echo AR"", ""loadouts\usmc_e_ar.sqf""]; " \n "this addaction [""Echo Engineer (Demo)"", ""loadouts\usmc_e_e_demo.sqf""]; " \n "this addaction [""Echo Engineer (EOD)"", ""loadouts\usmc_e_e_eod.sqf""]; " \n "this addaction [""Echo Engineer (Fortification)"", ""loadouts\usmc_e_e_fort.sqf""]; " \n "this addaction [""Echo Engineer (Repair)"", ""loadouts\usmc_e_e_rep.sqf""]; " \n "this addaction [""Echo Heavy Weapons (Mortar)"", ""loadouts\usmc_e_mor.sqf""]; " \n "this addaction [""Echo Asst. Heavy Weapons (Mortar)"", ""loadouts\usmc_e_mor_ab.sqf""]; " \n "this addaction [""Echo Heavy Weapons (HAT)"", ""loadouts\usmc_e_hat.sqf""]; " \n "this addaction [""Echo Asst. Heavy Weapons (HAT)"", ""loadouts\usmc_e_hat_ab.sqf""]; " \n "this addaction [""Echo Driver"", ""loadouts\usmc_e_d.sqf""]; " \n "this addaction [""Fox Commander"", ""loadouts\usmc_f_com.sqf""]; " \n "this addaction [""Fox Crewman"", ""loadouts\usmc_f_crew.sqf""]; " \n "this addaction [""Fox Technician"", ""loadouts\usmc_f_tech.sqf""];" \n "this addaction [""Helicopter Pilot"", ""loadouts\pilot.sqf""]; " \n "this addaction [""Helicopter Crew"", ""loadouts\pilot_crew.sqf""];  " \n "this addaction [""<t color=""""#0000FF"""">"" +""Save Loadout"", {(_this select 1) setVariable [""SR_Loadout"",getUnitLoadout (_this select 1)];}]; " \n "this addaction [""<t color=""""#0000FF"""">"" +""Load Loadout"", {(_this select 1)  setUnitLoadout ((_this select 1)  getVariable [""SR_Loadout"",[]]);}]; " \n " " \n "}";
 				disableSimulation=1;
 			};
 			id=193;
 			type="Box_NATO_Uniforms_F";
-			atlOffset=0.00099945068;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2948,13 +2980,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3932.1873,32.918137,504.8009};
-				angles[]={6.2711949,0.51369965,0.0095932409};
+				position[]={3932.1873,32.918133,504.80042};
+				angles[]={6.2711945,0.51370275,0.0095993113};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{this addaction [""<t color=""""#00FF00"""">"" +""XPS3"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_eotech_xps3""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""M552"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_eotech_552""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""M68 CCO"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_compm4""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Aimpoint"", ""loadouts\7R_EQ.sqf"",[""FHQ_optic_AIM""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Comp M2"", ""loadouts\7R_EQ.sqf"",[""RH_compm2""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Comp M2 low"", ""loadouts\7R_EQ.sqf"",[""RH_compm2l""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Comp M4"", ""loadouts\7R_EQ.sqf"",[""RH_compm4s""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Comp M4"", ""loadouts\7R_EQ.sqf"",[""RH_compm4s""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Aimpoint T1"", ""loadouts\7R_EQ.sqf"",[""RH_t1""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Aimpoint T1 high"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_T1_high""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Aimpoint T1 low"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_T1_low""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""C-more"", ""loadouts\7R_EQ.sqf"",[""RH_cmore""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""RX01 no filter"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_RX01_noFilter""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""RX01"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_RX01""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""TA01nsn"", ""loadouts\7R_EQ.sqf"",[""RH_ta01nsn""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""ACOG3"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_ACOG3_USMC""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""ACOG3 RMR"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_ACOG_RMR""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""C79"", ""loadouts\7R_EQ.sqf"",[""RH_c79""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""EXPS3 + G33"", ""loadouts\7R_EQ.sqf"",[""RH_eothhs1""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""M145"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_ELCAN""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""M150"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_ACOG""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""SU-230"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_su230""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""SU-230 MRDS"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_su230_mrds""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""DMR Sight - ACOG MDO"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_ACOG_MDO""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""DMR Sight - MOS"", ""loadouts\7R_EQ.sqf"",[""optic_SOS""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""UAV Terminal"", ""loadouts\7R_EQ.sqf"",[""B_UavTerminal""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""GPS"", ""loadouts\7R_EQ.sqf"",[""ItemGPS""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Vector"", ""loadouts\7R_EQ.sqf"",[""ACE_Vector""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Laserdesignator"", ""loadouts\7R_EQ.sqf"",[""Laserdesignator""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Lockpick"", ""loadouts\7R_EQ.sqf"",[""ACE_key_lockpick""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Entreching Tool"", ""loadouts\7R_EQ.sqf"",[""ACE_EntrenchingTool""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RADIO ACRE_PRC343"", ""loadouts\7R_EQ.sqf"",[""ACRE_PRC343""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RADIO PRC152 (SLs, 2ic)"", ""loadouts\7R_EQ.sqf"",[""ACRE_PRC152""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RADIO PRC148 (Air, Sup, Mech)"", ""loadouts\7R_EQ.sqf"",[""ACRE_PRC148""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RADIO PRC117F (Long Range)"", ""loadouts\7R_EQ.sqf"",[""ACRE_PRC117F""]]; " \n "}";
 				disableSimulation=1;
 			};
 			id=194;
@@ -2995,7 +3028,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -3033,7 +3066,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{if(isServer) then { " \n "clearweaponcargoGlobal this; " \n "clearmagazinecargoGlobal this; " \n "clearitemcargoGlobal this; " \n "clearBackpackCargoGlobal this; " \n "this addmagazinecargoGlobal [""rhs_200rnd_556x45_M_SAW"", 40]; " \n "this addmagazinecargoGlobal [""rhsusf_100Rnd_556x45_soft_pouch"", 40]; " \n "this addmagazinecargoGlobal [""rhsusf_100Rnd_762x51"", 40]; " \n "this addmagazinecargoGlobal [""MRAWS_HEAT_F"", 10]; " \n "this addmagazinecargoGlobal [""MRAWS_HE_F"", 10]; " \n "this addWeaponcargoGlobal [""rhs_weap_M136_hedp"", 20]; " \n "this addWeaponcargoGlobal [""rhs_weap_m72a7"", 10]; " \n "this additemcargoGlobal [""SatchelCharge_Remote_Mag"", 6]; " \n "this additemcargoGlobal [""DemoCharge_Remote_Mag"", 12]; " \n "this addBackpackCargoGlobal [""usm_pack_bandolier_empty"", 12]; " \n "}; " \n "}";
+				init="call{if(isServer) then {   " \n "clearweaponcargoGlobal this;   " \n "clearmagazinecargoGlobal this;   " \n "clearitemcargoGlobal this;  " \n "clearBackpackCargoGlobal this;  " \n "this addmagazinecargoGlobal [""rhs_200rnd_556x45_M_SAW"", 40];     " \n "this addmagazinecargoGlobal [""rhsusf_100Rnd_556x45_soft_pouch"", 40];   " \n "this addmagazinecargoGlobal [""rhsusf_100Rnd_762x51"", 40];   " \n "this addmagazinecargoGlobal [""MRAWS_HEAT_F"", 10];   " \n "this addmagazinecargoGlobal [""MRAWS_HE_F"", 10]; " \n "this addWeaponcargoGlobal [""rhs_weap_M136_hedp"", 20]; " \n "this addWeaponcargoGlobal [""rhs_weap_m72a7"", 10]; " \n "this additemcargoGlobal [""SatchelCharge_Remote_Mag"", 6];   " \n "this additemcargoGlobal [""DemoCharge_Remote_Mag"", 12];   " \n "}; " \n "}";
 			};
 			id=195;
 			type="B_CargoNet_01_ammo_F";
@@ -3357,14 +3390,13 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5099.647,101.59086,4212.0688};
-				angles[]={6.2783856,0,0.10752973};
+				position[]={5084.4043,107.9911,4206.4424};
 			};
 			name="taskPrep";
-			init="call{this globalChat ""Grace period..."";}";
+			init="call{this globalChat ""Grace period is in effect"";}";
 			id=226;
 			type="ModuleTaskCreate_F";
-			atlOffset=7.6293945e-006;
+			atlOffset=7.2275925;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3584,12 +3616,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5059.3013,104.28899,4233.5654};
-				angles[]={6.2605233,0,0};
+				position[]={5060.9668,108.80417,4197.0591};
 			};
+			name="grace_end";
 			id=227;
 			type="ModuleTaskSetState_F";
-			atlOffset=-7.6293945e-006;
+			atlOffset=7.2280045;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3636,45 +3668,48 @@ class Mission
 		class Item25
 		{
 			dataType="Trigger";
-			position[]={5073.9341,101.1816,4201.5991};
+			position[]={5044.146,110.62385,4174.7192};
 			class Attributes
 			{
+				name="grace";
 				text="End grace period";
 				condition="call{true}";
-				onActivation="call{[""Grace period ended. Enjoy!"",""hint"",false,true] call BIS_fnc_MP;}";
+				onActivation="call{this globalChat ""Grace period ended. Enjoy!"";}";
 				sizeA=0;
 				sizeB=0;
-				timeout[]={6,6,6};
+				timeout[]={600,600,600};
 			};
 			id=229;
 			type="EmptyDetector";
+			atlOffset=7.2279892;
 		};
 		class Item26
 		{
 			dataType="Trigger";
-			position[]={5092.6782,101.12038,4192.6899};
+			position[]={5093.8218,108.33331,4193.4482};
 			class Attributes
 			{
 				text="Grace period task success";
-				condition="call{[ ""taskPrep"" ]call BIS_fnc_taskState == ""Succeeded""}";
+				condition="call{[""taskPrep""] call BIS_fnc_taskState == ""Succeeded""}";
 				sizeA=0;
 				sizeB=0;
 				effectSound="FD_Course_Active_F";
 			};
 			id=230;
 			type="EmptyDetector";
+			atlOffset=7.2279968;
 		};
 		class Item27
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5093.5449,100.84953,4169.3862};
-				angles[]={6.2232857,0,6.1005368};
+				position[]={5094.6885,107.91278,4170.1445};
 			};
+			name="taskDestroy";
 			id=231;
 			type="ModuleTaskCreate_F";
-			atlOffset=7.6293945e-006;
+			atlOffset=7.2275925;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3787,7 +3822,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Destroy the drones";
+							value="Destroy the <marker name='destroy_drones_marker'>drones</marker>";
 						};
 					};
 				};
@@ -3825,7 +3860,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -3863,7 +3898,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="ASSIGNED";
+							value="CREATED";
 						};
 					};
 				};
@@ -3894,12 +3929,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5079.4692,101.26376,4176.0942};
-				angles[]={6.2592044,0,6.0568514};
+				position[]={5080.6128,108.1698,4176.8525};
 			};
+			name="taskDefend";
 			id=232;
 			type="ModuleTaskCreate_F";
-			atlOffset=-7.6293945e-006;
+			atlOffset=7.2275925;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4012,7 +4047,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Defend the drones";
+							value="Defend the <marker name='defend_drones_marker'>drones</marker>";
 						};
 					};
 				};
@@ -4050,7 +4085,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -4088,7 +4123,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="ASSIGNED";
+							value="CREATED";
 						};
 					};
 				};
@@ -4117,7 +4152,7 @@ class Mission
 		class Item29
 		{
 			dataType="Trigger";
-			position[]={5045.79,102.41454,4184.1279};
+			position[]={5051.1519,110.78494,4122.0469};
 			class Attributes
 			{
 				text="No more blufor";
@@ -4128,18 +4163,453 @@ class Mission
 			};
 			id=234;
 			type="EmptyDetector";
+			atlOffset=7.2275848;
 		};
 		class Item30
 		{
 			dataType="Trigger";
-			position[]={5211.5449,135.91971,4025.1599};
+			position[]={5099.1328,108.73573,4106.6099};
 			class Attributes
 			{
-				condition="call{!alive ""uav1"" && !alive ""uav2""}";
+				text="UAVs destroyed";
+				condition="call{!alive uav1 && !alive uav2}";
 				sizeA=0;
 				sizeB=0;
 			};
 			id=235;
+			type="EmptyDetector";
+			atlOffset=7.2279892;
+		};
+		class Item31
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3947.8049,32.858032,519.10999};
+				angles[]={6.2711945,2.0704665,0.0095993113};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="v_pad";
+			};
+			id=241;
+			type="ACE_DropZone";
+		};
+		class Item32
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3944.616,33.344929,513.19849};
+				angles[]={6.2711945,0.49052477,0.0095993113};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this addaction [""Spawn Humvee"", fw_fnc_vehicleSpawn,[""rhsusf_m998_w_s_2dr"",v_pad]];}";
+			};
+			id=242;
+			type="ACE_FOB_Terminal";
+		};
+		class Item33
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3947.8687,34.803619,519.08893};
+				angles[]={6.2711949,2.0760288,0.0095932409};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=243;
+			type="rhsusf_m998_w_s_2dr";
+			atlOffset=-3.8146973e-006;
+		};
+		class Item34
+		{
+			dataType="Marker";
+			position[]={5251.0234,136.1366,3991.0186};
+			name="destroy_drones_marker";
+			text="Destroy the drones";
+			type="hd_objective";
+			colorName="ColorEAST";
+			id=244;
+		};
+		class Item35
+		{
+			dataType="Marker";
+			position[]={5251.6328,136.13699,3994.459};
+			name="defend_drones_marker";
+			text="Defend the drones";
+			type="hd_objective";
+			colorName="ColorWEST";
+			id=245;
+			atlOffset=0.00039672852;
+		};
+		class Item36
+		{
+			dataType="Trigger";
+			position[]={5073.9648,109.79961,4111.6318};
+			class Attributes
+			{
+				text="TImeout (+5m)";
+				condition="call{triggerActivated timeout_warning;}";
+				onActivation="call{[west, ""HQ""] sideChat ""You have failed America."";" \n "[east, ""HQ""] sideChat ""Well cone!"";}";
+				sizeA=0;
+				sizeB=0;
+				timeout[]={300,300,300};
+			};
+			id=249;
+			type="EmptyDetector";
+			atlOffset=7.2280045;
+		};
+		class Item37
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5111.3833,107.2285,4160.5635};
+			};
+			name="blufor_win";
+			id=250;
+			type="ModuleTaskSetState_F";
+			atlOffset=7.2275925;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SUCCEEDED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item38
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5063.7617,108.79243,4171.4673};
+			};
+			name="opfor_win";
+			id=251;
+			type="ModuleTaskSetState_F";
+			atlOffset=7.2275925;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SUCCEEDED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item39
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5089.4551,106.66436,4141.1133};
+			};
+			name="bluefor_lose";
+			id=252;
+			type="ModuleTaskSetState_F";
+			atlOffset=7.2276001;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="FAILED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item40
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5069.3438,108.16553,4145.6836};
+			};
+			name="opfor_lose";
+			id=253;
+			type="ModuleTaskSetState_F";
+			atlOffset=7.2275925;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="FAILED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item41
+		{
+			dataType="Trigger";
+			position[]={5065.8188,107.58225,4089.489};
+			class Attributes
+			{
+				name="timeout_warning";
+				text="Timeout warning (25m)";
+				condition="call{[""taskPrep""] call BIS_fnc_taskState == ""Succeeded""}";
+				onActivation="call{[west, ""HQ""] sideChat ""Marines, your have only 5 minutes left to complete your mission!"";" \n "[east, ""HQ""] sideChat ""Hold fast, comrades! Only 5 minutes remain!"";}";
+				sizeA=0;
+				sizeB=0;
+				timeout[]={1500,1500,1500};
+			};
+			id=254;
+			type="EmptyDetector";
+			atlOffset=5.2905426;
+		};
+		class Item42
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5231.0508,137.25133,4014.6899};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=257;
+			type="plp_cts_ContShippingYellow";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item43
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5229.1411,137.26184,4007.5649};
+				angles[]={0,1.6247793,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=258;
+			type="plp_cts_ContShippingRed";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item44
+		{
+			dataType="Trigger";
+			position[]={5128.813,100.55001,4171.0601};
+			class Attributes
+			{
+				text="End blufor win";
+				condition="call{[""taskDestroy""] call BIS_fnc_taskState == ""Succeeded""}";
+				onActivation="call{""end2"" call BIS_fnc_endMission;}";
+				sizeA=0;
+				sizeB=0;
+				timeout[]={10,10,10};
+			};
+			id=260;
+			type="EmptyDetector";
+		};
+		class Item45
+		{
+			dataType="Trigger";
+			position[]={5113.4072,99.021629,4177.8071};
+			class Attributes
+			{
+				text="End opfor win";
+				condition="call{[""taskDefend""] call BIS_fnc_taskState == ""Succeeded""}";
+				onActivation="call{""end1"" call BIS_fnc_endMission;}";
+				sizeA=0;
+				sizeB=0;
+				timeout[]={10,10,10};
+			};
+			id=261;
 			type="EmptyDetector";
 		};
 	};
@@ -4147,11 +4617,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=4;
+			nextID=14;
 		};
 		class Links
 		{
-			items=4;
+			items=14;
 			class Item0
 			{
 				linkID=0;
@@ -4187,6 +4657,106 @@ class Mission
 				linkID=3;
 				item0=232;
 				item1=230;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item4
+			{
+				linkID=4;
+				item0=251;
+				item1=232;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item5
+			{
+				linkID=5;
+				item0=253;
+				item1=232;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item6
+			{
+				linkID=6;
+				item0=231;
+				item1=252;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item7
+			{
+				linkID=7;
+				item0=250;
+				item1=231;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item8
+			{
+				linkID=8;
+				item0=235;
+				item1=253;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item9
+			{
+				linkID=9;
+				item0=235;
+				item1=250;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item10
+			{
+				linkID=10;
+				item0=234;
+				item1=252;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item11
+			{
+				linkID=11;
+				item0=234;
+				item1=251;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item12
+			{
+				linkID=12;
+				item0=249;
+				item1=251;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item13
+			{
+				linkID=13;
+				item0=249;
+				item1=252;
 				class CustomData
 				{
 					type="Sync";

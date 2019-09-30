@@ -1,3 +1,5 @@
+params ["_playerUnit", "_didJIP"];
+
 // =====================================================================================================================================================
 
 // Briefing Init
@@ -16,3 +18,13 @@ if (count SR_Hack_Area != 0) then {
 // NVG Adjustments (DO NOT TOUCH)
 ace_nightvision_fogScaling = 0.5;
 ace_nightvision_effectScaling = 0.5;
+
+if (side player == opfor) then
+{
+	"destroy_drones_marker" setMarkerAlpha 0;
+};
+
+if (side player == blufor) then
+{
+	"defend_drones_marker" setMarkerAlpha 0;
+};
