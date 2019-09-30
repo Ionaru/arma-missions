@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=262;
+		nextID=265;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5173.9844,219.21732,4347.9883};
-		dir[]={-0.35972455,-0.4974345,-0.78948313};
-		up[]={-0.20628062,0.86745965,-0.45271873};
-		aside[]={-0.91004604,6.8917871e-008,0.41465273};
+		pos[]={5132.2646,131.21342,4273.0483};
+		dir[]={-0.25905728,-0.66397387,-0.70145202};
+		up[]={-0.23003127,0.74775463,-0.62285805};
+		aside[]={-0.93807548,6.6356733e-008,0.34644634};
 	};
 };
 binarizationWanted=0;
@@ -187,17 +187,76 @@ randomSeed=9599520;
 class ScenarioData
 {
 	author="Ionaru";
+	overviewText="US marines infiltrate a Russian base to destroy two high-tech drones";
+	overviewTextLocked="US marines infiltrate a Russian base to destroy two high-tech drones";
+	overViewPicture="drought.paa";
+	overViewPictureLocked="drought.paa";
+	onLoadMission="US marines infiltrate a Russian base to destroy two high-tech drones";
+	loadScreen="drought.paa";
+	disabledAI=1;
+	class Header
+	{
+		gameType="TDM";
+	};
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="None";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
 	class Intel
 	{
-		timeOfChanges=1800.0002;
+		briefingName="7R Drought";
+		overviewText="US marines infiltrate a Russian base to destroy two high-tech drones";
+		timeOfChanges=28800;
 		startWeather=0;
-		startWind=0.1;
+		startFog=0.30000001;
+		startWind=0.02;
 		startWaves=0.1;
 		forecastWeather=0;
-		forecastWind=0.1;
+		forecastFog=0.30000001;
+		forecastWind=0.02;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
 		wavesForced=1;
@@ -205,14 +264,14 @@ class Mission
 		year=2012;
 		month=3;
 		day=12;
-		hour=12;
-		minute=0;
+		hour=6;
+		minute=9;
 		startFogDecay=0.014;
 		forecastFogDecay=0.014;
 	};
 	class Entities
 	{
-		items=46;
+		items=47;
 		class Item0
 		{
 			dataType="Object";
@@ -1416,6 +1475,7 @@ class Mission
 			class Attributes
 			{
 				init="call{this addaction [""Platoon Leader"", ""loadouts\rus_pl.sqf""]; " \n "this addaction [""Platoon FAC"", ""loadouts\rus_p_fac.sqf""]; " \n "this addaction [""Platoon Engineer (Demo)"", ""loadouts\rus_p_e_demo.sqf""]; " \n "this addaction [""Platoon Engineer (EOD)"", ""loadouts\rus_p_e_eod.sqf""]; " \n "this addaction [""Platoon Engineer (Fortification)"", ""loadouts\rus_p_e_fort.sqf""]; " \n "this addaction [""Platoon Engineer (Repair)"", ""loadouts\rus_p_e_rep.sqf""]; " \n "this addaction [""Platoon DMR"", ""loadouts\rus_p_dmr.sqf""]; " \n "this addaction [""Platoon Driver"", ""loadouts\rus_p_d.sqf""]; " \n "this addaction [""Platoon AR"", ""loadouts\rus_p_ar.sqf""]; " \n "this addaction [""Platoon Medic"", ""loadouts\rus_p_medic.sqf""]; " \n "this addaction [""Squad Leader"", ""loadouts\rus_sl.sqf""]; " \n "this addaction [""Combat Medic"", ""loadouts\rus_medic.sqf""]; " \n "this addaction [""Operator Rifle"", ""loadouts\rus_o_r.sqf""]; " \n "this addaction [""Operator AR"", ""loadouts\rus_o_ar.sqf""]; " \n "this addaction [""Operator Light AT"", ""loadouts\rus_o_lat.sqf""]; " \n "this addaction [""Operator MMG"", ""loadouts\rus_o_mmg.sqf""]; " \n "this addaction [""Operator Asst. MMG"", ""loadouts\rus_o_mmg_ab.sqf""]; " \n "this addaction [""Operator Medium AT"", ""loadouts\rus_o_mat.sqf""]; " \n "this addaction [""Operator Asst. Medium AT"", ""loadouts\rus_o_mat_ab.sqf""]; " \n "this addaction [""Operator Grenadier"", ""loadouts\rus_o_g.sqf""]; " \n "this addaction [""Operator DMR (VSS)"", ""loadouts\rus_o_dmr.sqf""]; " \n "this addaction [""Operator Battlerifle (AK-104)"", ""loadouts\rus_o_br.sqf""]; " \n "this addaction [""Operator Specialist (AS Val)"", ""loadouts\rus_o_spc.sqf""]; " \n "this addaction [""Operator Breacher"", ""loadouts\rus_o_breacher.sqf""]; " \n "this addaction [""Operator Engineer (Demo)"", ""loadouts\rus_o_e_demo.sqf""]; " \n "this addaction [""Operator Engineer (EOD)"", ""loadouts\rus_o_e_eod.sqf""]; " \n "this addaction [""Operator Engineer (Fortification)"", ""loadouts\rus_o_e_fort.sqf""]; " \n "this addaction [""Operator Engineer (Repair)"", ""loadouts\rus_o_e_rep.sqf""]; " \n "this addaction [""Echo Rifleman"", ""loadouts\rus_e_r.sqf""]; " \n "this addaction [""Echo AR"", ""loadouts\rus_e_ar.sqf""]; " \n "this addaction [""Echo Engineer (Demo)"", ""loadouts\rus_e_e_demo.sqf""]; " \n "this addaction [""Echo Engineer (EOD)"", ""loadouts\rus_e_e_eod.sqf""]; " \n "this addaction [""Echo Engineer (Fortification)"", ""loadouts\rus_e_e_fort.sqf""]; " \n "this addaction [""Echo Engineer (Repair)"", ""loadouts\rus_e_e_rep.sqf""]; " \n "this addaction [""Echo Heavy Weapons (Mortar)"", ""loadouts\rus_e_mor.sqf""]; " \n "this addaction [""Echo Asst. Heavy Weapons (Mortar)"", ""loadouts\rus_e_mor_ab.sqf""]; " \n "this addaction [""Echo Heavy Weapons (HAT)"", ""loadouts\rus_e_hat.sqf""]; " \n "this addaction [""Echo Asst. Heavy Weapons (HAT)"", ""loadouts\rus_e_hat_ab.sqf""]; " \n "this addaction [""Echo Driver"", ""loadouts\rus_e_d.sqf""]; " \n "this addaction [""Fox Commander"", ""loadouts\rus_f_com.sqf""]; " \n "this addaction [""Fox Crewman"", ""loadouts\rus_f_crew.sqf""]; " \n "this addaction [""Fox Technician"", ""loadouts\rus_f_tech.sqf""]; " \n "this addaction [""Sierra Sniper"", ""loadouts\rus_sniper.sqf""]; " \n "this addaction [""Sierra Spotter"", ""loadouts\rus_spotter.sqf""]; " \n "this addaction [""<t color=""""#0000FF"""">"" +""Save Loadout"", {(_this select 1) setVariable [""SR_Loadout"",getUnitLoadout (_this select 1)];}]; " \n "this addaction [""<t color=""""#0000FF"""">"" +""Load Loadout"", {(_this select 1)  setUnitLoadout ((_this select 1)  getVariable [""SR_Loadout"",[]]);}]; " \n " " \n "}";
+				name="u_box_opfor";
 				disableSimulation=1;
 			};
 			id=145;
@@ -1496,6 +1556,7 @@ class Mission
 			class Attributes
 			{
 				init="call{ " \n "this addaction [""<t color=""""#00FF00"""">"" +""1p63"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_1p63""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""ekp1"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_ekp1""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""pkas"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_pkas""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""ekp8"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_ekp8_02""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RM: 1p78"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_1p78""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RM: nita"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_nita""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""PL DMR: pso1m2"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_pso1m2""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""PL DMR: pso1m21"", ""loadouts\7R_EQ.sqf"",[""rhs_acc_pso1m21""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""UAV Terminal"", ""loadouts\7R_EQ.sqf"",[""O_UavTerminal""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Vector"", ""loadouts\7R_EQ.sqf"",[""ACE_Vector""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Laserdesignator"", ""loadouts\7R_EQ.sqf"",[""Laserdesignator""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Lockpick"", ""loadouts\7R_EQ.sqf"",[""ACE_key_lockpick""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Entreching Tool"", ""loadouts\7R_EQ.sqf"",[""ACE_EntrenchingTool""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RADIO PRC152 (SLs, 2ic)"", ""loadouts\7R_EQ.sqf"",[""ACRE_PRC152""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RADIO PRC148 (Air, Sup, Mech)"", ""loadouts\7R_EQ.sqf"",[""ACRE_PRC148""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RADIO PRC117F (Long Range)"", ""loadouts\7R_EQ.sqf"",[""ACRE_PRC117F""]];}";
+				name="eq_box_opfor";
 				disableSimulation=1;
 			};
 			id=146;
@@ -1575,6 +1636,7 @@ class Mission
 			class Attributes
 			{
 				init="call{if(isServer) then {   " \n "clearweaponcargoGlobal this;   " \n "clearmagazinecargoGlobal this;   " \n "clearitemcargoGlobal this;  " \n "clearBackpackCargoGlobal this;    " \n "this addmagazinecargoGlobal [""SR_60Rnd_545x39_rpk"", 60];   " \n "this addmagazinecargoGlobal [""rhs_100Rnd_762x54mmR"", 40];   " \n "this addmagazinecargoGlobal [""rhs_rpg7_PG7VL_mag"", 20]; " \n "this addmagazinecargoGlobal [""rhs_rpg7_PG7VR_mag"", 10]; " \n "this addmagazinecargoGlobal [""rhs_rpg7_OG7V_mag"", 10]; " \n "this addweaponcargoGlobal [""rhs_weap_rpg26"", 10]; " \n "this addweaponcargoGlobal [""rhs_weap_rshg2"", 10]; " \n "this additemcargoGlobal [""SatchelCharge_Remote_Mag"", 6];   " \n "this additemcargoGlobal [""DemoCharge_Remote_Mag"", 12];   " \n "}; " \n "}";
+				name="b_box_opfor";
 			};
 			id=147;
 			type="B_CargoNet_01_ammo_F";
@@ -1658,7 +1720,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5264.5391,136.13959,3991.2817};
-				angles[]={-0,2.0884805,0};
+				angles[]={0,2.0884805,0};
 			};
 			name="zeus";
 			id=149;
@@ -1770,7 +1832,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5259.3413,136.1366,3987.417};
-				angles[]={-0,2.0884805,0};
+				angles[]={0,2.0884805,0};
 			};
 			name="HC";
 			isPlayable=1;
@@ -2909,6 +2971,7 @@ class Mission
 			class Attributes
 			{
 				init="call{this addaction [""Platoon Leader"", ""loadouts\usmc_pl.sqf""]; " \n "this addaction [""Platoon FAC"", ""loadouts\usmc_p_fac.sqf""]; " \n "this addaction [""Platoon Engineer (Demo)"", ""loadouts\usmc_p_e_demo.sqf""]; " \n "this addaction [""Platoon Engineer (EOD)"", ""loadouts\usmc_p_e_eod.sqf""]; " \n "this addaction [""Platoon Engineer (Fortification)"", ""loadouts\usmc_p_e_fort.sqf""]; " \n "this addaction [""Platoon Engineer (Repair)"", ""loadouts\usmc_p_e_rep.sqf""]; " \n "this addaction [""Platoon DMR"", ""loadouts\usmc_p_dmr.sqf""]; " \n "this addaction [""Platoon Driver"", ""loadouts\usmc_p_d.sqf""]; " \n "this addaction [""Platoon AR"", ""loadouts\usmc_p_ar.sqf""]; " \n "this addaction [""Platoon Medic"", ""loadouts\usmc_p_medic.sqf""]; " \n "this addaction [""Squad Leader"", ""loadouts\usmc_sl.sqf""]; " \n "this addaction [""Combat Medic"", ""loadouts\usmc_medic.sqf""]; " \n "this addaction [""Operator Rifle"", ""loadouts\usmc_o_r.sqf""]; " \n "this addaction [""Operator AR"", ""loadouts\usmc_o_ar.sqf""]; " \n "this addaction [""Operator Light AT"", ""loadouts\usmc_o_lat.sqf""]; " \n "this addaction [""Operator MMG"", ""loadouts\usmc_o_mmg.sqf""]; " \n "this addaction [""Operator Asst. MMG"", ""loadouts\usmc_o_mmg_ab.sqf""]; " \n "this addaction [""Operator Medium AT"", ""loadouts\usmc_o_mat.sqf""]; " \n "this addaction [""Operator Asst. Medium AT"", ""loadouts\usmc_o_mat_ab.sqf""]; " \n "this addaction [""Operator Grenadier"", ""loadouts\usmc_o_g.sqf""]; " \n "this addaction [""Operator DMR (M27)"", ""loadouts\usmc_o_dmr.sqf""]; " \n "this addaction [""Operator Battlerifle (SCAR-H)"", ""loadouts\usmc_o_br.sqf""]; " \n "this addaction [""Operator Specialist (M4A1)"", ""loadouts\usmc_o_spc.sqf""]; " \n "this addaction [""Operator Breacher"", ""loadouts\usmc_o_breacher.sqf""]; " \n "this addaction [""Operator Engineer (Demo)"", ""loadouts\usmc_o_e_demo.sqf""]; " \n "this addaction [""Operator Engineer (EOD)"", ""loadouts\usmc_o_e_eod.sqf""]; " \n "this addaction [""Operator Engineer (Fortification)"", ""loadouts\usmc_o_e_fort.sqf""]; " \n "this addaction [""Operator Engineer (Repair)"", ""loadouts\usmc_o_e_rep.sqf""]; " \n "this addaction [""Echo Rifleman"", ""loadouts\usmc_e_r.sqf""]; " \n "this addaction [""Echo AR"", ""loadouts\usmc_e_ar.sqf""]; " \n "this addaction [""Echo Engineer (Demo)"", ""loadouts\usmc_e_e_demo.sqf""]; " \n "this addaction [""Echo Engineer (EOD)"", ""loadouts\usmc_e_e_eod.sqf""]; " \n "this addaction [""Echo Engineer (Fortification)"", ""loadouts\usmc_e_e_fort.sqf""]; " \n "this addaction [""Echo Engineer (Repair)"", ""loadouts\usmc_e_e_rep.sqf""]; " \n "this addaction [""Echo Heavy Weapons (Mortar)"", ""loadouts\usmc_e_mor.sqf""]; " \n "this addaction [""Echo Asst. Heavy Weapons (Mortar)"", ""loadouts\usmc_e_mor_ab.sqf""]; " \n "this addaction [""Echo Heavy Weapons (HAT)"", ""loadouts\usmc_e_hat.sqf""]; " \n "this addaction [""Echo Asst. Heavy Weapons (HAT)"", ""loadouts\usmc_e_hat_ab.sqf""]; " \n "this addaction [""Echo Driver"", ""loadouts\usmc_e_d.sqf""]; " \n "this addaction [""Fox Commander"", ""loadouts\usmc_f_com.sqf""]; " \n "this addaction [""Fox Crewman"", ""loadouts\usmc_f_crew.sqf""]; " \n "this addaction [""Fox Technician"", ""loadouts\usmc_f_tech.sqf""];" \n "this addaction [""Helicopter Pilot"", ""loadouts\pilot.sqf""]; " \n "this addaction [""Helicopter Crew"", ""loadouts\pilot_crew.sqf""];  " \n "this addaction [""<t color=""""#0000FF"""">"" +""Save Loadout"", {(_this select 1) setVariable [""SR_Loadout"",getUnitLoadout (_this select 1)];}]; " \n "this addaction [""<t color=""""#0000FF"""">"" +""Load Loadout"", {(_this select 1)  setUnitLoadout ((_this select 1)  getVariable [""SR_Loadout"",[]]);}]; " \n " " \n "}";
+				name="u_box_blufor";
 				disableSimulation=1;
 			};
 			id=193;
@@ -2988,6 +3051,7 @@ class Mission
 			class Attributes
 			{
 				init="call{this addaction [""<t color=""""#00FF00"""">"" +""XPS3"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_eotech_xps3""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""M552"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_eotech_552""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""M68 CCO"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_compm4""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Aimpoint"", ""loadouts\7R_EQ.sqf"",[""FHQ_optic_AIM""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Comp M2"", ""loadouts\7R_EQ.sqf"",[""RH_compm2""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Comp M2 low"", ""loadouts\7R_EQ.sqf"",[""RH_compm2l""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Comp M4"", ""loadouts\7R_EQ.sqf"",[""RH_compm4s""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Comp M4"", ""loadouts\7R_EQ.sqf"",[""RH_compm4s""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Aimpoint T1"", ""loadouts\7R_EQ.sqf"",[""RH_t1""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Aimpoint T1 high"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_T1_high""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Aimpoint T1 low"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_T1_low""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""C-more"", ""loadouts\7R_EQ.sqf"",[""RH_cmore""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""RX01 no filter"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_RX01_noFilter""]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""RX01"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_RX01""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""TA01nsn"", ""loadouts\7R_EQ.sqf"",[""RH_ta01nsn""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""ACOG3"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_ACOG3_USMC""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""ACOG3 RMR"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_ACOG_RMR""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""C79"", ""loadouts\7R_EQ.sqf"",[""RH_c79""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""EXPS3 + G33"", ""loadouts\7R_EQ.sqf"",[""RH_eothhs1""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""M145"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_ELCAN""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""M150"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_ACOG""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""SU-230"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_su230""]]; " \n "this addaction [""<t color=""""#FF8C00"""">"" +""SU-230 MRDS"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_su230_mrds""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""DMR Sight - ACOG MDO"", ""loadouts\7R_EQ.sqf"",[""rhsusf_acc_ACOG_MDO""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""DMR Sight - MOS"", ""loadouts\7R_EQ.sqf"",[""optic_SOS""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""UAV Terminal"", ""loadouts\7R_EQ.sqf"",[""B_UavTerminal""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""GPS"", ""loadouts\7R_EQ.sqf"",[""ItemGPS""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Vector"", ""loadouts\7R_EQ.sqf"",[""ACE_Vector""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Laserdesignator"", ""loadouts\7R_EQ.sqf"",[""Laserdesignator""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Lockpick"", ""loadouts\7R_EQ.sqf"",[""ACE_key_lockpick""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""Entreching Tool"", ""loadouts\7R_EQ.sqf"",[""ACE_EntrenchingTool""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RADIO ACRE_PRC343"", ""loadouts\7R_EQ.sqf"",[""ACRE_PRC343""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RADIO PRC152 (SLs, 2ic)"", ""loadouts\7R_EQ.sqf"",[""ACRE_PRC152""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RADIO PRC148 (Air, Sup, Mech)"", ""loadouts\7R_EQ.sqf"",[""ACRE_PRC148""]]; " \n "this addaction [""<t color=""""#FF0000"""">"" +""RADIO PRC117F (Long Range)"", ""loadouts\7R_EQ.sqf"",[""ACRE_PRC117F""]]; " \n "}";
+				name="eq_box_blufor";
 				disableSimulation=1;
 			};
 			id=194;
@@ -3067,6 +3131,7 @@ class Mission
 			class Attributes
 			{
 				init="call{if(isServer) then {   " \n "clearweaponcargoGlobal this;   " \n "clearmagazinecargoGlobal this;   " \n "clearitemcargoGlobal this;  " \n "clearBackpackCargoGlobal this;  " \n "this addmagazinecargoGlobal [""rhs_200rnd_556x45_M_SAW"", 40];     " \n "this addmagazinecargoGlobal [""rhsusf_100Rnd_556x45_soft_pouch"", 40];   " \n "this addmagazinecargoGlobal [""rhsusf_100Rnd_762x51"", 40];   " \n "this addmagazinecargoGlobal [""MRAWS_HEAT_F"", 10];   " \n "this addmagazinecargoGlobal [""MRAWS_HE_F"", 10]; " \n "this addWeaponcargoGlobal [""rhs_weap_M136_hedp"", 20]; " \n "this addWeaponcargoGlobal [""rhs_weap_m72a7"", 10]; " \n "this additemcargoGlobal [""SatchelCharge_Remote_Mag"", 6];   " \n "this additemcargoGlobal [""DemoCharge_Remote_Mag"", 12];   " \n "}; " \n "}";
+				name="b_box_blufor";
 			};
 			id=195;
 			type="B_CargoNet_01_ammo_F";
@@ -3674,10 +3739,10 @@ class Mission
 				name="grace";
 				text="End grace period";
 				condition="call{true}";
-				onActivation="call{this globalChat ""Grace period ended. Enjoy!"";}";
+				onActivation="call{this globalChat ""Grace period ended. Enjoy!"";" \n "deleteVehicle eq_box_opfor;" \n "deleteVehicle eq_box_blufor;" \n "deleteVehicle u_box_opfor;" \n "deleteVehicle u_box_blufor;" \n "deleteVehicle b_box_opfor;" \n "deleteVehicle b_box_blufor;}";
 				sizeA=0;
 				sizeB=0;
-				timeout[]={600,600,600};
+				timeout[]={6,6,6};
 			};
 			id=229;
 			type="EmptyDetector";
@@ -3686,7 +3751,7 @@ class Mission
 		class Item26
 		{
 			dataType="Trigger";
-			position[]={5093.8218,108.33331,4193.4482};
+			position[]={5095.8486,108.43787,4197.8877};
 			class Attributes
 			{
 				text="Grace period task success";
@@ -3697,7 +3762,7 @@ class Mission
 			};
 			id=230;
 			type="EmptyDetector";
-			atlOffset=7.2279968;
+			atlOffset=7.2279282;
 		};
 		class Item27
 		{
@@ -4178,7 +4243,7 @@ class Mission
 			};
 			id=235;
 			type="EmptyDetector";
-			atlOffset=7.2279892;
+			atlOffset=7.2279968;
 		};
 		class Item31
 		{
@@ -4612,16 +4677,69 @@ class Mission
 			id=261;
 			type="EmptyDetector";
 		};
+		class Item46
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5092.5522,108.2269,4189.0723};
+			};
+			id=264;
+			type="ModuleTaskSetState_F";
+			atlOffset=7.2279663;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="ASSIGNED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=14;
+			nextID=15;
 		};
 		class Links
 		{
-			items=14;
+			items=15;
 			class Item0
 			{
 				linkID=0;
@@ -4645,8 +4763,8 @@ class Mission
 			class Item2
 			{
 				linkID=2;
-				item0=231;
-				item1=230;
+				item0=251;
+				item1=232;
 				class CustomData
 				{
 					type="Sync";
@@ -4655,8 +4773,8 @@ class Mission
 			class Item3
 			{
 				linkID=3;
-				item0=232;
-				item1=230;
+				item0=253;
+				item1=232;
 				class CustomData
 				{
 					type="Sync";
@@ -4665,8 +4783,8 @@ class Mission
 			class Item4
 			{
 				linkID=4;
-				item0=251;
-				item1=232;
+				item0=231;
+				item1=252;
 				class CustomData
 				{
 					type="Sync";
@@ -4675,8 +4793,8 @@ class Mission
 			class Item5
 			{
 				linkID=5;
-				item0=253;
-				item1=232;
+				item0=250;
+				item1=231;
 				class CustomData
 				{
 					type="Sync";
@@ -4685,8 +4803,8 @@ class Mission
 			class Item6
 			{
 				linkID=6;
-				item0=231;
-				item1=252;
+				item0=235;
+				item1=253;
 				class CustomData
 				{
 					type="Sync";
@@ -4695,8 +4813,8 @@ class Mission
 			class Item7
 			{
 				linkID=7;
-				item0=250;
-				item1=231;
+				item0=235;
+				item1=250;
 				class CustomData
 				{
 					type="Sync";
@@ -4705,8 +4823,8 @@ class Mission
 			class Item8
 			{
 				linkID=8;
-				item0=235;
-				item1=253;
+				item0=234;
+				item1=252;
 				class CustomData
 				{
 					type="Sync";
@@ -4715,8 +4833,8 @@ class Mission
 			class Item9
 			{
 				linkID=9;
-				item0=235;
-				item1=250;
+				item0=234;
+				item1=251;
 				class CustomData
 				{
 					type="Sync";
@@ -4725,8 +4843,8 @@ class Mission
 			class Item10
 			{
 				linkID=10;
-				item0=234;
-				item1=252;
+				item0=249;
+				item1=251;
 				class CustomData
 				{
 					type="Sync";
@@ -4735,8 +4853,8 @@ class Mission
 			class Item11
 			{
 				linkID=11;
-				item0=234;
-				item1=251;
+				item0=249;
+				item1=252;
 				class CustomData
 				{
 					type="Sync";
@@ -4745,8 +4863,8 @@ class Mission
 			class Item12
 			{
 				linkID=12;
-				item0=249;
-				item1=251;
+				item0=230;
+				item1=264;
 				class CustomData
 				{
 					type="Sync";
@@ -4755,8 +4873,18 @@ class Mission
 			class Item13
 			{
 				linkID=13;
-				item0=249;
-				item1=252;
+				item0=264;
+				item1=232;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item14
+			{
+				linkID=14;
+				item0=264;
+				item1=231;
 				class CustomData
 				{
 					type="Sync";
