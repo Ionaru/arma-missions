@@ -21,10 +21,10 @@ ace_nightvision_effectScaling = 0.5;
 
 if (side player == opfor) then
 {
-	"destroy_drones_marker" setMarkerAlpha 0;
+	"destroy_drones_marker" setMarkerAlphaLocal 0;
 };
 
 if (side player == blufor) then
 {
-	"defend_drones_marker" setMarkerAlpha 0;
+	"defend_drones_marker" setMarkerAlphaLocal 0;
 };
