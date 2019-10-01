@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1464;
+		nextID=1465;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=138;
+		nextID=161;
 	};
 	class Camera
 	{
-		pos[]={3292.3267,236.7428,2939.7161};
-		dir[]={0.76554358,-0.64223105,-0.04142243};
-		up[]={0.64134669,0.76642895,-0.034703415};
-		aside[]={-0.054035328,1.047214e-006,-0.99866396};
+		pos[]={5400.8823,8.8853302,3755.4487};
+		dir[]={-0.73420137,-0.27344185,0.62161994};
+		up[]={-0.20879973,0.96181417,0.17678437};
+		aside[]={0.64625037,1.8072315e-006,0.7632941};
 	};
 };
 binarizationWanted=0;
@@ -106,13 +106,14 @@ addons[]=
 	"UK3CB_Factions_Vehicles_UH1H",
 	"A3_Air_F_Heli_Heli_Transport_04",
 	"acre_sys_intercom",
-	"A3_Modules_F_Curator_Misc"
+	"A3_Modules_F_Curator_Misc",
+	"acex_fortify"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=54;
+		items=55;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -477,6 +478,13 @@ class AddonsMetaData
 			author="ACRE2Team";
 			url="https://github.com/IDI-Systems/acre2";
 		};
+		class Item54
+		{
+			className="acex_fortify";
+			name="acex_fortify";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
 	};
 };
 randomSeed=10187858;
@@ -594,7 +602,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=175;
+		items=176;
 		class Item0
 		{
 			dataType="Marker";
@@ -12106,7 +12114,7 @@ class Mission
 			name="spawn_maxwell_r_2";
 			type="Empty";
 			colorName="default";
-			angle=110.87783;
+			angle=110.87782;
 			id=1193;
 			atlOffset=0.0004196167;
 		};
@@ -12117,7 +12125,7 @@ class Mission
 			name="spawn_maxwell_5";
 			type="Empty";
 			colorName="default";
-			angle=110.87783;
+			angle=110.87782;
 			id=1194;
 		};
 		class Item122
@@ -15718,6 +15726,45 @@ class Mission
 					};
 				};
 				nAttributes=19;
+			};
+		};
+		class Item175
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5392.1143,2.8202021,3772.2566};
+				angles[]={6.0785804,0.76640898,6.2456956};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1464;
+			type="ACE_FOB_Terminal";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="images\teleport_image.paa";
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};
