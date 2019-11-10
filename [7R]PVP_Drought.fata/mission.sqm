@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5252.9653,193.05502,4084.4495};
-		dir[]={-0.05649903,-0.59582078,-0.80117381};
-		up[]={-0.041917115,0.8030901,-0.59438235};
-		aside[]={-0.99756217,-4.7090725e-007,0.070350975};
+		pos[]={3954.5935,39.526047,505.77936};
+		dir[]={-0.64921957,-0.53223825,0.54336357};
+		up[]={-0.40815192,0.84659374,0.34160233};
+		aside[]={0.64182091,2.1816231e-007,0.76685852};
 	};
 };
 binarizationWanted=0;
@@ -3206,7 +3206,7 @@ class Mission
 			type="Empty";
 			colorName="default";
 			alpha=0;
-			angle=299.43298;
+			angle=299.43292;
 			id=196;
 			atlOffset=4.948685e+011;
 		};
@@ -4268,7 +4268,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3944.616,33.344929,513.19849};
+				position[]={3944.6165,33.344944,513.19891};
 				angles[]={6.2711945,0.49052477,0.0095993113};
 			};
 			side="Empty";
@@ -4276,6 +4276,7 @@ class Mission
 			class Attributes
 			{
 				init="call{this addaction [""Spawn Humvee"", fw_fnc_vehicleSpawn,[""rhsusf_m998_w_s_2dr"",v_pad]];}";
+				disableSimulation=1;
 			};
 			id=242;
 			type="ACE_FOB_Terminal";
