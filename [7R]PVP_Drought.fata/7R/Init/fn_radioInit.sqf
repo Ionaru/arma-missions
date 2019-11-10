@@ -1,7 +1,7 @@
 /*
 	Parameters:
 		<--- None
-		
+
 	Auto Exec on Start.
 
 */
@@ -14,19 +14,19 @@
 
 // Friendly Fire Log
 _id = ["ace_unconscious", {
-	params ["_unit","_state"]; 
-	if (_state) then { 
-		_shooter = _unit getVariable ["ace_medical_lastDamageSource", ""]; 
-	if (_shooter in allPlayers) then { 
-		_str = format ["[Friendly Fire] - %1 shot at %2", (name _shooter), (name _unit)]; 
-		_str remoteExecCall ["diag_log", 2];  
-	}; 
+	params ["_unit","_state"];
+	if (_state) then {
+		_shooter = _unit getVariable ["ace_medical_lastDamageSource", ""];
+	if (_shooter in allPlayers) then {
+		_str = format ["[Friendly Fire] - %1 shot at %2", (name _shooter), (name _unit)];
+		_str remoteExecCall ["diag_log", 2];
+	};
 };}] call CBA_fnc_addEventHandler;
 
 
 // ACRE Settings
 // General
-[false, false] call acre_api_fnc_setupMission;
+[true, true] call acre_api_fnc_setupMission;
 
 // Terrain Loss (Interference)
 [0] call acre_api_fnc_setLossModelScale;
@@ -182,7 +182,7 @@ player createDiaryRecord ["Regu lation", ["Equipment", "
 // Composition
 player createDiarySubject ["Composition", "Composition"];
 player createDiaryRecord ["Composition", ["Platoon Composition", "
-<execute expression='nul = [] spawn fw_fnc_compositionDisplay'>Display Composition</execute> 
+<execute expression='nul = [] spawn fw_fnc_compositionDisplay'>Display Composition</execute>
 "]];
 
 player createDiarySubject ["Mortar", "Mortar"];
