@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5122.8726,201.15387,4277.4575};
-		dir[]={-0.15935904,-0.54202706,-0.8251546};
-		up[]={-0.10278894,0.840334,-0.53223127};
-		aside[]={-0.98189044,-7.0262467e-007,0.18963203};
+		pos[]={5252.9653,193.05502,4084.4495};
+		dir[]={-0.05649903,-0.59582078,-0.80117381};
+		up[]={-0.041917115,0.8030901,-0.59438235};
+		aside[]={-0.99756217,-4.7090725e-007,0.070350975};
 	};
 };
 binarizationWanted=0;
@@ -1704,12 +1704,13 @@ class Mission
 		class Item10
 		{
 			dataType="Marker";
-			position[]={5275.4487,4.948685e+011,4008.0876};
+			position[]={5275.4492,4.948685e+011,4008.0879};
 			name="respawn_east";
 			text="Respawn East";
 			type="Empty";
 			colorName="default";
-			angle=119.66107;
+			alpha=0;
+			angle=119.661;
 			id=148;
 			atlOffset=4.948685e+011;
 		};
@@ -3199,12 +3200,13 @@ class Mission
 		class Item19
 		{
 			dataType="Marker";
-			position[]={3943.1702,4.948685e+011,508.53845};
+			position[]={3943.1699,4.948685e+011,508.53799};
 			name="respawn_west";
 			text="Respawn West";
 			type="Empty";
 			colorName="default";
-			angle=299.43265;
+			alpha=0;
+			angle=299.43298;
 			id=196;
 			atlOffset=4.948685e+011;
 		};
@@ -3761,7 +3763,7 @@ class Mission
 			};
 			id=230;
 			type="EmptyDetector";
-			atlOffset=7.2279205;
+			atlOffset=7.2279129;
 		};
 		class Item27
 		{
@@ -4794,7 +4796,7 @@ class Mission
 			init="call{[west, ""HQ""] sideChat ""?"";" \n "}";
 			id=266;
 			type="ModuleTaskSetState_F";
-			atlOffset=7.2280655;
+			atlOffset=7.2280731;
 			class CustomAttributes
 			{
 				class Attribute0

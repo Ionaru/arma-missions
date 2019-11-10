@@ -3,8 +3,8 @@ enableDebugConsole = 2;
 
 // Disable AI
 disabledAI = 1;
-respawn = 1;
-
+respawn = 3;
+respawnTemplates[] = {"ace_spectator"};
 
 class CfgDebriefing
 {
