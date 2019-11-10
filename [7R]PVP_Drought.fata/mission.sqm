@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=265;
+		nextID=268;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3934.9585,45.262302,490.08102};
-		dir[]={-0.16468681,-0.65957147,0.73338622};
-		up[]={-0.14451349,0.7516371,0.6435492};
-		aside[]={0.97570795,3.4438563e-007,0.21910201};
+		pos[]={5122.8726,201.15387,4277.4575};
+		dir[]={-0.15935904,-0.54202706,-0.8251546};
+		up[]={-0.10278894,0.840334,-0.53223127};
+		aside[]={-0.98189044,-7.0262467e-007,0.18963203};
 	};
 };
 binarizationWanted=0;
@@ -270,7 +270,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=47;
+		items=50;
 		class Item0
 		{
 			dataType="Object";
@@ -3750,7 +3750,7 @@ class Mission
 		class Item26
 		{
 			dataType="Trigger";
-			position[]={5095.8486,108.43787,4197.8877};
+			position[]={5094.0776,108.44247,4198.9229};
 			class Attributes
 			{
 				text="Grace period task success";
@@ -4324,7 +4324,7 @@ class Mission
 			{
 				text="TImeout (+5m)";
 				condition="call{triggerActivated timeout_warning;}";
-				onActivation="call{[west, ""HQ""] sideChat ""You have failed America."";" \n "[east, ""HQ""] sideChat ""Well cone!"";}";
+				onActivation="call{[west, ""HQ""] sideChat ""You have failed America."";" \n "[east, ""HQ""] sideChat ""Well done!"";}";
 				sizeA=0;
 				sizeB=0;
 				timeout[]={300,300,300};
@@ -4392,12 +4392,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5063.7617,108.79243,4171.4673};
+				position[]={5064.5112,108.81067,4169.5757};
 			};
 			name="opfor_win";
 			id=251;
 			type="ModuleTaskSetState_F";
-			atlOffset=7.2275925;
+			atlOffset=7.2276459;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4446,12 +4446,13 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5089.4551,106.66436,4141.1133};
+				position[]={5089.4551,106.66479,4141.1128};
 			};
 			name="bluefor_lose";
+			init="call{[west, ""HQ""] sideChat ""?"";" \n "}";
 			id=252;
 			type="ModuleTaskSetState_F";
-			atlOffset=7.2276001;
+			atlOffset=7.2280045;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4552,20 +4553,20 @@ class Mission
 		class Item41
 		{
 			dataType="Trigger";
-			position[]={5065.8188,107.58225,4089.489};
+			position[]={5065.8188,107.5827,4089.489};
 			class Attributes
 			{
 				name="timeout_warning";
 				text="Timeout warning (25m)";
 				condition="call{[""taskPrep""] call BIS_fnc_taskState == ""Succeeded""}";
-				onActivation="call{[west, ""HQ""] sideChat ""Marines, your have only 5 minutes left to complete your mission!"";" \n "[east, ""HQ""] sideChat ""Hold fast, comrades! Only 5 minutes remain!"";}";
+				onActivation="call{[west, ""HQ""] sideChat ""Marines, you only have 5 minutes left to complete your mission!"";" \n "[east, ""HQ""] sideChat ""Hold fast, comrades! Only 5 minutes remain!"";}";
 				sizeA=0;
 				sizeB=0;
-				timeout[]={1500,1500,1500};
+				timeout[]={1800,1800,1800};
 			};
 			id=254;
 			type="EmptyDetector";
-			atlOffset=5.2905426;
+			atlOffset=5.2909927;
 		};
 		class Item42
 		{
@@ -4681,11 +4682,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5092.5522,108.2269,4189.0723};
+				position[]={5097.71,108.27441,4186.9736};
 			};
 			id=264;
 			type="ModuleTaskSetState_F";
-			atlOffset=7.2279663;
+			atlOffset=7.2279739;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4729,16 +4730,178 @@ class Mission
 				nAttributes=2;
 			};
 		};
+		class Item47
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5085.228,107.82136,4191.4023};
+			};
+			id=265;
+			type="ModuleTaskSetState_F";
+			atlOffset=7.2279739;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="ASSIGNED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item48
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5083.7729,106.53645,4142.3691};
+			};
+			name="bluefor_lose_1";
+			init="call{[west, ""HQ""] sideChat ""?"";" \n "}";
+			id=266;
+			type="ModuleTaskSetState_F";
+			atlOffset=7.2280655;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="FAILED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item49
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5062.0122,108.87793,4176.7368};
+			};
+			name="opfor_win_1";
+			id=267;
+			type="ModuleTaskSetState_F";
+			atlOffset=7.2276001;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SUCCEEDED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=15;
+			nextID=18;
 		};
 		class Links
 		{
-			items=15;
+			items=18;
 			class Item0
 			{
 				linkID=0;
@@ -4822,8 +4985,8 @@ class Mission
 			class Item8
 			{
 				linkID=8;
-				item0=234;
-				item1=252;
+				item0=249;
+				item1=251;
 				class CustomData
 				{
 					type="Sync";
@@ -4832,8 +4995,8 @@ class Mission
 			class Item9
 			{
 				linkID=9;
-				item0=234;
-				item1=251;
+				item0=249;
+				item1=252;
 				class CustomData
 				{
 					type="Sync";
@@ -4842,8 +5005,8 @@ class Mission
 			class Item10
 			{
 				linkID=10;
-				item0=249;
-				item1=251;
+				item0=230;
+				item1=264;
 				class CustomData
 				{
 					type="Sync";
@@ -4852,8 +5015,8 @@ class Mission
 			class Item11
 			{
 				linkID=11;
-				item0=249;
-				item1=252;
+				item0=264;
+				item1=231;
 				class CustomData
 				{
 					type="Sync";
@@ -4862,8 +5025,8 @@ class Mission
 			class Item12
 			{
 				linkID=12;
-				item0=230;
-				item1=264;
+				item0=265;
+				item1=232;
 				class CustomData
 				{
 					type="Sync";
@@ -4872,8 +5035,8 @@ class Mission
 			class Item13
 			{
 				linkID=13;
-				item0=264;
-				item1=232;
+				item0=230;
+				item1=265;
 				class CustomData
 				{
 					type="Sync";
@@ -4882,8 +5045,38 @@ class Mission
 			class Item14
 			{
 				linkID=14;
-				item0=264;
+				item0=234;
+				item1=266;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item15
+			{
+				linkID=15;
+				item0=266;
 				item1=231;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item16
+			{
+				linkID=16;
+				item0=234;
+				item1=267;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item17
+			{
+				linkID=17;
+				item0=267;
+				item1=232;
 				class CustomData
 				{
 					type="Sync";
