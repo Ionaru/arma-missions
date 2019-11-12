@@ -2,12 +2,12 @@
 	Parameters:
 		<-- Unit as Object
 		<-- Mode as Integer (mode: 1 - Handgrenade Suicide; mode: 2 - Pistol/Shooter)
-		
+
 	Description:
 		A civilian will pretent to be innocent, but under condition will turn against players.
 
 	Example:
-		nul = [this, 1] spawn fw_fnc_civSleeper;	
+		nul = [this, 1] spawn fw_fnc_civSleeper;
 
 */
 
@@ -33,9 +33,9 @@ switch (_mode) do {
 		_unit addMagazine "10Rnd_9x21_Mag";
 		sleep 2;
 		[_unit] call ace_weaponselect_fnc_putWeaponAway;
-		["ace_captiveStatusChanged", {
+		["weve_had_enough_of_your_shit", {
 			params ["_unit","_status","_reason"];
-			nul = [_unit] spawn fw_fnc_civShooter; 
+			nul = [_unit] spawn fw_fnc_civShooter;
 		}] call CBA_fnc_addEventHandler;
 	};
 };

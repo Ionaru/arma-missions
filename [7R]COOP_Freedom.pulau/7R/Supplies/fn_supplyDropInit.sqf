@@ -2,7 +2,7 @@
 	Parameters:
 		<-- Target Marker Name as String
 		<-- Spawn Marker Name as string
-		<-- Airplane Type as String 
+		<-- Airplane Type as String
 		<-- Callsign as String
 		<-- Amount of Boxes as Integer (1-3 boxes)
 		<-- Optional: Type of Supply Drop as Integer (1: Infantry, 2: Vehicle Supply, 3: Fortification Supplies), default : 1
@@ -53,7 +53,7 @@ publicVariable "SupplyDropLast";
 // Confirmation Message + Combat Log
 _str = str(_amount) + "x " + _msg + " Drop to Grid " + (mapGridPosition _target);
 [_str,_str] spawn fw_fnc_info;
-["CombatLog", ["Support", _str]] call CBA_fnc_globalEvent; 
+["CombatLog", ["Support", _str]] call CBA_fnc_globalEvent;
 
 // Calculating Spawn Point
 _dir = _spawn getDir _target;
@@ -69,7 +69,7 @@ _planeGroup = _plane select 2;
 _planeacc = _plane select 0;
 _planeacc engineOn true;
 _planeacc allowDamage false;
-_planeGroup setBehaviour "CARELESS"; 
+_planeGroup setBehaviour "CARELESS";
 leader _planeGroup setGroupIdGlobal [_callsign];
 {
 	_x disableAi "FSM";
@@ -116,8 +116,8 @@ waitUntil {(_planeacc distance2D _wp) < 150};
 ["Supply Drop delivered."] spawn fw_fnc_info;
 
 // Send Plane to End Pos
-_dropdist = 20 + (15 * _amount); 
-waitUntil {(_planeacc distance2D _wp) < _dropdist};
+// _dropdist = 20 + (15 * _amount);
+// waitUntil {(_planeacc distance2D _wp) < _dropdist};
 _planeacc doMove _wpPos;
 
 // Close Ramp
@@ -133,7 +133,7 @@ waitUntil{(_planeacc distance2D  _wpPos) < 500 || !(alive _planeacc) || (CBA_Mis
 
 
 // Update Available Supply Amount
-SupplyDropAmmo = SupplyDropAmmo - _amount; 
+SupplyDropAmmo = SupplyDropAmmo - _amount;
 publicVariable 'SupplyDropAmmo';
 
 // End Message

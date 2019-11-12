@@ -1,9 +1,9 @@
 // JIP Teleporter Init
 
 if (_this select 1) then {
-	(_this select 0) addAction ["<t color='#FF0000'>JIP Teleporter</t>",fw_fnc_jipTeleport,nil,0,false,true,"","(_target distance2D (markerPos 'respawn_west') < 75)"];   
+	(_this select 0) addAction ["<t color='#FF0000'>JIP Teleporter</t>",fw_fnc_jipTeleport,nil,0,false,true,"","(_target distance2D (markerPos 'respawn_west') < 75)"];
 };
- 
+
 // =====================================================================================================================================================
 
 // Briefing Init
@@ -47,7 +47,7 @@ _CVA1 =  ["7R_SupplyDropAir","Call Supply Drop (1 Box)","7R\Supplies\7r_SD.paa",
 _CVA2 =  ["7R_SupplyDropAir","Call Supply Drop (2 Boxes)","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 2, 1] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_SupplyH"], _CVA2] call ace_interact_menu_fnc_addActionToClass;
 
-_CVA3 =  ["7R_SupplyDropAir","Call Supply Drop (3 Boxes)","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 3, 1] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_CVA3 =  ["7R_SupplyDropAir","Call Supply Drop (3 Boxes)","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN",SR_Support_Assets select 2,"Stallion 5-1", 3, 1] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_SupplyH"], _CVA3] call ace_interact_menu_fnc_addActionToClass;
 
 _CVA5 =  ["7R_SupplyDropAir","Call Fortification Supply Drop","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 1, 3] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
