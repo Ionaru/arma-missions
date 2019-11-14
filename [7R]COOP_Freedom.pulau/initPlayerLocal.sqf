@@ -41,22 +41,22 @@ _CTM = ["7R_Artillery","Designate CAS-Target","",{null = ["CASTarget", "CAS-T", 
 _headerSupply = ["7R_SupplyH","Call Supplies","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\box_ca.paa",{},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions","7R_Header"], _headerSupply] call ace_interact_menu_fnc_addActionToClass;
 
-_CVA1 =  ["7R_SupplyDropAir","Call Supply Drop (1 Box)","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 1, 1] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_CVA1 =  ["7R_SupplyDropAir","Call Supply Drop (1 Box)","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_CH_47F","Stallion 5-1", 1, 1] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_SupplyH"], _CVA1] call ace_interact_menu_fnc_addActionToClass;
 
 _CVA2 =  ["7R_SupplyDropAir","Call Supply Drop (2 Boxes)","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 2, 1] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_SupplyH"], _CVA2] call ace_interact_menu_fnc_addActionToClass;
 
-_CVA3 =  ["7R_SupplyDropAir","Call Supply Drop (3 Boxes)","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN",SR_Support_Assets select 2,"Stallion 5-1", 3, 1] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_CVA3 =  ["7R_SupplyDropAir","Call Supply Drop (3 Boxes)","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 3, 1] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_SupplyH"], _CVA3] call ace_interact_menu_fnc_addActionToClass;
 
-_CVA5 =  ["7R_SupplyDropAir","Call Fortification Supply Drop","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 1, 3] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_CVA5 =  ["7R_SupplyDropAir","Call Fortification Supply Drop","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_CH_47F","Stallion 5-1", 1, 3] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_SupplyH"], _CVA5] call ace_interact_menu_fnc_addActionToClass;
 
-_CVA6 =  ["7R_SupplyDropAir","Call Special Equipment Supply Drop","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 1, 4] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_CVA6 =  ["7R_SupplyDropAir","Call Special Equipment Supply Drop","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_CH_47F","Stallion 5-1", 1, 4] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_SupplyH"], _CVA6] call ace_interact_menu_fnc_addActionToClass;
 
-_CVA7 =  ["7R_SupplyDropAir","Call Medical Supply Drop","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", 1, 7] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
+_CVA7 =  ["7R_SupplyDropAir","Call Medical Supply Drop","7R\Supplies\7r_SD.paa",{null = ["SupplyDrop","STARTSPAWN","RHS_CH_47F","Stallion 5-1", 1, 7] spawn fw_fnc_supplyDropInit},{[_player] call fw_fnc_isLeader}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header", "7R_SupplyH"], _CVA7] call ace_interact_menu_fnc_addActionToClass;
 
 _CHH =  ["7R_VehicleDropHeader","Vehicle Drop","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\car_ca.paa",{null =  [] spawn fw_fnc_supplyDropReport},{[_player] call fw_fnc_canCallVehicleDrop},{[_target, _player, []] call fw_fnc_vehicleDropAction}] call ace_interact_menu_fnc_createAction;

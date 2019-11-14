@@ -36,7 +36,7 @@ ace_medical_gasMask = "Mask_M50";
 SR_Support_Assets = ["RHS_C130J","globemaster_c17","RHS_CH_47F","JS_JC_FA18E","RHS_CH_47F"];
 
 // Vehicle Supply Drop Setup [Display Name, Vehicle Class, Loadout Number]
-SR_Vehicle_Drop = [["Quad","B_Quadbike_01_F",0]];
+SR_Vehicle_Drop = [["Humvee","rhsgref_hidf_M998_2dr_halftop",0]];
 
 // ======================================================================================
 /*

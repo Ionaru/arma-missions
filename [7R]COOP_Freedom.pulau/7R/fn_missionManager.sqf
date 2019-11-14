@@ -29,7 +29,9 @@ switch (_nbr) do {
 	// Phase 1
     case 1: {
 
-		["[7R] Freedom", "By: Ionaru"] spawn BIS_fnc_infoText;
+		{(3600 * timeMultiplier) setOvercast 1;} remoteExec ["bis_fnc_call", 0];
+
+		sleep 120;
 
 		// Civilians
 		_handle = ["kinandal_zone", _civilians, 30, 0, 0, 10] spawn fw_fnc_civSpawn;
@@ -90,15 +92,15 @@ switch (_nbr) do {
 		phase = 1;
 		publicVariable "phase";
 
-		"Mission Loaded" remoteExec ["systemChat", 0];
-		// ["MissionLog", ["Mission", "Phase 1 Loaded"]] spawn CBA_fnc_globalEvent;
-
-		// "weve_had_enough_of_your_shit" call CBA_fnc_serverEvent;
-		// ["tag_testEvent", "test message server"] call CBA_fnc_serverEvent;
-
+		"Mission Loaded, enjoy!" remoteExec ["systemChat", 0];
 	};
 
     case 2: {
+
+		{(1200 * timeMultiplier) setFog [0.05, 0.01, 0];} remoteExec ["bis_fnc_call", 0];
+
+		"liberate_marker" setMarkerAlpha 0;
+		"attack_marker" setMarkerAlpha 1;
 
 		// Activate sleepers
 		{
@@ -168,6 +170,9 @@ switch (_nbr) do {
 
 	case 3: {
 
+		{(1800 * timeMultiplier) setRain 1;} remoteExec ["bis_fnc_call", 0];
+		{(1200 * timeMultiplier) setFog [0.15, 0.01, 0];} remoteExec ["bis_fnc_call", 0];
+
 		_handle = ["bunker_vic", "VEHICLE", 7, ["bunker_vic", true]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
@@ -223,8 +228,11 @@ switch (_nbr) do {
 
 	case 4: {
 
+		"attack_marker" setMarkerAlpha 0;
+		"attack2_marker" setMarkerAlpha 1;
+
 		{
-			if (side _x == civilian || size _x == opfor) then
+			if (side _x == civilian || side _x == opfor) then
 			{
 				_x setDamage 1;
 			};
@@ -273,6 +281,9 @@ switch (_nbr) do {
 	};
 
 	case 5: {
+
+		"attack2_marker" setMarkerAlpha 0;
+		"crush_marker" setMarkerAlpha 1;
 
 		_handle = ["crossroads_zone", "PATROL", 2, ["crossroads_zone", "P"]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
@@ -328,6 +339,9 @@ switch (_nbr) do {
 
 	case 6: {
 
+		{(1800 * timeMultiplier) setRain 0;} remoteExec ["bis_fnc_call", 0];
+		{(2400 * timeMultiplier) setFog [0.05, 0.01, 0];} remoteExec ["bis_fnc_call", 0];
+
 		// Rampage remaining units
 		{
 			private _group = _x;
@@ -345,7 +359,7 @@ switch (_nbr) do {
 
 		sleep 20;
 
-		_handle = ["minanga_vic", "VEHICLE", 7, ["crossroads", false, ["rockies", "P"]]] spawn fw_fnc_spawnTemplate;;
+		_handle = ["minanga_vic", "VEHICLE", 7, ["crossroads", false, ["crossroads", "P"]]] spawn fw_fnc_spawnTemplate;;
 		waitUntil {scriptDone _handle};
 
 		sleep 10;
@@ -412,6 +426,12 @@ switch (_nbr) do {
 	};
 
 	case 7: {
+
+		{(120 * timeMultiplier) setOvercast 0;} remoteExec ["bis_fnc_call", 0];
+
+		"crush_marker" setMarkerAlpha 0;
+		"finish_marker" setMarkerAlpha 1;
+		"boats_marker" setMarkerAlpha 1;
 
 		// Activate sleepers
 		{

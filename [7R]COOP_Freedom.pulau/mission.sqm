@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1193;
+		nextID=1212;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=39;
+		nextID=67;
 	};
 	class Camera
 	{
-		pos[]={3785.2827,159.15233,10646.999};
-		dir[]={-0.88948327,-0.41713151,-0.18709134};
-		up[]={-0.4082202,0.90882981,-0.085863262};
-		aside[]={-0.20585407,8.4596104e-007,0.97867978};
+		pos[]={6072.0522,108.93381,6183.5435};
+		dir[]={-0.84510201,-0.50666964,0.1711911};
+		up[]={-0.49658549,0.8621245,0.10059323};
+		aside[]={0.19856186,7.2168768e-007,0.98020226};
 	};
 };
 binarizationWanted=0;
@@ -73,7 +73,8 @@ addons[]=
 	"A3_Soft_F_Beta_Truck_02",
 	"UK3CB_Factions_Vehicles_Skoda",
 	"UK3CB_Factions_Vehicles_V3S",
-	"A3_Soft_F_Gamma_Truck_02"
+	"A3_Soft_F_Gamma_Truck_02",
+	"A3_Modules_F_Curator_Misc"
 };
 class AddonsMetaData
 {
@@ -367,33 +368,117 @@ randomSeed=15369964;
 class ScenarioData
 {
 	author="Ionaru";
+	overviewText="Liberate Pulau Gurun";
+	overViewPicture="freedom.paa";
+	onLoadMission="Liberate Pulau Gurun";
+	loadScreen="freedom.paa";
+	respawnDialog=0;
+	disabledAI=1;
+	respawn=3;
+	respawnDelay=30.000002;
+	class Header
+	{
+		gameType="Coop";
+	};
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Counter";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+	class Category1
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=2;
+				};
+			};
+		};
+		nAttributes=1;
+	};
 };
 class Mission
 {
 	class Intel
 	{
+		briefingName="[7R] Freedom";
+		overviewText="Liberate Pulau Gurun";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
-		startWind=0.1000001;
+		startWeather=0;
+		startFog=0.050000001;
+		startWind=0.02;
 		startWaves=0.1;
-		forecastWeather=0.2;
-		forecastWind=0.1;
+		forecastWeather=0;
+		forecastFog=0.050000001;
+		forecastWind=0.02;
 		forecastWaves=0.1;
-		forecastLightnings=0.1;
+		lightningsForced=1;
 		wavesForced=1;
 		windForced=1;
 		year=2018;
 		month=7;
 		day=1;
 		hour=12;
-		startFogDecay=0.014;
-		forecastFogDecay=0.014;
+		startFogDecay=0.0099999998;
+		forecastFogDecay=0.0099999998;
 	};
 	class Entities
 	{
-		items=271;
+		items=279;
 		class Item0
 		{
 			dataType="Marker";
@@ -3219,8 +3304,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5933.9785,59.93866,6206.6519};
-				angles[]={6.2642584,3.2211738,0.076602653};
+				position[]={5933.6543,59.912674,6206.5503};
+				angles[]={6.2642584,3.2211738,0.072558969};
 			};
 			side="Empty";
 			flags=4;
@@ -3229,7 +3314,6 @@ class Mission
 			};
 			id=138;
 			type="rhsgref_hidf_M998_2dr_halftop";
-			atlOffset=3.8146973e-005;
 		};
 		class Item42
 		{
@@ -3462,8 +3546,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5937.8901,61.604214,6248.1841};
-				angles[]={6.2585835,3.1526392,0.02650325};
+				position[]={5937.2012,61.561115,6247.8643};
+				angles[]={6.2344174,3.1526392,0.050666805};
 			};
 			side="Empty";
 			flags=4;
@@ -3472,7 +3556,6 @@ class Mission
 			};
 			id=154;
 			type="rhsgref_hidf_m113a3_mk19";
-			atlOffset=0.00080490112;
 		};
 		class Item49
 		{
@@ -3500,7 +3583,7 @@ class Mission
 			alpha=0;
 			a=75;
 			b=300;
-			angle=4.342999;
+			angle=4.3429976;
 			id=162;
 			atlOffset=-0.54525876;
 		};
@@ -3515,7 +3598,7 @@ class Mission
 			alpha=0;
 			a=600;
 			b=63.924;
-			angle=182.97197;
+			angle=182.97195;
 			id=163;
 			atlOffset=0.00021457672;
 		};
@@ -5262,6 +5345,7 @@ class Mission
 			markerType="ELLIPSE";
 			type="rectangle";
 			colorName="default";
+			alpha=0;
 			a=250;
 			b=400;
 			angle=81.669998;
@@ -8491,13 +8575,12 @@ class Mission
 		class Item134
 		{
 			dataType="Marker";
-			position[]={5863.5762,12.12,8928.875};
+			position[]={5865.6738,12.234131,8927.7637};
 			name="rockies_vic2";
 			type="Empty";
 			colorName="default";
 			angle=134.95892;
 			id=855;
-			atlOffset=0.00034332275;
 		};
 		class Item135
 		{
@@ -8532,7 +8615,7 @@ class Mission
 			alpha=0;
 			a=1000;
 			b=63.924;
-			angle=45.230991;
+			angle=45.230984;
 			id=858;
 			atlOffset=4.5297527;
 		};
@@ -9387,19 +9470,20 @@ class Mission
 		class Item143
 		{
 			dataType="Trigger";
-			position[]={4870.7368,39.058609,8597.3496};
-			angle=5.8296261;
+			position[]={4362.4067,0,8315.4951};
+			angle=5.8296256;
 			class Attributes
 			{
 				text="Bases cleared -> P5";
 				condition="call{(count thisList) < 5}";
 				onActivation="call{[5] spawn fw_fnc_missionManager;}";
-				sizeA=900;
+				sizeA=350;
 				sizeB=350;
 				activationBy="GUER";
 			};
 			id=882;
 			type="EmptyDetectorAreaR250";
+			atlOffset=0.60000002;
 		};
 		class Item144
 		{
@@ -9408,7 +9492,7 @@ class Mission
 			class Attributes
 			{
 				text="Tip cleared -> P7";
-				condition="call{(count thisList) < 5}";
+				condition="call{(count thisList) < 15}";
 				onActivation="call{[7] spawn fw_fnc_missionManager;}";
 				sizeA=450;
 				sizeB=450;
@@ -9427,6 +9511,7 @@ class Mission
 			{
 				text="Island cleared -> P8 (END)";
 				condition="call{(count thisList) < 5 && !alive officer}";
+				onActivation="call{[8] spawn fw_fnc_missionManager;}";
 				sizeA=500;
 				sizeB=500;
 				activationBy="GUER";
@@ -9473,7 +9558,7 @@ class Mission
 			name="minanga_vic";
 			type="Empty";
 			colorName="default";
-			angle=77.17997;
+			angle=77.179962;
 			id=887;
 			atlOffset=0.00012302399;
 		};
@@ -9504,7 +9589,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4622.8608,1.2254705,10319.222};
-				angles[]={-0,0.25834203,0};
+				angles[]={0,0.25834203,0};
 			};
 			side="Empty";
 			flags=4;
@@ -9524,6 +9609,7 @@ class Mission
 			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="default";
+			alpha=0;
 			a=90.207001;
 			b=30.798;
 			angle=352.405;
@@ -10198,7 +10284,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7554.6313,44.077835,9994.9551};
-				angles[]={-0,1.6851503,0};
+				angles[]={0,1.6851503,0};
 			};
 			side="Independent";
 			flags=4;
@@ -10578,7 +10664,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={3501.626,12.81586,10595.335};
-						angles[]={-0,3.594872,0};
+						angles[]={0,3.594872,0};
 					};
 					side="Independent";
 					flags=7;
@@ -10622,7 +10708,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3501.626,14.120987,10595.285};
-				angles[]={-0,3.594872,0};
+				angles[]={0,3.594872,0};
 			};
 			side="Independent";
 			flags=6;
@@ -10639,7 +10725,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4436.6689,11.053948,8378.6387};
-				angles[]={-0,1.0222293,0};
+				angles[]={0,1.0222293,0};
 			};
 			side="Independent";
 			flags=2;
@@ -10783,7 +10869,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5532.6128,40.767521,8990.4541};
-						angles[]={-0,1.4599335,0};
+						angles[]={0,1.4599335,0};
 					};
 					side="Independent";
 					flags=7;
@@ -10827,7 +10913,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5532.6128,42.072647,8990.4043};
-				angles[]={-0,1.4599335,0};
+				angles[]={0,1.4599335,0};
 			};
 			side="Independent";
 			flags=6;
@@ -10851,7 +10937,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5413.4629,44.037609,9008.8994};
-						angles[]={-0,6.0690012,0};
+						angles[]={0,6.0690012,0};
 					};
 					side="Independent";
 					flags=7;
@@ -10895,7 +10981,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5413.4629,45.342735,9008.8496};
-				angles[]={-0,6.0690012,0};
+				angles[]={0,6.0690012,0};
 			};
 			side="Independent";
 			flags=6;
@@ -10919,7 +11005,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5348.2036,46.751373,8980.1348};
-						angles[]={-0,4.6595697,0};
+						angles[]={0,4.6595697,0};
 					};
 					side="Independent";
 					flags=7;
@@ -10963,7 +11049,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5348.2036,48.056499,8980.085};
-				angles[]={-0,4.6595697,0};
+				angles[]={0,4.6595697,0};
 			};
 			side="Independent";
 			flags=6;
@@ -10987,7 +11073,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5423.2676,42.581463,8960.5244};
-						angles[]={-0,2.9233744,0};
+						angles[]={0,2.9233744,0};
 					};
 					side="Independent";
 					flags=7;
@@ -11031,7 +11117,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5423.2676,43.886589,8960.4746};
-				angles[]={-0,2.9233744,0};
+				angles[]={0,2.9233744,0};
 			};
 			side="Independent";
 			flags=6;
@@ -11351,13 +11437,12 @@ class Mission
 		class Item200
 		{
 			dataType="Marker";
-			position[]={4378.438,2.1600001,8304.9688};
+			position[]={4388.0723,2.7100708,8282.9404};
 			name="fort_vic";
 			type="Empty";
 			colorName="default";
 			angle=337.33899;
 			id=1065;
-			atlOffset=-1.3113022e-005;
 		};
 		class Item201
 		{
@@ -11559,7 +11644,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="CREATED";
+							value="ASSIGNED";
 						};
 					};
 				};
@@ -11708,7 +11793,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="Drive the enemies off this island!";
 						};
 					};
 				};
@@ -11784,7 +11869,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="CREATED";
+							value="ASSIGNED";
 						};
 					};
 				};
@@ -11933,7 +12018,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="Finish it off! Kill the enemy commander on <marker name='finish_marker'>Moko island</marker>!";
 						};
 					};
 				};
@@ -12009,7 +12094,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="CREATED";
+							value="ASSIGNED";
 						};
 					};
 				};
@@ -12211,7 +12296,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="The enemies have fortified another <marker name='attack2_marker'>position</marker> nearby!";
 						};
 					};
 				};
@@ -12287,7 +12372,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="CREATED";
+							value="ASSIGNED";
 						};
 					};
 				};
@@ -12560,6 +12645,7 @@ class Mission
 			name="attack_marker";
 			type="hd_objective";
 			colorName="ColorEAST";
+			alpha=0;
 			id=1080;
 			atlOffset=0.00022506714;
 		};
@@ -12570,6 +12656,7 @@ class Mission
 			name="attack2_marker";
 			type="hd_objective";
 			colorName="ColorEAST";
+			alpha=0;
 			id=1081;
 			atlOffset=0.60000002;
 		};
@@ -12580,6 +12667,7 @@ class Mission
 			name="crush_marker";
 			type="hd_objective";
 			colorName="ColorEAST";
+			alpha=0;
 			id=1082;
 			atlOffset=4.7206879e-005;
 		};
@@ -12590,6 +12678,7 @@ class Mission
 			name="finish_marker";
 			type="hd_objective";
 			colorName="ColorEAST";
+			alpha=0;
 			id=1083;
 			atlOffset=-0.00043392181;
 		};
@@ -12966,7 +13055,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4616.0742,4.2236891,10185.747};
-				angles[]={-0,3.4182796,0};
+				angles[]={0,3.4182796,0};
 			};
 			side="Empty";
 			flags=4;
@@ -13689,7 +13778,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="CREATED";
+							value="ASSIGNED";
 						};
 					};
 				};
@@ -14341,6 +14430,7 @@ class Mission
 					};
 					id=1155;
 					type="LOP_UA_Infantry_TL";
+					atlOffset=-4.7683716e-007;
 				};
 				class Item1
 				{
@@ -14358,6 +14448,7 @@ class Mission
 					};
 					id=1156;
 					type="LOP_UA_Infantry_SL";
+					atlOffset=4.7683716e-007;
 				};
 				class Item2
 				{
@@ -14374,6 +14465,7 @@ class Mission
 					};
 					id=1157;
 					type="LOP_UA_Infantry_Corpsman";
+					atlOffset=-4.7683716e-007;
 				};
 				class Item3
 				{
@@ -14390,6 +14482,7 @@ class Mission
 					};
 					id=1158;
 					type="LOP_UA_Infantry_AT";
+					atlOffset=-4.7683716e-007;
 				};
 				class Item4
 				{
@@ -14406,6 +14499,7 @@ class Mission
 					};
 					id=1159;
 					type="LOP_UA_Infantry_AT";
+					atlOffset=-4.7683716e-007;
 				};
 				class Item5
 				{
@@ -14422,6 +14516,7 @@ class Mission
 					};
 					id=1160;
 					type="LOP_UA_Infantry_AT_Asst";
+					atlOffset=4.7683716e-007;
 				};
 				class Item6
 				{
@@ -14438,6 +14533,7 @@ class Mission
 					};
 					id=1161;
 					type="LOP_UA_Infantry_AT_Asst";
+					atlOffset=-4.7683716e-007;
 				};
 				class Item7
 				{
@@ -14476,6 +14572,7 @@ class Mission
 			{
 			};
 			id=1154;
+			atlOffset=-4.7683716e-007;
 		};
 		class Item257
 		{
@@ -14914,16 +15011,213 @@ class Mission
 			};
 			id=1191;
 		};
+		class Item271
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={6793.6963,1.9694824,7079.3774};
+				angles[]={0,0,6.1539106};
+			};
+			name="ao_p1";
+			areaSize[]={800,0,500};
+			areaIsRectangle=1;
+			flags=1;
+			id=1193;
+			type="ModuleCoverMap_F";
+		};
+		class Item272
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={6376.2402,17.79932,8124.3569};
+				angles[]={0.076515228,3.961653,0.25748843};
+			};
+			name="ao_p2";
+			areaSize[]={2000,0,800};
+			areaIsRectangle=1;
+			flags=1;
+			id=1194;
+			type="ModuleCoverMap_F";
+		};
+		class Item273
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4907.1899,10.407378,8643.5488};
+				angles[]={0.29450688,1.022571,6.2166185};
+			};
+			name="ao_p4";
+			areaSize[]={600,0,1000};
+			areaIsRectangle=1;
+			flags=1;
+			id=1195;
+			type="ModuleCoverMap_F";
+		};
+		class Item274
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3846.6382,6.7589078,9446.999};
+				angles[]={6.2432079,4.3636184,0.076516926};
+			};
+			areaSize[]={1500,0,800};
+			areaIsRectangle=1;
+			flags=1;
+			id=1196;
+			type="ModuleCoverMap_F";
+		};
+		class Item275
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5662.1597,-2.5962739,10151.576};
+				angles[]={0,1.6466309,0};
+			};
+			areaSize[]={600,0,3000};
+			areaIsRectangle=1;
+			flags=1;
+			id=1197;
+			type="ModuleCoverMap_F";
+			atlOffset=1.6875277;
+		};
+		class Item276
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3437.627,4.9876227,8855.1543};
+				angles[]={0.020001473,1.161761,0.11285299};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				lock="LOCKED";
+			};
+			id=1209;
+			type="LOP_UA_Mi8MT_Cargo";
+			atlOffset=0.0011683702;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_decalNumber_type";
+					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cRHSAIRMI8NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item277
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3431.3762,4.488543,8899.9785};
+				angles[]={6.2798514,1.3540264,0.026668631};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				lock="LOCKED";
+			};
+			id=1210;
+			type="LOP_UA_Mi8MT_Cargo";
+			atlOffset=-0.0030804873;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_decalNumber_type";
+					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cRHSAIRMI8NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item278
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3445.3987,5.8599229,8813.6045};
+				angles[]={6.25985,1.4450628,0.083147481};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				lock="LOCKED";
+			};
+			id=1211;
+			type="LOP_UA_Mi8MT_Cargo";
+			atlOffset=-2.3841858e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_decalNumber_type";
+					expression="if(_value != 'NoChange')then{ _this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cRHSAIRMI8NumberPlaces, _value]]] call rhs_fnc_decalsInit}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=16;
+			nextID=20;
 		};
 		class Links
 		{
-			items=16;
+			items=20;
 			class Item0
 			{
 				linkID=0;
@@ -15079,6 +15373,46 @@ class Mission
 				linkID=15;
 				item0=1111;
 				item1=1110;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item16
+			{
+				linkID=16;
+				item0=846;
+				item1=1194;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item17
+			{
+				linkID=17;
+				item0=880;
+				item1=1195;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item18
+			{
+				linkID=18;
+				item0=882;
+				item1=1196;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item19
+			{
+				linkID=19;
+				item0=883;
+				item1=1197;
 				class CustomData
 				{
 					type="Sync";
