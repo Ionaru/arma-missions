@@ -7,7 +7,7 @@
 // Mission Parameter
 
 // Unit Cap (cap of AI)
-SR_Unit_Cap = 400;
+SR_Unit_Cap = 250;
 SR_AI_NVG = "";
 SR_AI_removeNVG = false;
 SR_AI_addFlashlight = false;
