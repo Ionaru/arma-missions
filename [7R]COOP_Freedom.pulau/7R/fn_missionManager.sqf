@@ -22,6 +22,8 @@ if (HC in allPlayers && isServer) exitWith {};
 // Parameter init
 params ["_nbr"];
 
+["MissionLog", ["Mission", format ["Phase %1 Loaded", _nbr]]] spawn CBA_fnc_globalEvent;
+
 _civilians = ["C_Man_4_enoch_F", "C_Man_casual_6_F_tanoan", "C_man_shorts_1_F_afro", "C_Orestes", "C_Man_casual_3_F_tanoan", "C_Man_1_enoch_F", "C_man_shorts_2_F_afro"];
 
 // Phase Case means Phase
