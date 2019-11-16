@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5914.1304,85.042183,6211.3379};
-		dir[]={0.67753971,-0.72109908,0.14480156};
-		up[]={0.70517761,0.69282949,0.15070844};
-		aside[]={0.20899908,-1.5713158e-007,-0.97792208};
+		pos[]={5901.3281,81.353683,6176.8828};
+		dir[]={0.69855493,-0.40436164,0.59038913};
+		up[]={0.30884778,0.91458929,0.2610257};
+		aside[]={0.64551318,9.9505996e-008,-0.7637766};
 	};
 };
 binarizationWanted=0;
@@ -369,7 +369,6 @@ class ScenarioData
 {
 	author="Ionaru";
 	overviewText="Liberate Pulau Gurun";
-	overViewPicture="freedom.paa";
 	onLoadMission="Liberate Pulau Gurun";
 	loadScreen="freedom.paa";
 	respawnDialog=0;
