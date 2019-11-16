@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1231;
+		nextID=1236;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3795.9233,27.317482,10513.611};
-		dir[]={0.6344136,-0.43065679,-0.64191729};
-		up[]={0.30272529,0.9025147,-0.30630639};
-		aside[]={-0.71125215,1.641456e-008,-0.70293742};
+		pos[]={7724.8081,23.626719,10075.732};
+		dir[]={0.5495888,-0.3788434,0.74461842};
+		up[]={0.22497763,0.92545885,0.3048141};
+		aside[]={0.80458939,1.0419171e-007,-0.59385276};
 	};
 };
 binarizationWanted=0;
@@ -478,7 +478,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=284;
+		items=286;
 		class Item0
 		{
 			dataType="Marker";
@@ -16308,6 +16308,74 @@ class Mission
 			{
 			};
 			id=1229;
+		};
+		class Item284
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7729.9058,21.626791,10079.777};
+						angles[]={6.1703339,1.2256734,0.039979152};
+					};
+					side="Independent";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=1234;
+					type="LOP_UA_Infantry_Rifleman";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=1234;
+						item1=1235;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=1233;
+		};
+		class Item285
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7729.6514,23.21677,10079.573};
+				angles[]={6.1703339,1.2256734,0.039979152};
+			};
+			side="Independent";
+			flags=6;
+			class Attributes
+			{
+				lock="LOCKED";
+			};
+			id=1235;
+			type="LOP_UA_Kord_High";
 		};
 	};
 	class Connections
