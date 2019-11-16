@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7724.8081,23.626719,10075.732};
-		dir[]={0.5495888,-0.3788434,0.74461842};
-		up[]={0.22497763,0.92545885,0.3048141};
-		aside[]={0.80458939,1.0419171e-007,-0.59385276};
+		pos[]={7734.5361,32.187874,10092.229};
+		dir[]={-0.40168843,-0.35823962,-0.84281939};
+		up[]={-0.15413021,0.93362683,-0.32339486};
+		aside[]={-0.90273213,1.1641532e-009,0.4302434};
 	};
 };
 binarizationWanted=0;
@@ -3384,6 +3384,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						init="call{this disableAI ""PATH"";}";
 						disableSimulation=1;
 						ignoreByDynSimulGrid=1;
 					};
@@ -3706,17 +3707,17 @@ class Mission
 		class Item59
 		{
 			dataType="Marker";
-			position[]={4020.4519,4.5159998,9197.082};
+			position[]={4015.74,4.2290001,9197.082};
 			name="crossroads_zone";
-			markerType="RECTANGLE";
+			markerType="ELLIPSE";
 			type="rectangle";
 			colorName="default";
 			alpha=0;
-			a=139.205;
-			b=185.60699;
+			a=290;
+			b=290;
 			angle=154.99799;
 			id=173;
-			atlOffset=2.0980835e-005;
+			atlOffset=-0.00023841858;
 		};
 		class Item60
 		{
