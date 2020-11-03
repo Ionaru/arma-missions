@@ -12,37 +12,6 @@
 ["CombatLog", {player createDiaryRecord ["Combat Log", [_this select 0, _this select 1]]}] call CBA_fnc_addEventHandler;
 ["MissionLog", {player createDiaryRecord ["Mission Log", [_this select 0, _this select 1]]}] call CBA_fnc_addEventHandler;
 
-// Friendly Fire Log
-_id = ["ace_unconscious", {
-	params ["_unit","_state"]; 
-	if (_state) then { 
-		_shooter = _unit getVariable ["ace_medical_lastDamageSource", ""]; 
-	if (_shooter in allPlayers) then { 
-		_str = format ["[Friendly Fire] - %1 shot at %2", (name _shooter), (name _unit)]; 
-		_str remoteExecCall ["diag_log", 2];  
-	}; 
-};}] call CBA_fnc_addEventHandler;
-
-
-// ACRE Settings
-// General
-[false, false] call acre_api_fnc_setupMission;
-
-// Terrain Loss (Interference)
-[0] call acre_api_fnc_setLossModelScale;
-
-// Full Duplex (Multi people can talk at the same time)
-[true] call acre_api_fnc_setFullDuplex;
-
-// Interference (Multi people sending at same frequency)
-[false] call acre_api_fnc_setInterference;
-
-// AI hearing players
-[true] call acre_api_fnc_setRevealToAI;
-
-// Disables simulation of Antenna Direction
-[true] call acre_api_fnc_ignoreAntennaDirection;
-
 // Channel Names
 ["ACRE_PRC152", "default", 1, "description", "PLT NET"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC152", "default", 2, "description", "COM NET"] call acre_api_fnc_setPresetChannelField;
@@ -65,17 +34,24 @@ _id = ["ace_unconscious", {
 ["ACRE_PRC117F", "default", 5, "name", "AIR NET 1"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 6, "name", "AIR NET 2"] call acre_api_fnc_setPresetChannelField;
 
-// Log HC Frames
-if (!hasInterface && !isServer) then {
-	    _handle = [{ (format ["HC Frames: %1", diag_fps]) remoteExec ["diag_log",2];}, 15, []] call CBA_fnc_addPerFrameHandler;
-};
-// Log Server Frames
-if (isServer) then {
-	    _handle = [{diag_log format ["Server Frames: %1", diag_fps]; diag_log format ["Unit Count: %1", (count allUnits)]}, 15, []] call CBA_fnc_addPerFrameHandler;
-};
-
 // Client Only Part
 if (!hasInterface) exitWith {};
+
+// Friendly Fire Log
+_id = ["ace_unconscious", {
+	params ["_unit","_state"]; 
+	if (!(isPlayer _unit)) exitWith {};
+	if (_state) then { 
+		_shooter = _unit getVariable ["ace_medical_lastDamageSource", ""]; 
+	if (_shooter in allPlayers) then { 
+		private _log = format ["[Friendly Fire] - %1 shot at %2", (name _shooter), (name _unit)]; 
+		_log remoteExecCall ["diag_log", 2];  
+		private _msg = format [SR_FF + "<br/>" + (name _shooter) + " shot at " + (name _unit) + "."];
+		SR_FF = _msg;
+		publicVariable "SR_FF";
+	}; 
+};}] call CBA_fnc_addEventHandler;
+
 
 //Comm Card
 player createDiarySubject ["Communication", "Communication"];
@@ -156,7 +132,7 @@ player createDiarySubject ["Mission Log", "Mission Log"];
 
 // Regulations
 player createDiarySubject ["Regulation", "Regulation"];
-player createDiaryRecord ["Regu lation", ["Equipment", "
+player createDiaryRecord ["Regulation", ["Equipment", "
 <br/>
 <font size='18'>Composition Regulations</font>
 <br/>

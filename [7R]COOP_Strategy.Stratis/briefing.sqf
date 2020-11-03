@@ -53,7 +53,7 @@ Reinsertion by FOB.
 <br/><br/>
 <font size='18'>FIRE SUPPORT PLAN</font>
 <br/>
-Only supply drops are available at this time.
+Artillery, CAS and supply drops available.
 "]];
 
 // ====================================================================================

@@ -14,9 +14,10 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP_RM";
+_unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
@@ -32,9 +33,9 @@ _unit addHeadgear "UK3CB_BAF_H_CrewHelmet_ESS_A";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "hlc_smg_mp5a3";
-_unit addPrimaryWeaponItem "hlc_acc_Surefiregrip";
-_unit addWeapon "rhsusf_weap_glock17g4";
+_unit addWeapon "UK3CB_BAF_L22A2";
+_unit addWeapon "UK3CB_BAF_L131A1";
+_unit addHandgunItem "UK3CB_BAF_Flashlight_L131A1";
 _unit addWeapon "Binocular";
 
 comment "Add items";
@@ -43,13 +44,14 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_9x21_Mag";};
+for "_i" from 1 to 5 do {_unit addItemToVest "UK3CB_BAF_556_30Rnd";};
 
 _unit addItemToUniform "ACRE_PRC343";
 _unit addItemToVest "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
+	_unit addItem "ACE_IR_Strobe_Item";
 	_unit linkItem "rhsusf_ANPVS_15";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

@@ -4,7 +4,7 @@
 
 	Return:
 		--> Leader as Boolean
-
+		
 	Description:
 		Checks if a Unit fulfills the requirements to call a Vehicle Supply Drop
 

@@ -7,7 +7,7 @@
 
 		Description:
 			Action to pick up intel or investigate.
-
+		
 		Example:
 		none
 */
@@ -25,3 +25,4 @@ if (_inv) then {
 } else {
 	[_time, _target, {deleteVehicle (_this select 0)},{hint "Action Canceled"}, _stg] call ace_common_fnc_progressBar;
 };
+

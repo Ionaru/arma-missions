@@ -2,7 +2,7 @@
 	Parameters:
 		<-- Target Marker Name as String
 		<-- Spawn Marker Name as string
-		<-- Airplane Type as String 
+		<-- Airplane Type as String
 		<-- Callsign as String
 		<-- Amount of Boxes as Integer (1-3 boxes)
 		<-- Optional: Type of Supply Drop as Integer (1: Infantry, 2: Vehicle Supply, 3: Fortification Supplies), default : 1
@@ -13,55 +13,43 @@
 */
 
 // Parameter Init
-params ["_target","_spawn","_type","_callsign","_amount",["_mode",1],["_vehicle",[]]];
-if (typeName  _target == "STRING") then {
-	_target = markerPos _target;
-} else {
-	_target = getPos _target;
-};
-_spawn = markerPos _spawn;
-_class = "";
-_loadout = -1;
-_msg = "Supply";
-
+params [["_targetMarker","SupplyDrop"],["_spawnMarker","STARTSPAWN"],["_type","RHS_C130J"],["_callsign",""],["_amount",1],["_mode",0],["_vehicle",[]]];
+private _target = [_targetMarker] call fw_fnc_findLocation;
+private _spawn = [_spawnMarker] call fw_fnc_findLocation;
+private _msg = "Supply";
+private _vehicleClass = "";
+private _vehicleLoadout = -1;
 // Check if Vehicle Drop
 if (count _vehicle > 0) then {
 	//_type = "globemaster_c17_altus";
-	_class = _vehicle select 0;
-	_loadout = _vehicle select 1;
+	_vehicleClass = _vehicle select 0;
+	_vehicleLoadout = _vehicle select 1;
 	_msg = "Vehicle";
-	if (isNil "_loadout") then {
-		_loadout = -1;
-	};
 };
 
 // Init Public variables if not initialized in init.sqf or else with default values.
-if (isNil "SupplyDropLock") then {SupplyDropLock = false; publicVariable "SupplyDropLock";};
-if (isNil "SupplyDropAmmo") then {SupplyDropAmmo = 5; publicVariable "SupplyDropAmmo";};
+if (isNil "SupplyDropLast") then {SupplyDropLast = -30; publicVariable "SupplyDropLast";};
+if (isNil "SupplyDropAmmo") then {SupplyDropAmmo = 12; publicVariable "SupplyDropAmmo";};
 
-// Check if other Fire Mission in progress, no Ammunition left and no Target designated.
-if (SupplyDropLock) exitWith {
-	[[SR_Side, "HQ"],"Negative: No Supply Drop available. Other Missions in progress."] remoteExec ["sideChat", 0];
-	["SD: Currently Busy", 1.5] call ace_common_fnc_displayTextStructured;
+if (CBA_MissionTime - SupplyDropLast < 30) exitWith {
+	["Negative: No Supply Drop available. Other Missions in progress.","SD: Currently Busy"] spawn fw_fnc_info;
 };
 if (SupplyDropAmmo <= 0) exitWith {
-	[[SR_Side, "HQ"],"Negative: No Supply Drop available. Out of Resources."] remoteExec ["sideChat", 0];
-	["SD: Out of Resources", 1.5] call ace_common_fnc_displayTextStructured;
+	["Negative: No Supply Drop available. Out of Resources.","SD: Out of Resources"] spawn fw_fnc_info;
 };
 if (_target isEqualto [0,0,0]) exitWith {
-	[[SR_Side, "HQ"],"No Supply Drop Zone designated."] remoteExec ["sideChat", 0];
-	["SD: No Drop Zone", 1.5] call ace_common_fnc_displayTextStructured;
+	["No Supply Drop Zone designated.","SD: No Drop Zone"] spawn fw_fnc_info;
 };
 
 // Lock
-SupplyDropLock = true;
-publicVariable "SupplyDropLock";
+private _startTime = CBA_MissionTime;
+SupplyDropLast = _startTime;
+publicVariable "SupplyDropLast";
 
 // Confirmation Message + Combat Log
 _str = str(_amount) + "x " + _msg + " Drop to Grid " + (mapGridPosition _target);
-[[SR_Side, "HQ"],_str] remoteExec ["sideChat", 0];
-[_str, 1.5] call ace_common_fnc_displayTextStructured;
-["CombatLog", ["Support", _str]] call CBA_fnc_globalEvent; 
+[_str,_str] spawn fw_fnc_info;
+["CombatLog", ["Support", _str]] call CBA_fnc_globalEvent;
 
 // Calculating Spawn Point
 _dir = _spawn getDir _target;
@@ -77,7 +65,7 @@ _planeGroup = _plane select 2;
 _planeacc = _plane select 0;
 _planeacc engineOn true;
 _planeacc allowDamage false;
-_planeGroup setBehaviour "CARELESS"; 
+_planeGroup setBehaviour "CARELESS";
 leader _planeGroup setGroupIdGlobal [_callsign];
 {
 	_x disableAi "FSM";
@@ -89,7 +77,7 @@ leader _planeGroup setGroupIdGlobal [_callsign];
 	_x setVariable ["asr_ai_exclude", true]
 }forEach units _planeGroup;
 
-
+// Cargo Supply Drop
 if (count _vehicle == 0) then {
 	// Spawn and Attach Boxes in Cargo
 	for [{_i= 1},{_i <= _amount},{_i = _i + 1}] do {
@@ -99,10 +87,11 @@ if (count _vehicle == 0) then {
 		[_planeacc, "cargo_mem_2", _off, _mode] spawn fw_fnc_supplyDropBox;
 	};
 } else {
-	_veh = createVehicle [_class, [0,0,0], [], 0, "NONE"];
+	// Vehicle Drop
+	_veh = createVehicle [_vehicleClass, [0,0,1000], [], 0, "NONE"];
 	_veh disableCollisionWith _planeacc;
-	if (_loadout >= 0) then {
-		[_veh, _loadout] execVM "loadouts\VehicleCargoContent.sqf";
+	if (_vehicleLoadout >= 0) then {
+		[_veh, _vehicleLoadout] execVM "loadouts\_vehicle_cargo_content.sqf";
 	};
 	_veh attachTo [_planeacc,[0,0,4]];
 };
@@ -120,32 +109,28 @@ _planeacc doMove _wp;
 // Drop
 waitUntil {(_planeacc distance2D _wp) < 150};
 [_planeacc] spawn fw_fnc_supplyDropEject;
+["Supply Drop delivered."] spawn fw_fnc_info;
 
 // Send Plane to End Pos
-_dropdist = 20 + (15 * _amount); 
+_dropdist = 20 + (15 * _amount);
 waitUntil {(_planeacc distance2D _wp) < _dropdist};
 _planeacc doMove _wpPos;
-
-[[SR_Side, "HQ"],"Supply Drop delivered."] remoteExec ["sideChat", 0];
 
 // Close Ramp
 _planeacc animate ["ramp_bottom",0];
 _planeacc animate ["ramp_top",0];
 
+// Move to end point
 _planeacc doMove _wpPos;
 
 // Wait until End Pos Reached
-waitUntil{(_planeacc distance2D  _wpPos) < 500 || !(alive _planeacc)};
+waitUntil{(_planeacc distance2D  _wpPos) < 500 || !(alive _planeacc) || (CBA_MissionTime - _startTime > 360)};
 [leader _planeGroup] call fw_fnc_deleteVehicle;
 
-// Release Lock
-waitUntil {!alive _planeacc};
-SupplyDropLock = false;
-publicVariable 'SupplyDropLock';
 
 // Update Available Supply Amount
-SupplyDropAmmo = SupplyDropAmmo - _amount; 
+SupplyDropAmmo = SupplyDropAmmo - _amount;
 publicVariable 'SupplyDropAmmo';
 
 // End Message
-[[SR_Side, "HQ"],"Supply Drop Mission completed."] remoteExec ["sideChat", 0];
+["Supply Drop Mission completed."] spawn fw_fnc_info;

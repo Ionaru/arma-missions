@@ -14,13 +14,14 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "UK3CB_BAF_U_CombatUniform_MTP_ShortSleeve_RM";
+_unit forceAddUniform "VSM_OGA_OD_casual_Camo";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
+for "_i" from 1 to 2 do {_unit addItemToUniform "UK3CB_BAF_9_15Rnd";};
 _unit addVest "UK3CB_BAF_V_Osprey_Rifleman_C";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
@@ -31,13 +32,13 @@ _unit addItemToBackpack "UK3CB_BAF_L128A1";
 for "_i" from 1 to 6 do {_unit addItemToBackpack "UK3CB_BAF_12G_Pellets";};
 for "_i" from 1 to 6 do {_unit addItemToBackpack "UK3CB_BAF_12G_Slugs";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "HandGrenade";};
-_unit addHeadgear "UK3CB_BAF_H_Mk7_Net_CESS_D";
-_unit addGoggles "rhs_googles_clear";
+_unit addHeadgear "rhsusf_opscore_fg_pelt_cam";
+_unit addGoggles "milgp_f_face_shield_tactical_khk";
 
 comment "Add weapons";
-_unit addWeapon "UK3CB_BAF_L85A2_RIS_AFG";
-_unit addPrimaryWeaponItem "UK3CB_BAF_LLM_IR_Tan";
-_unit addWeapon "rhsusf_weap_glock17g4";
+_unit addWeapon "UK3CB_BAF_L119A1_CQB";
+_unit addWeapon "UK3CB_BAF_L117A2";
+_unit addHandgunItem "UK3CB_BAF_L105A1_LLM_IR_G";
 _unit addWeapon "Binocular";
 
 comment "Add items";
@@ -54,6 +55,7 @@ if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
 	_unit linkItem "UK3CB_BAF_HMNVS";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
+	_unit addItemToBackpack "ACE_IR_Strobe_Item";
 };
 _unit setVariable ["SR_Class","B", true];
 _unit setVariable ["ace_isEngineer",0, true];
