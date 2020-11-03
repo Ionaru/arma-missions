@@ -24,20 +24,6 @@ private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_
 
         // Select Order based on Mode
         switch (_this getVariable ["SR_PatrolMode",""]) do {
-            // Patrol Order
-            case "P": {
-                 private _position = [];
-                // Create Random Patrol Point
-                private _poi = [_this, SR_POI_Range] call fw_fnc_findPOI;
-                if (!isNull _poi) then {
-                    _position = [[[getPos _poi, 350]], [],{!surfaceIsWater _this}] call BIS_fnc_randomPos;
-                } else {
-                    _position = [_this] call fw_fnc_getRandomPos;
-                };
-                [_this,_position, 25, "MOVE", "SAFE", "YELLOW", "LIMITED",selectRandom ["STAG COLUMN", "COLUMN", "DIAMOND","FILE"], "deleteWaypoint [group this, 1]", [3,6,9]] call CBA_fnc_addWaypoint;
-                // Debug
-                if (SR_Debug) then {systemChat format ["%1 is patrolling %2", _this, (mapGridPosition _position)];};
-            };
             // Garrison Order
             case "G": {
                 // Create Garrison Waypoint and lock it
@@ -68,6 +54,20 @@ private _offCombatStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_
                 [_this] spawn fw_fnc_rampageCharge;
 
            };
+            // Patrol Order
+            default {
+                 private _position = [];
+                // Create Random Patrol Point
+                private _poi = [_this, SR_POI_Range] call fw_fnc_findPOI;
+                if (!isNull _poi) then {
+                    _position = [[[getPos _poi, 350]], [],{!surfaceIsWater _this}] call BIS_fnc_randomPos;
+                } else {
+                    _position = [_this] call fw_fnc_getRandomPos;
+                };
+                [_this,_position, 25, "MOVE", "SAFE", "YELLOW", "LIMITED",selectRandom ["STAG COLUMN", "COLUMN", "DIAMOND","FILE"], "deleteWaypoint [group this, 1]", [3,6,9]] call CBA_fnc_addWaypoint;
+                // Debug
+                if (SR_Debug) then {systemChat format ["%1 is patrolling %2", _this, (mapGridPosition _position)];};
+            };
         };
 
         // Force Flashlights
@@ -90,13 +90,13 @@ private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_Stat
             _roll = random 100;
             if (_roll < _x && _x > _last) then {
                 // Special Condition for Surrender
-                if (!(_forEachIndex == 2) || ((leader _this) findNearestEnemy (leader _this)) distance2d (position leader _this) < 150) then {
+                if (!(_forEachIndex == 1) || ((leader _this) findNearestEnemy (leader _this)) distance2d (position leader _this) < 150) then {
                     _index = _forEachIndex;
                     _last = _x;
                 };
             };
-        } forEach [SR_Flee, SR_Charge, SR_Surrender];
-        
+        } forEach [SR_Flee, SR_Surrender];
+
         // Execute selected Option
         switch (_index) do {
             // Flee
@@ -104,24 +104,12 @@ private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_Stat
                 _this setVariable ["SR_Depressed", true];
                 _this allowFleeing 1;
                 // Debug
-                if (SR_Debug) then {systemChat format ["%1 is fleeing", _this];};         
-            };
-            // Charge
-            case 1: {
-                _this setVariable ["SR_Depressed", true];
-                // Each Group member supressive the nearest enemy
-                {
-                    [_x] spawn fw_fnc_suppress;
-                }forEach units _this;
-                // Group does not flee
-                _this allowFleeing 0; 
-                // Debug
-                if (SR_Debug) then {systemChat format ["%1 is charging", _this];};
+                if (SR_Debug) then {systemChat format ["%1 is fleeing", _this];};
             };
             // Surrender
-            case 2: {
+            case 1: {
                 _this setVariable ["SR_Depressed", true];
-                {   
+                {
                     [_x] spawn fw_fnc_surrender;
                 }forEach (units _this);
                 // Debug
@@ -131,7 +119,7 @@ private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_Stat
     };
 }, {}, {
     // Once Depressed, reset after 4 min
-    [this] spawn fw_fnc_depressedCooldown;
+    [this,200] spawn fw_fnc_depressedCooldown;
 }, "CombatLoop"] call CBA_statemachine_fnc_addState;
 
 // Artillery Support Loop
@@ -145,7 +133,7 @@ private _supportStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_De
     // Get Unit Target Querry
     private _leader = leader _this;
     private _group = _this;
-  
+
     // Find Target
     _target = _leader findNearestEnemy position _leader;
     if (_target == objNull) exitWith {};
@@ -162,7 +150,7 @@ private _supportStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_De
 
         // Request Flares
             [_artillery,2,_target] spawn fw_fnc_artilleryCall;
-                
+
     // Daytime Evaluation
     } else {
 
@@ -186,8 +174,6 @@ private _supportStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_De
     },objNull, 5] call CBA_fnc_waitAndExecute;
 
     // Debug
-    if (SR_Debug) then {systemChat format ["%1 providing artillery to %2", _artillery, (mapGridPosition _targetPos)];}; 
+    if (SR_Debug) then {systemChat format ["%1 providing artillery to %2", _artillery, (mapGridPosition _targetPos)];};
 
 }, {}, {}, "SupportLoop"] call CBA_statemachine_fnc_addState;
-
-

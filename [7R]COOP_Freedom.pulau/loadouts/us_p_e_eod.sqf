@@ -14,14 +14,15 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "VSM_Multicam_Crye_SS_Camo";
+_unit forceAddUniform "rhs_uniform_g3_mc";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
-_unit addVest "milgp_v_mmac_marksman_belt_RGR";
+_unit addVest "milgp_v_mmac_marksman_mc";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
 _unit addBackpack "VSM_Multicam_Backpack_Kitbag";
@@ -32,7 +33,8 @@ _unit addItemToBackpack "ACE_EntrenchingTool";
 _unit addItemToBackpack "ACE_SpraypaintRed";
 _unit addItemToBackpack "ACE_SpraypaintGreen";
 for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
-_unit addHeadgear "milgp_h_opscore_03_goggles_RGR_hexagon";
+_unit addItemToBackpack "milgp_h_cap_01_MC";
+_unit addHeadgear "rhsusf_opscore_mc_pelt";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
@@ -48,13 +50,15 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 12 do {_unit addItemToVest "20Rnd_762x51_Mag";};
+for "_i" from 1 to 10 do {_unit addItemToVest "20Rnd_762x51_Mag";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "20Rnd_762x51_Mag";};
 
 _unit addItemToUniform "ACRE_PRC343";
 _unit addItemToVest "ACRE_PRC152";
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
+	_unit addItem "ACE_IR_Strobe_Item";
 	_unit linkItem "rhsusf_ANPVS_15";
 	_unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };

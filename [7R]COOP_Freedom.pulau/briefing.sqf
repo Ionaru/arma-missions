@@ -113,7 +113,7 @@ Ultranationalist infantry, motorized and mechanized forces
 <br/><br/>
 <font size='18'>FRIENDLY FORCES</font>
 <br/>
-USMC
+US Rangers
 "]];
 
 // ====================================================================================

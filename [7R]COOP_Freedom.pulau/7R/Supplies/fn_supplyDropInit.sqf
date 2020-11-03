@@ -13,22 +13,18 @@
 */
 
 // Parameter Init
-params [["_targetMarker","SupplyDrop"],["_spawnMarker","STARTSPAWN"],["_type","RHS_C130J"],["_callsign",""],["_amount",1],["_mode",1],["_vehicle",[]]];
+params [["_targetMarker","SupplyDrop"],["_spawnMarker","STARTSPAWN"],["_type","RHS_C130J"],["_callsign",""],["_amount",1],["_mode",0],["_vehicle",[]]];
 private _target = [_targetMarker] call fw_fnc_findLocation;
 private _spawn = [_spawnMarker] call fw_fnc_findLocation;
 private _msg = "Supply";
 private _vehicleClass = "";
 private _vehicleLoadout = -1;
-
 // Check if Vehicle Drop
 if (count _vehicle > 0) then {
 	//_type = "globemaster_c17_altus";
 	_vehicleClass = _vehicle select 0;
 	_vehicleLoadout = _vehicle select 1;
 	_msg = "Vehicle";
-	if (isNil "_loadout") then {
-		_vehicleLoadout = -1;
-	};
 };
 
 // Init Public variables if not initialized in init.sqf or else with default values.
@@ -92,10 +88,10 @@ if (count _vehicle == 0) then {
 	};
 } else {
 	// Vehicle Drop
-	_veh = createVehicle [_vehicleClass, [0,0,0], [], 0, "NONE"];
+	_veh = createVehicle [_vehicleClass, [0,0,1000], [], 0, "NONE"];
 	_veh disableCollisionWith _planeacc;
-	if (_loadout >= 0) then {
-		[_veh, _loadout] execVM "loadouts\VehicleCargoContent.sqf";
+	if (_vehicleLoadout >= 0) then {
+		[_veh, _vehicleLoadout] execVM "loadouts\_vehicle_cargo_content.sqf";
 	};
 	_veh attachTo [_planeacc,[0,0,4]];
 };
@@ -116,8 +112,8 @@ waitUntil {(_planeacc distance2D _wp) < 150};
 ["Supply Drop delivered."] spawn fw_fnc_info;
 
 // Send Plane to End Pos
-// _dropdist = 20 + (15 * _amount);
-// waitUntil {(_planeacc distance2D _wp) < _dropdist};
+_dropdist = 20 + (15 * _amount);
+waitUntil {(_planeacc distance2D _wp) < _dropdist};
 _planeacc doMove _wpPos;
 
 // Close Ramp

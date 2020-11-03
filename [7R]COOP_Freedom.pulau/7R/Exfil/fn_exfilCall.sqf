@@ -5,13 +5,13 @@
 		<-- Type of Helicopter as String
 		<-- Callsign as String
 		<-- Traveltime as Integer (seconds) e.g. Spawn Delay
-		<-- Optional: Dropoff Marker as String  
+		<-- Optional: Dropoff Marker as String
 
 	Description:
 	Handles AI based Exfiltration, spawning helicopter and picking up units. Optional drop off afterwards.
-	In case a dropoff marker is present after picking up units at the exfil, 
+	In case a dropoff marker is present after picking up units at the exfil,
 	it will fly to the dropoff to unload all people before returning to his spawn to despawn.
-	
+
 	Example:
 	none
 */
@@ -44,7 +44,7 @@ publicVariable "ExfilHeloLock";
 // Log entry and Confirmation Message
 _str = "Exfil Helicopter dispatched to Grid " + (mapGridPosition _target) + ".";
 [_str, 1.5] call ace_common_fnc_displayTextStructured;
-["CombatLog", ["Support", _str]] call CBA_fnc_globalEvent; 
+["CombatLog", ["Support", _str]] call CBA_fnc_globalEvent;
 [[SR_Side, "HQ"],_str] remoteExec ["sideChat", -2];
 
 // Inline End Function
@@ -62,23 +62,25 @@ _group = _helo select 2;
 _helo = _helo select 0;
 _helo engineOn true;
 _group setGroupIdGlobal [_callsign];
-_group setBehaviour "CARELESS"; 
+_group setBehaviour "CARELESS";
 
-
+/*
 // Disable Units to react
 {
 	_x disableAi "AUTOCOMBAT";
 	_x setVariable ["asr_ai_exclude", true];
 }forEach units _group;
+*/
+[_group] spawn sr_support_fnc_supportAI;
 
 // Add Action for Lift Off
 [_helo] remoteExec ["fw_fnc_exfilAction", 0, true];
 
 // Clear Inventory of Helo
-clearweaponcargoGlobal _helo;  
-clearmagazinecargoGlobal _helo;  
-clearitemcargoGlobal _helo; 
-clearBackpackCargoGlobal _helo; 
+clearweaponcargoGlobal _helo;
+clearmagazinecargoGlobal _helo;
+clearitemcargoGlobal _helo;
+clearBackpackCargoGlobal _helo;
 _helo addItemCargoGlobal ["SR_PAK", 10];
 
 // Add Waypoints at EZ
@@ -92,7 +94,7 @@ _wp1 setWayPointCombatMode "WHITE";
 waitUntil {sleep 0.5; (!([_helo] call fw_fnc_checkStatus) || ((_helo distance _target) < 1000))};
 if (!([_helo] call fw_fnc_checkStatus)) exitWith {[] call FNC_END;};
 _group lockWP true;
-_group setSpeedMode "LIMITED"; 
+_group setSpeedMode "LIMITED";
 
 // Landing
 waitUntil {(!([_helo] call fw_fnc_checkStatus) || ((_helo distance _target) < 200))};
@@ -112,9 +114,10 @@ _helo engineOn true;
 // Wait for Liftoff Command and lift off
 waitUntil {(!(alive _helo) || !(canMove _helo)) || (({alive _x} count units _group) < 1) || (_helo getVariable ["liftoff", false])};
 if (!([_helo] call fw_fnc_checkStatus)) exitWith {[] call FNC_END;};
+_helo land 'NONE';
 force = true;
 publicVariable "force";
-_group setSpeedMode "NORMAL"; 
+_group setSpeedMode "NORMAL";
 _helo flyInHeight 100;
 {deleteWaypoint _x}forEach waypoints _group;
 

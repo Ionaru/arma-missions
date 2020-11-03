@@ -28,12 +28,10 @@ _civilians = ["C_Man_4_enoch_F", "C_Man_casual_6_F_tanoan", "C_man_shorts_1_F_af
 
 // Phase Case means Phase
 switch (_nbr) do {
-	// Phase 1
+	// Phase 0
     case 1: {
 
-		{(3600 * timeMultiplier) setOvercast 1;} remoteExec ["bis_fnc_call", 0];
-
-		sleep 120;
+		"Mission loading..." remoteExec ["systemChat", 0];
 
 		// Civilians
 		_handle = ["kinandal_zone", _civilians, 30, 0, 0, 10] spawn fw_fnc_civSpawn;
@@ -91,15 +89,13 @@ switch (_nbr) do {
 		_handle = ["kinandal_zone", "PATROL", 2, ["kinandal_zone", "P"]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
-		phase = 1;
+		phase = 0;
 		publicVariable "phase";
 
 		"Mission Loaded, enjoy!" remoteExec ["systemChat", 0];
 	};
 
     case 2: {
-
-		{(1200 * timeMultiplier) setFog [0.05, 0.01, 0];} remoteExec ["bis_fnc_call", 0];
 
 		"liberate_marker" setMarkerAlpha 0;
 		"attack_marker" setMarkerAlpha 1;
@@ -171,9 +167,6 @@ switch (_nbr) do {
 	};
 
 	case 3: {
-
-		{(1800 * timeMultiplier) setRain 1;} remoteExec ["bis_fnc_call", 0];
-		{(1200 * timeMultiplier) setFog [0.15, 0.01, 0];} remoteExec ["bis_fnc_call", 0];
 
 		_handle = ["bunker_vic", "VEHICLE", 7, ["bunker_vic", true]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
@@ -341,9 +334,6 @@ switch (_nbr) do {
 
 	case 6: {
 
-		{(1800 * timeMultiplier) setRain 0;} remoteExec ["bis_fnc_call", 0];
-		{(2400 * timeMultiplier) setFog [0.05, 0.01, 0];} remoteExec ["bis_fnc_call", 0];
-
 		// Rampage remaining units
 		{
 			private _group = _x;
@@ -428,8 +418,6 @@ switch (_nbr) do {
 	};
 
 	case 7: {
-
-		{(120 * timeMultiplier) setOvercast 0;} remoteExec ["bis_fnc_call", 0];
 
 		"crush_marker" setMarkerAlpha 0;
 		"finish_marker" setMarkerAlpha 1;
