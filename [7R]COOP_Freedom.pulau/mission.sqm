@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5775.2485,72.889709,6283.9521};
-		dir[]={0.8837539,-0.46338835,0.066214323};
-		up[]={0.4621264,0.88612795,0.034622967};
-		aside[]={0.074716516,-1.5697442e-006,-0.9972679};
+		pos[]={5797.1763,118.63016,6253.3755};
+		dir[]={0.78047013,-0.61169875,-0.12971093};
+		up[]={0.60343629,0.79106849,-0.10028996};
+		aside[]={-0.16396034,-1.076085e-006,-0.98653078};
 	};
 };
 binarizationWanted=0;
@@ -2092,16 +2092,17 @@ class Mission
 		class Item44
 		{
 			dataType="Marker";
-			position[]={3451.7971,4.3439999,10441.242};
+			position[]={3440.219,2.6329999,10380.463};
 			name="tip_zone";
-			markerType="ELLIPSE";
+			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="default";
 			alpha=0;
 			a=250;
-			b=250;
+			b=200;
+			angle=278.457;
 			id=171;
-			atlOffset=-0.00011634827;
+			atlOffset=0.00023627281;
 		};
 		class Item45
 		{
@@ -2123,7 +2124,7 @@ class Mission
 			dataType="Marker";
 			position[]={4015.74,4.2290001,9197.082};
 			name="crossroads_zone";
-			markerType="ELLIPSE";
+			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="default";
 			alpha=0;
@@ -3723,17 +3724,17 @@ class Mission
 		class Item55
 		{
 			dataType="Marker";
-			position[]={7777.5332,6.2670002,9985.875};
+			position[]={7830.5962,13.156,9997.4521};
 			name="base_island";
-			markerType="ELLIPSE";
+			markerType="RECTANGLE";
 			type="rectangle";
 			colorName="default";
 			alpha=0;
-			a=250;
-			b=400;
+			a=200;
+			b=300;
 			angle=81.669998;
 			id=359;
-			atlOffset=-0.00028991699;
+			atlOffset=-0.61754704;
 		};
 		class Item56
 		{
