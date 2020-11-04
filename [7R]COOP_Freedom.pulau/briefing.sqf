@@ -45,7 +45,9 @@ _exe = player createDiaryRecord ["diary", ["Execution","
 <br/>
 <font size='18'>COMMANDER'S INTENT</font>
 <br/>
-Head out to Kinandal and liberate it, then destroy the rest of the ultranationalist forces in the north of Pulau Gurun
+Head out to Kinandal and liberate it, then destroy the rest of the ultranationalist forces in the north of Pulau Gurun.
+<br/>
+Many fortifications and bunkers have been built on the islands during the war, all known locations have been marked on your maps.
 <br/><br/>
 <font size='18'>MOVEMENT PLAN</font>
 <br/>
@@ -53,7 +55,7 @@ Some Humvees and old M113 have been pulled out of storage for us to use.
 <br/>
 
 <br/>
-Reinsertion by FOB
+Reinsertion by vehicle or FOB
 <br/><br/>
 <font size='18'>FIRE SUPPORT PLAN</font>
 <br/>
@@ -78,6 +80,15 @@ Additional Humvees can be called in by vehicle drop.
 _mis = player createDiaryRecord ["diary", ["Mission","
 <br/>
 Liberate Pulau Gurun
+
+<br/><br/>
+<font size='18'>ENEMY FORCES</font>
+<br/>
+Ultranationalist infantry, motorized and mechanized forces
+<br/><br/>
+<font size='18'>FRIENDLY FORCES</font>
+<br/>
+US Rangers
 "]];
 
 // ====================================================================================
@@ -106,14 +117,6 @@ The now severely understaffed and under-equipped US base stands no chance agains
 
 <br/>
 The USMC has been tasked to restore peace to the island and 'liberate' its citizens from these ultranationalists.
-<br/><br/>
-<font size='18'>ENEMY FORCES</font>
-<br/>
-Ultranationalist infantry, motorized and mechanized forces
-<br/><br/>
-<font size='18'>FRIENDLY FORCES</font>
-<br/>
-US Rangers
 "]];
 
 // ====================================================================================
