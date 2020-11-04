@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1377;
+		nextID=1379;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6555.7715,38.932434,8540.7354};
-		dir[]={-0.4830507,-0.38354439,0.78712004};
-		up[]={-0.2006146,0.92352217,0.32689613};
-		aside[]={0.85230166,-8.9872628e-008,0.52305222};
+		pos[]={7349.7939,29.476839,7285.7813};
+		dir[]={-0.045200109,-0.47641769,0.87807626};
+		up[]={-0.02449277,0.87921476,0.47579685};
+		aside[]={0.99869311,2.5640475e-008,0.051410437};
 	};
 };
 binarizationWanted=0;
@@ -2028,7 +2028,7 @@ class Mission
 			alpha=0;
 			a=300;
 			b=430.87201;
-			angle=316.94293;
+			angle=316.94296;
 			id=164;
 			atlOffset=-9.5771294;
 		};
@@ -13356,11 +13356,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={6793.6963,1.9694824,7079.3774};
-				angles[]={0,0,6.1539106};
+				position[]={7093.9438,13.124463,7352.4707};
+				angles[]={6.2432065,0.81569707,6.1835165};
 			};
 			name="ao_p1";
-			areaSize[]={800,0,500};
+			areaSize[]={1200,0,1000};
 			areaIsRectangle=1;
 			flags=1;
 			id=1193;
@@ -13375,7 +13375,7 @@ class Mission
 				angles[]={0.076515228,3.961653,0.25748843};
 			};
 			name="ao_p2";
-			areaSize[]={2000,0,800};
+			areaSize[]={2250,0,1000};
 			areaIsRectangle=1;
 			flags=1;
 			id=1194;
@@ -13390,7 +13390,7 @@ class Mission
 				angles[]={0.29450688,1.022571,6.2166185};
 			};
 			name="ao_p4";
-			areaSize[]={600,0,1000};
+			areaSize[]={800,0,1500};
 			areaIsRectangle=1;
 			flags=1;
 			id=1195;
@@ -13401,10 +13401,10 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={3846.6382,6.7589078,9446.999};
-				angles[]={6.2432079,4.3636184,0.076516926};
+				position[]={4130.8032,16.419851,9396.7002};
+				angles[]={0.026662467,4.3636198,6.2398791};
 			};
-			areaSize[]={1500,0,800};
+			areaSize[]={2000,0,1000};
 			areaIsRectangle=1;
 			flags=1;
 			id=1196;
@@ -13415,15 +13415,15 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5662.1597,-2.5962739,10151.576};
+				position[]={5662.1602,-2.5957997,10151.576};
 				angles[]={0,1.6466309,0};
 			};
-			areaSize[]={600,0,3000};
+			areaSize[]={1500,0,4000};
 			areaIsRectangle=1;
 			flags=1;
 			id=1197;
 			type="ModuleCoverMap_F";
-			atlOffset=1.6875277;
+			atlOffset=1.6879995;
 		};
 		class Item248
 		{
