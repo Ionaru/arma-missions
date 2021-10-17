@@ -48,7 +48,7 @@ We'll approach Mike-26 from the eastern side of the island. After which we'll mo
 <br/><br/>
 <font size='18'>MOVEMENT PLAN</font>
 <br/>
-Getting some legwork in, bois!
+Myvement by foot<br/>
 Reinsertion by FOB.
 <br/><br/>
 <font size='18'>FIRE SUPPORT PLAN</font>

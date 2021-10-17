@@ -29,12 +29,12 @@ switch (_nbr) do {
 
 		// Mike-26
 
-		// _spawn = ["mike_patrol","PATROL",2,["mike_patrol", "P"]] spawn fw_fnc_spawnTemplate;
-		// waitUntil {scriptDone _spawn}; sleep 2;
-		// _spawn = ["mike_patrol","PATROL",2,["mike_patrol", "P"]] spawn fw_fnc_spawnTemplate;
-		// waitUntil {scriptDone _spawn}; sleep 2;
-		// _spawn = ["mike_patrol","PATROL",2,["mike_patrol", "P"]] spawn fw_fnc_spawnTemplate;
-		// waitUntil {scriptDone _spawn}; sleep 2;
+		_spawn = ["mike_patrol","PATROL",2,["mike_patrol", "P"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _spawn}; sleep 2;
+		_spawn = ["mike_patrol","PATROL",2,["mike_patrol", "P"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _spawn}; sleep 2;
+		_spawn = ["mike_patrol","PATROL",2,["mike_patrol", "P"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _spawn}; sleep 2;
 		_spawn = ["mike_patrol","PATROL",2,["mike_patrol", "P"]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _spawn}; sleep 2;
 		_spawn = ["mike_patrol","PATROL",1,["mike_patrol", "P"]] spawn fw_fnc_spawnTemplate;
@@ -53,10 +53,10 @@ switch (_nbr) do {
 		waitUntil {scriptDone _spawn}; sleep 2;
 		_spawn = ["mike_spawn","GARRISON",1,[250]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _spawn}; sleep 2;
-		// _spawn = ["mike_spawn","GARRISON",1,[250]] spawn fw_fnc_spawnTemplate;
-		// waitUntil {scriptDone _spawn}; sleep 2;
-		// _spawn = ["mike_spawn","GARRISON",1,[250]] spawn fw_fnc_spawnTemplate;
-		// waitUntil {scriptDone _spawn}; sleep 2;
+		_spawn = ["mike_spawn","GARRISON",1,[250]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _spawn}; sleep 2;
+		_spawn = ["mike_spawn","GARRISON",1,[250]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _spawn}; sleep 2;
 
 		phase = 1;
 		publicVariable "phase";
@@ -91,12 +91,12 @@ switch (_nbr) do {
 		// Maxwell
 		// Init download
 
-		// _spawn = ["spawn_maxwell_1","PATROL",3,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
-		// waitUntil {scriptDone _spawn}; sleep 2;
-		// _spawn = ["spawn_maxwell_2","PATROL",3,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
-		// waitUntil {scriptDone _spawn}; sleep 2;
-		// _spawn = ["spawn_maxwell_1","PATROL",3,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
-		// waitUntil {scriptDone _spawn}; sleep 2;
+		_spawn = ["spawn_maxwell_1","PATROL",3,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _spawn}; sleep 2;
+		_spawn = ["spawn_maxwell_2","PATROL",3,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _spawn}; sleep 2;
+		_spawn = ["spawn_maxwell_1","PATROL",3,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _spawn}; sleep 2;
 
 	};
 	case 4: {
@@ -104,10 +104,10 @@ switch (_nbr) do {
 		// Maxwell
 		// 10%
 
-		// _spawn = ["spawn_maxwell_2","PATROL",3,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
-		// waitUntil {scriptDone _spawn}; sleep 2;
-		// _spawn = ["spawn_maxwell_2","PATROL",3,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
-		// waitUntil {scriptDone _spawn}; sleep 2;
+		_spawn = ["spawn_maxwell_2","PATROL",3,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _spawn}; sleep 2;
+		_spawn = ["spawn_maxwell_2","PATROL",3,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _spawn}; sleep 2;
 		_spawn = ["spawn_maxwell_1","PATROL",2,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _spawn}; sleep 2;
 		_spawn = ["spawn_maxwell_3","PATROL",2,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
@@ -149,12 +149,12 @@ switch (_nbr) do {
 		_spawn = ["spawn_maxwell_6","PATROL",3,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _spawn}; sleep 2;
 
-		// _spawn = ["spawn_maxwell_4","PATROL",3,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
-		// waitUntil {scriptDone _spawn}; sleep 2;
-		// _spawn = ["spawn_maxwell_3","PATROL",4,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
-		// waitUntil {scriptDone _spawn}; sleep 2;
-		// _spawn = ["spawn_maxwell_6","PATROL",3,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
-		// waitUntil {scriptDone _spawn}; sleep 2;
+		_spawn = ["spawn_maxwell_4","PATROL",3,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _spawn}; sleep 2;
+		_spawn = ["spawn_maxwell_3","PATROL",4,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _spawn}; sleep 2;
+		_spawn = ["spawn_maxwell_6","PATROL",3,["maxwell_zone", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _spawn}; sleep 2;
 
 		sleep 20;
 		_spawn=["spawn_maxwell_r_2","VEHICLE",8,["maxwell_vic",false,["maxwell_zone","R"]]] spawn fw_fnc_spawnTemplate;

@@ -69,6 +69,7 @@ if (_type isEqualTo "PATROL") Then {
 
 			if( "HandGrenade" in magazines _x) then { _x removeMagazines "HandGrenade" };
 			if( "MiniGrenade" in magazines _x) then { _x removeMagazines "MiniGrenade" };
+			if( "1Rnd_HE_Grenade_shell" in magazines _x) then { _x removeMagazines "1Rnd_HE_Grenade_shell" };
 		} forEach units _group;
 	};
 
