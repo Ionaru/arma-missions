@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "rhs_uniform_afghanka_para";
+_unit forceAddUniform "rhs_uniform_emr_des_patchless";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
@@ -58,7 +58,7 @@ if (SR_Night) then {
 	_unit addHeadgear "rhs_ssh68_2";
 	_unit addItemToBackpack "rhs_fieldcap_khk";
 	_unit addPrimaryWeaponItem "rhs_acc_2dpZenit";
-	
+
 };
 _unit setVariable ["SR_Class","PE", true];
 _unit setVariable ["ace_isEngineer",0, true];

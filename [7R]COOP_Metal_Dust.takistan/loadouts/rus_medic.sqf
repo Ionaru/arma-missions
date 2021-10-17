@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "rhs_uniform_afghanka_para";
+_unit forceAddUniform "rhs_uniform_emr_des_patchless";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
@@ -45,7 +45,7 @@ _unit addWeapon "Binocular";
 comment "Add items";
 _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
-_unit linkItem "ItemWatch"; 
+_unit linkItem "ItemWatch";
 
 for "_i" from 1 to 10 do {_unit addItemToVest "rhs_30Rnd_545x39_7N6M_AK";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_30Rnd_545x39_7N6M_AK";};
