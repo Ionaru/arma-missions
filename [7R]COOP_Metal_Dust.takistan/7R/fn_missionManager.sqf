@@ -17,9 +17,7 @@
 
 // Server only execute or HC if present
 if (!isServer && hasInterface) exitWith {};
-if (!isNil "HC") then {
-	if (HC in allPlayers && isServer) exitWith {};
-};
+if (HC in allPlayers && isServer) exitWith {};
 
 // Parameter init
 params ["_nbr"];
@@ -72,6 +70,15 @@ switch (_nbr) do {
 		sleep 10;
 
 		_handle = ["roadblock_vic_reinf_spawn", "VEHICLE", 7, ["roadblock_rally", false, ["roadblock_rally", "R"]]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+
+        sleep 120;
+
+		_handle = ["roadblock_reinf_spawn", "PATROL", 2, ["roadblock_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		_handle = ["roadblock_reinf_spawn", "PATROL", 2, ["roadblock_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		_handle = ["roadblock_reinf_spawn", "PATROL", 2, ["roadblock_rally", "R"]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
 	};
@@ -178,6 +185,20 @@ switch (_nbr) do {
 		_handle = ["depot_reinf_2", "VEHICLE", 6, ["depot_dropoff", false, ["depot_rally", "R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
+        sleep 300;
+
+		_handle = ["depot_reinf", "PATROL", 2, ["depot_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		_handle = ["depot_reinf", "PATROL", 2, ["depot_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+
+        sleep 60;
+
+		_handle = ["depot_reinf", "PATROL", 2, ["depot_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		_handle = ["depot_reinf", "PATROL", 2, ["depot_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+
 
 		// Populate factory
 
@@ -228,6 +249,28 @@ switch (_nbr) do {
 		waitUntil {scriptDone _handle};
 
 		sleep 300;
+
+		_handle = ["depot_reinf_2", "VEHICLE", 8, ["depot_reinf", false, ["depot_reinf", "R"]]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+
+        sleep 10;
+
+		_handle = ["depot_reinf_2", "PATROL", 2, ["depot_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		_handle = ["factory_reinf_marker", "PATROL", 2, ["depot_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+
+        sleep 60;
+
+		_handle = ["factory_reinf_marker", "PATROL", 2, ["depot_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		_handle = ["depot_reinf_2", "PATROL", 2, ["depot_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+
+		_handle = ["depot_reinf_2", "VEHICLE", 9, ["depot_reinf", false, ["depot_reinf", "R"]]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+
+        sleep 300;
 
 
 		// Populate admin
@@ -282,9 +325,22 @@ switch (_nbr) do {
 
 		sleep 120;
 
-		_handle = ["admin_reinf", "PATROL", 1, ["admin_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		_handle = ["admin_reinf_2", "VEHICLE", 9, ["admin_rally", false, ["admin_rally", "R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
-		_handle = ["admin_reinf_2", "PATROL", 1, ["admin_rally", "R"]] spawn fw_fnc_spawnTemplate;
+
+		_handle = ["admin_reinf", "PATROL", 2, ["admin_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		_handle = ["admin_reinf_2", "PATROL", 2, ["admin_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+
+        sleep 60;
+
+		_handle = ["admin_reinf_2", "VEHICLE", 9, ["admin_rally", false, ["admin_rally", "R"]]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+
+		_handle = ["admin_reinf", "PATROL", 2, ["admin_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		_handle = ["admin_reinf_2", "PATROL", 2, ["admin_rally", "R"]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
 		sleep 120;
@@ -327,11 +383,27 @@ switch (_nbr) do {
 		_handle = ["admin_reinf_2", "VEHICLE", 6, ["hvt_dropoff", false, ["hvt_rally", "R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
+        sleep 20;
+
+		_handle = ["admin_reinf", "PATROL", 2, ["hvt_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		_handle = ["admin_reinf", "PATROL", 2, ["hvt_rally", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+
+        sleep 10;
+
+		_handle = ["admin_reinf_2", "VEHICLE", 8, ["hvt_dropoff", false, ["hvt_rally", "R"]]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+
 	};
 
 	// Oil seized, counterattack & populate airport
 	case 8: {
 
+		_handle = ["oil_reinf", "VEHICLE", 8, ["oil_rally", false, ["oil_rally", "R"]]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+
+		sleep 10;
 
 		_handle = ["oil_reinf", "VEHICLE", 6, ["oil_dropoff", false, ["oil_rally", "R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
@@ -364,6 +436,11 @@ switch (_nbr) do {
 		sleep 10;
 
 		_handle = ["oil_reinf", "VEHICLE", 7, ["oil_rally", false, ["oil_rally", "R"]]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+
+		sleep 20;
+
+		_handle = ["oil_reinf", "VEHICLE", 8, ["oil_rally", false, ["oil_rally", "R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
 		sleep 600;
@@ -427,8 +504,39 @@ switch (_nbr) do {
 		waitUntil {scriptDone _handle};
 		sleep 10;
 
+		_handle = ["airfield_reinf_2", "PATROL", 2, ["oil_reinf", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		sleep 10;
+		_handle = ["airfield_reinf_2", "PATROL", 2, ["oil_reinf", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		sleep 10;
+		_handle = ["airfield_reinf_2", "PATROL", 2, ["oil_reinf", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		sleep 10;
 
-		// Rampage all enemy units
+		_handle = ["airfield_reinf_2", "VEHICLE", 8, ["oil_reinf", false, ["oil_reinf", "R"]]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+        sleep 10;
+
+		_handle = ["airfield_reinf_2", "VEHICLE", 7, ["oil_reinf", false, ["oil_reinf", "R"]]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+        sleep 10;
+
+		_handle = ["airfield_reinf_2", "VEHICLE", 7, ["oil_reinf", false, ["oil_reinf", "R"]]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+        sleep 10;
+
+		_handle = ["airfield_reinf_2", "PATROL", 2, ["oil_reinf", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		sleep 10;
+		_handle = ["airfield_reinf_2", "PATROL", 2, ["oil_reinf", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		sleep 10;
+		_handle = ["airfield_reinf_2", "PATROL", 2, ["oil_reinf", "R"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		sleep 10;
+
+		// Rampage all enemy units.
 		{
 			private _group = _x;
 			if (side _group == opfor) then
@@ -437,6 +545,8 @@ switch (_nbr) do {
 				deleteWaypoint [_x, 1];
 			};
 		} forEach allGroups;
+
+
 
 	};
 	case 100: {
