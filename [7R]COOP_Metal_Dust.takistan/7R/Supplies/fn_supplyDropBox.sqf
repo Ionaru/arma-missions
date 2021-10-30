@@ -5,7 +5,7 @@
 		<-- Offset as Array
 		<-- Mode as Integer
 		<-- Cargo Spawn Overwrite as Boolean
-		
+
 	Description:
 		Spawns the Box and Loads it with appropriate cargo. Either provides them for Air Drop or Sling Loading.
 
@@ -18,9 +18,5 @@ params["_plane","_mem","_off",["_mode", 0]];
 private _box = [_mode] call fw_fnc_supplySpawn;
 
 // Attach Box to Plane
+_box hideObject true;
 _box attachTo [_plane,_off,_mem];
-
-
-
-
-

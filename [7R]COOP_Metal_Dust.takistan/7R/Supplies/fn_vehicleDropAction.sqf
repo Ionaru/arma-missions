@@ -27,7 +27,7 @@ private _actions = [];
 			private _dz = (_player nearObjects ["ACE_DropZone", 150]) select 0;
 			private _class = _this select 2 select 0;
 			private _loadout = _this select 2 select 1;
-			nul = [_dz, "STARTSPAWN", "RHS_C130J", "Pegasus 5-1", 1, 1, [_class, _loadout]] spawn fw_fnc_supplyDropInit;
+			nul = [_dz, "STARTSPAWN", "UK3CB_TKA_O_C130J", "Pegasus 5-1", 1, 1, [_class, _loadout]] spawn fw_fnc_supplyDropInit;
 		},
 		{[_player] call fw_fnc_canCallVehicleDrop},
 		{},
@@ -35,7 +35,7 @@ private _actions = [];
 	] call ace_interact_menu_fnc_createAction;
 
 	_actions pushBack [_code, [], _vehicle];
-	
+
 	true
 
 } count SR_Vehicle_Drop;

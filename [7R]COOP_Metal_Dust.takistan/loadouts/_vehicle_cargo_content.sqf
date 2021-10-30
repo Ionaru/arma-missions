@@ -20,8 +20,8 @@ switch (_index) do {
 	// Helicopter Loadout - Loadout 1
 	case 1: {
 		_vehicle addItemCargoGlobal ["SR_PAK", 4];
-		_vehicle additemcargoGlobal ["rhs_mag_nspd", 2]; 
-		_vehicle additemcargoGlobal ["rhs_mag_nspn_green", 2]; 
+		_vehicle additemcargoGlobal ["rhs_mag_nspd", 2];
+		_vehicle additemcargoGlobal ["rhs_mag_nspn_green", 2];
 	};
 	// Ground Vehicle (Infantry) Loadout - Loadout 2
 	case 2: {
@@ -45,8 +45,8 @@ switch (_index) do {
 	case 4: {
 		["ACE_Track", _vehicle] call ace_cargo_fnc_loadItem;
 		_vehicle addItemCargoGlobal ["SR_PAK", 4];
-		_vehicle additemcargoGlobal ["rhs_mag_nspd", 2]; 
-		_vehicle additemcargoGlobal ["rhs_mag_nspn_green", 2]; 
+		_vehicle additemcargoGlobal ["rhs_mag_nspd", 2];
+		_vehicle additemcargoGlobal ["rhs_mag_nspn_green", 2];
 	};
 	// Default Case (Fallback)
 	default {};

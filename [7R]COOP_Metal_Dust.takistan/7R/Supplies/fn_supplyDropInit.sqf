@@ -64,6 +64,12 @@ _plane = [_spawnPos, _dir, _type, SR_Side] call bis_fnc_spawnVehicle;
 _planeGroup = _plane select 2;
 _planeacc = _plane select 0;
 _planeacc engineOn true;
+
+_planeacc animate ["intake_hide", 1];
+_planeacc animate ["bench_hide", 1];
+_planeacc animate ["reardoors_hide", 1];
+_planeacc animate ["reardoors_hide_left", 1];
+
 _planeacc allowDamage false;
 _planeGroup setBehaviour "CARELESS";
 leader _planeGroup setGroupIdGlobal [_callsign];
@@ -93,6 +99,7 @@ if (count _vehicle == 0) then {
 	if (_vehicleLoadout >= 0) then {
 		[_veh, _vehicleLoadout] execVM "loadouts\_vehicle_cargo_content.sqf";
 	};
+	_veh hideObject true;
 	_veh attachTo [_planeacc,[0,0,4]];
 };
 
@@ -101,10 +108,12 @@ _wpPos = [_target, 2000, _dir] call BIS_fnc_relPos;
 _planeacc doMove _wp;
 
 // Open Ramp
-waitUntil {(_planeacc distance2D _wp) < 800};
-_planeacc animate ["ramp_bottom",1];
-_planeacc animate ["ramp_top",1];
-_planeacc doMove _wp;
+// waitUntil {(_planeacc distance2D _wp) < 800};
+// _planeacc animate ["open_reardoors_right",1];
+// _planeacc animate ["open_reardoors_right_small",1];
+// _planeacc animate ["open_reardoors_left",1];
+// _planeacc animate ["open_reardoors_left_small",1];
+// _planeacc doMove _wp;
 
 // Drop
 waitUntil {(_planeacc distance2D _wp) < 150};
@@ -112,16 +121,16 @@ waitUntil {(_planeacc distance2D _wp) < 150};
 ["Supply Drop delivered."] spawn fw_fnc_info;
 
 // Send Plane to End Pos
-_dropdist = 20 + (15 * _amount);
-waitUntil {(_planeacc distance2D _wp) < _dropdist};
+// _dropdist = 20 + (15 * _amount);
+// waitUntil {(_planeacc distance2D _wp) < _dropdist};
 _planeacc doMove _wpPos;
 
 // Close Ramp
-_planeacc animate ["ramp_bottom",0];
-_planeacc animate ["ramp_top",0];
+// _planeacc animate ["ramp_bottom",0];
+// _planeacc animate ["ramp_top",0];
 
 // Move to end point
-_planeacc doMove _wpPos;
+// _planeacc doMove _wpPos;
 
 // Wait until End Pos Reached
 waitUntil{(_planeacc distance2D  _wpPos) < 500 || !(alive _planeacc) || (CBA_MissionTime - _startTime > 360)};

@@ -33,19 +33,19 @@ SR_SupplyBoxes = [["SR_Supply_Crate_Empty","Infantry Supplies",1,3],["ACE_Constr
 /*
 	Support Asset Class Array
 	SR_Support_Assets = ["ParaDropPlane1","ParaDropPlane2","SupplyDropPlane","CASPlane","ExfilHelicopter"];
-	
+
 	// Recommended Options
-	ParaDropPlane1 & SupplyDropPlane - "RHS_C130J" (Default), "UK3CB_BAF_Hercules_C3" (BAF),"UK3CB_BAF_Hercules_C4" (German), "UK3CB_TKA_O_C130J" (Russian, USSR) 
+	ParaDropPlane1 & SupplyDropPlane - "RHS_C130J" (Default), "UK3CB_BAF_Hercules_C3" (BAF),"UK3CB_BAF_Hercules_C4" (German), "UK3CB_TKA_O_C130J" (Russian, USSR)
 	ParaDropPlane2 - "globemaster_c17" (Default)
 	CASPlane - "JS_JC_FA18E" (Default, "RHS_A10" (Alternative US/NATO), "RHS_Su25SM_vvs" (Russian/USSR)
 	ExfilHelicopter - "RHS_CH_47F" (Default), "UK3CB_BAF_Merlin_HC3_32_MTP" (BAF), "RHS_Mi8AMT_vvs" (Russian/USSR)
 
 
 */
-SR_Support_Assets = ["RHS_C130J","globemaster_c17","RHS_C130J","RHS_A10","RHS_CH_47F"];
+SR_Support_Assets = ["RHS_C130J","globemaster_c17","RHS_Mi8AMT_vdv","RHS_Su25SM_vvs","RHS_Mi8AMT_vdv"];
 
 // Vehicle Supply Drop Setup [Display Name, Vehicle Class, Loadout Number]
-SR_Vehicle_Drop = [["Quad","B_Quadbike_01_F",0]];
+SR_Vehicle_Drop = [["BRDM","rhsgref_BRDM2UM_vdv",2]];
 
 // ======================================================================================
 /*

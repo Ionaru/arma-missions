@@ -18,7 +18,7 @@ params ["_vehicle", "_player"];
 private _actions = [];
 private _options = [];
 
-// Create Array of Options 
+// Create Array of Options
 {
 	// Check if multiple boxes can be called at once
 	_x params ["_class","_description",["_loadout",-1],["_amount",1]];
@@ -40,10 +40,11 @@ private _options = [];
                     _description,
                    	_description,
                     "",
-                    { 
+                    {
 						params ["_target", "_player", "_params"];
 						_params params ["_class","_description","_loadout","_amount","_type"];
-                        nul = ["SupplyDrop","STARTSPAWN","RHS_C130J","Stallion 5-1", _amount, _type] spawn fw_fnc_supplyDropInit;
+						_planeType = SR_Support_Assets select 3;
+                        nul = ["SupplyDrop","STARTSPAWN","RHS_Mi8AMT_vdv","Stallion 5-1", _amount, _type] spawn fw_fnc_supplyDropInit;
                     },
                     {true},
                     {},
