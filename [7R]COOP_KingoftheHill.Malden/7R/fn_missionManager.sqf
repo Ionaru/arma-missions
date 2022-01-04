@@ -189,7 +189,6 @@ switch (_nbr) do {
 		_handle = ["goisse_patrol_side", "PATROL", 2, ["goisse_patrol_out", "P"]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
 		_handle = ["goisse_patrol_side", "PATROL", 2, ["goisse_patrol_out", "P"]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
 		_handle = ["goisse_patrol_side", "PATROL", 3, ["goisse_patrol_out", "P"]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
-		_handle = ["goisse_patrol_side", "PATROL", 3, ["goisse_patrol_out", "P"]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
 
 		_handle = ["goisse_zone", "PATROL", 1, ["goisse_patrol_out", "P"]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
 		_handle = ["goisse_zone", "PATROL", 1, ["goisse_patrol_out", "P"]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
@@ -197,9 +196,10 @@ switch (_nbr) do {
 		_handle = ["goisse_zone", "PATROL", 1, ["goisse_patrol_out", "P"]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
 		_handle = ["goisse_zone", "PATROL", 1, ["goisse_patrol_out", "P"]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
 
-		_handle = ["goisse_point", "GARRISON", 1, [300]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
-		_handle = ["goisse_point", "GARRISON", 1, [300]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
-		_handle = ["goisse_point", "GARRISON", 1, [300]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
+		_handle = ["goisse_lower_patrol", "PATROL", 1, ["goisse_lower_patrol", "P"]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
+		_handle = ["goisse_lower_patrol", "PATROL", 2, ["goisse_lower_patrol", "P"]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
+		_handle = ["goisse_lower_patrol", "PATROL", 2, ["goisse_lower_patrol", "P"]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
+
 		_handle = ["goisse_point", "GARRISON", 1, [300]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
 		_handle = ["goisse_point", "GARRISON", 1, [300]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
 		_handle = ["goisse_point", "GARRISON", 1, [300]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
