@@ -6,11 +6,11 @@
 		<-- Opt: Suicide Bombers as Integer - default: 0
 		<-- Opt: Sleeper as Integer - default : 0
 		<-- Opt: Shooter as Integer - default : 0
-		
+
 		Description:
-		Spawn Civilians randomly in an area which they either patrol, occupy houses or idle near roads. 
+		Spawn Civilians randomly in an area which they either patrol, occupy houses or idle near roads.
 		In addition it also allows the spawning of suicide bombers.
-		
+
 		Example:
 			nul = ["civ1",["LOP_CHR_Civ_Random"],8,0] spawn fw_fnc_civSpawn;
 
@@ -28,7 +28,7 @@ params ["_zone", "_classnames", "_civilians",["_bomber", 0],["_sleeper",0],["_sh
 
 // Spawn Units
 {
-	
+
 	private _count  = _x;
 	for [{_i = 1}, {_i <= _count}, {_i = _i + 1}] do {
 
@@ -60,23 +60,23 @@ params ["_zone", "_classnames", "_civilians",["_bomber", 0],["_sleeper",0],["_sh
 						[_position, [_unit], 250] spawn fw_fnc_garrison;
 					};
 					// Stand roadside
-					case 2: {
-						private _roads = _position nearRoads 250;
-						// Check if roads nearby, if not patrol
-						if (count _roads > 0) then {
-							_unit setPos (getPos (selectRandom _roads));
-							// Animate Civilian
-							[_unit, selectRandom [3,8,15,16,18], true] spawn fw_fnc_ambientAnimation;
-						} else {
-							[group _unit, _zone, 4] spawn fw_fnc_civPatrol;
-						};
-					};
+					// case 2: {
+					// 	private _roads = _position nearRoads 250;
+					// 	// Check if roads nearby, if not patrol
+					// 	if (count _roads > 0) then {
+					// 		_unit setPos (getPos (selectRandom _roads));
+					// 		// Animate Civilian
+							// [_unit, selectRandom [3,8,15,16,18], true] spawn fw_fnc_ambientAnimation;
+					// 	} else {
+					// 		[group _unit, _zone, 4] spawn fw_fnc_civPatrol;
+					// 	};
+					// };
 					// Patrol area
 					default {
 						[group _unit, _zone, 4] spawn fw_fnc_civPatrol;
 					};
 				};
 			};
-		};	
+		};
 	};
 } forEach [_civilians, _bomber, _sleeper , _shooter];
