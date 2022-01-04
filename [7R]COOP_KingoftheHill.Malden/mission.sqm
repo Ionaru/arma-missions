@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2491;
+		nextID=2493;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10136.891,30.239422,4006.6995};
-		dir[]={0.26333883,-0.37217364,-0.8901543};
-		up[]={0.10559439,0.92813069,-0.35693803};
-		aside[]={-0.9590199,-8.5771171e-007,-0.28371489};
+		pos[]={10134.859,32.225285,4011.9558};
+		dir[]={-0.09154126,-0.66638023,-0.74013066};
+		up[]={-0.081796519,0.74560171,-0.6613394};
+		aside[]={-0.99254471,-1.8490246e-006,0.12275775};
 	};
 };
 binarizationWanted=0;
@@ -410,7 +410,7 @@ randomSeed=10800295;
 class ScenarioData
 {
 	author="Ionaru";
-	overviewText="Drive Spetsnaz forces off Malden";
+	overviewText="Drive Russian forces off Malden";
 	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
@@ -493,7 +493,7 @@ class Mission
 	class Intel
 	{
 		briefingName="[7R] King of the Hills";
-		overviewText="Drive Spetsnaz forces off Malden";
+		overviewText="Drive Russian forces off Malden";
 		timeOfChanges=5400;
 		startWeather=0;
 		startFog=0.25;
@@ -10588,7 +10588,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Clear and secure the <marker name='airport_objective'>airport</marker> to finally rid Malden of the Spetsnaz occupants.";
+							value="Clear and secure the <marker name='airport_objective'>airport</marker> to finally rid Malden of the Russian occupants.";
 						};
 					};
 				};

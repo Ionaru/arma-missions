@@ -64,7 +64,7 @@ Artillery ammo: 45
 <br/>
 CAS ammo: 6
 <br/>
-Fortification supplies: 250
+Fortification supplies: 500
 "]];
 
 // ====================================================================================
@@ -74,7 +74,7 @@ Fortification supplies: 250
 
 _mis = player createDiaryRecord ["diary", ["Mission","
 <br/>
-Capture the Russian-held towns, destroy their equipment and drive them off the island.
+Capture the Russian-held towns, destroy their equipment and force them off the island.
 "]];
 
 // ====================================================================================
@@ -92,7 +92,7 @@ Our strategists have deemed that now, while the Russians are busy with rebuildin
 <br/><br/>
 <font size='18'>ENEMY FORCES</font>
 <br/>
-Spetsnaz
+Russian Armed Forces
 <br/><br/>
 <font size='18'>FRIENDLY FORCES</font>
 <br/>
