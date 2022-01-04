@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2487;
+		nextID=2491;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10121.908,48.06115,4046.144};
-		dir[]={-0.32835269,-0.58783114,-0.73950762};
-		up[]={-0.23855528,0.80896187,-0.53726524};
-		aside[]={-0.9140597,-1.4529796e-006,0.40585563};
+		pos[]={10136.891,30.239422,4006.6995};
+		dir[]={0.26333883,-0.37217364,-0.8901543};
+		up[]={0.10559439,0.92813069,-0.35693803};
+		aside[]={-0.9590199,-8.5771171e-007,-0.28371489};
 	};
 };
 binarizationWanted=0;
@@ -2324,8 +2324,8 @@ class Mission
 						rank="CORPORAL";
 						init="[this, 2] spawn fw_fnc_saveTemplate;";
 					};
-					id=2160;
-					type="rhs_vdv_junior_sergeant";
+					id=2490;
+					type="rhs_vdv_arifleman_rpk";
 					class CustomAttributes
 					{
 						class Attribute0
