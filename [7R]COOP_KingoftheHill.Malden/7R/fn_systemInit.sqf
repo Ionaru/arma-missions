@@ -13,6 +13,11 @@ SR_AI_removeNVG = false;
 SR_AI_addFlashlight = false;
 SR_AI_forceFlashlight = false;
 
+// Respawn Management
+SR_Respawn_Max = 600;
+SR_Wave_Size = 2;
+SR_Spawn_Height = 0;
+
 // Night Mission (true/false)
 SR_Night = false;
 SR_Camo_Coef = 0.75; // for Night Missions, default: 0.75
@@ -35,8 +40,9 @@ SR_SupplyBoxes = [["SR_Supply_Crate_Empty","Infantry Supplies",1,3],["ACE_Constr
 	CASPlane - "JS_JC_FA18E" (Default, "RHS_A10" (Alternative US/NATO), "RHS_Su25SM_vvs" (Russian/USSR)
 	ExfilHelicopter - "RHS_CH_47F" (Default), "UK3CB_BAF_Merlin_HC3_32_MTP" (BAF), "RHS_Mi8AMT_vvs" (Russian/USSR)
 
+
 */
-SR_Support_Assets = ["RHS_C130J","globemaster_c17","RHS_C130J","JS_JC_FA18E","RHS_CH_47F"];
+SR_Support_Assets = ["RHS_C130J","globemaster_c17","RHS_C130J","RHS_A10","RHS_CH_47F"];
 
 // Vehicle Supply Drop Setup [Display Name, Vehicle Class, Loadout Number]
 SR_Vehicle_Drop = [["Quad","B_Quadbike_01_F",0]];
@@ -47,15 +53,13 @@ SR_Vehicle_Drop = [["Quad","B_Quadbike_01_F",0]];
 	- SupplyDropAmmo = 12;
 	- CASCallAmmo = 6;
 	- ArtilleryCallAmmo 45;
-	- ace_trenches_trenchSupplies = 250; (Trench Supply Drop gives 250 as well)
+	- ace_trenches_trenchSupplies = 500; (Trench Supply Drop gives 500 as well)
 */
 // Support System Availability Variables
-ExfilHelolock = false;
-ReifLock = false;
 SupplyDropAmmo = 12;
 ArtilleryCallAmmo = 45;
 CASCallAmmo = 6;
-ace_trenches_trenchSupplies = 250;
+ace_trenches_trenchSupplies = 500;
 
 
 // ======================================================================================

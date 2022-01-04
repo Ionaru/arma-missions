@@ -11,7 +11,7 @@
 	Make Phase Variable an Integer. On trigger Act. use instead of phase = true; phase = phase + 1 or phase = 2.
 
 	Example:
-		nul = [1] spawn fw_fnc_missionManager;
+		nul = [0] spawn fw_fnc_missionManager;
 
 */
 
@@ -494,3 +494,5 @@ switch (_nbr) do {
 		[[blufor, "HQ"], "Well done, PL-1. Report for debrief."] remoteExec ["sideChat", 0];
 	};
 };
+
+["MissionLog", ["Mission", ("Case " + str(_nbr) + " loaded.")]] spawn CBA_fnc_globalEvent;

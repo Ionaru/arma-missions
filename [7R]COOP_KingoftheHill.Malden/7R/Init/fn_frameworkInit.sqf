@@ -22,4 +22,10 @@ if (isServer) then {
 };
 SR_SuspicionValue = 0;
 SR_SuspicionSpotted = -60;
-
+ArtilleryCallAmmo = 60;
+ArtilleryFireMissionReady = 0;
+ExfilReady = 0;
+ReifLock = false;
+SR_RespawnWave = false;
+SR_RespawnForce = false;
+SR_RespawnLock = false;

@@ -46,11 +46,13 @@
 		class civShooter{};
 		class civEventhandler{};
 		class civBomberAction{};
+		class civUnitSpawn{};
 	};
 	class arty
 	{
 		file = "7R\FireSupport";
 		class artillery{};
+		class artilleryReadyCheck{};
 		class CAS{};
 	};
 	class supply
@@ -70,7 +72,6 @@
 		file = "7R\Exfil";
 		class exfilAction{};
 		class exfilCall{};
-		class recoverCall{};
 	};
 	class reinf {
 		file = "7R\REINF";
@@ -81,16 +82,13 @@
 	class Objectives {
 		file = "7R\Objectives";
 		class hvt{};
+		class vip{};
 		class intelAction{};
 		class intelCollection{};
-		class hackingAction{};
-		class hackingLoop{};
-		class hackingPickup{};
 	};
 	class repair {
 		file = "7R\Repair";
 		class repairStation{};
-		class repair{};
 
 	};
 	class para {
@@ -114,11 +112,6 @@
 		file = "7R";
 		class missionManager{};
 		class systemInit{preInit = 1;};
-	};
-	class RP {
-		file = "7R\Rally";
-		class buildRP{};
-		class destroyRP{};
 	};
 	class UC {
 		file = "7R\Undercover";
@@ -150,15 +143,29 @@
 		class dismountVehicle{};
 		class findPOI{};
 		class garrisonZEI{};
+		class createWaypoint{};
+		class convoy{};
+		class convoyReaction{};
+	};
+	class AiAnimationn {
+		file = "7R\AI\Animation";
+		class ambientAnimation{};
 	};
 	class CleanUp {
 		file = "7R\AI\CleanUp";
 		class cleanUpLoop{postInit = true};
+	};
+	class AIEH {
+		file = "7R\AI\Eventhandler";
+		class civKilledEH{};
+		class civPanicEH{};
+		class powKilledEH{};
 	};
 	class Loadouts {
 		file = "7R\Loadouts";
 		class clearVehicleCargo{};
 		class addEquipmentRadios{};
 		class addEquipmentItems{};
+		class conditionEquipment{};
 	}
 };
