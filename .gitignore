@@ -3,6 +3,7 @@
 
 # Except these files/folders
 !.gitignore
+!.github/
 !\[7R\]COOP_Borderline.tem_summa/
 !\[7R\]COOP_Strategy.Stratis/
 !\[7R\]COOP_Pushback.pulau/

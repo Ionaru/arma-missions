@@ -1,0 +1,39 @@
+on: workflow_dispatch
+
+jobs:
+
+  get_mission_folders:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: lts/*
+    - id: set-matrix
+      run: |
+        echo "::set-output name=matrix::$(node -r fs -p 'fs.readdirSync(".").filter((path) => !path.startsWith("."))')"
+
+    outputs:
+        matrix: ${{ steps.set-matrix.outputs.matrix }}
+
+  build_mission:
+    needs: get_mission_folders
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        mission: ${{ fromJson(needs.get_mission_folders.outputs.matrix) }}
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/mission-make-pbo
+      with:
+        mission: "${{ matrix.mission }}"
+        briefingName: "${{ matrix.mission }}-${{ env.GITHUB_RUN_NUMBER }}"
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: "${{ matrix.mission }}"
+        path: ${{ matrix.mission }}/*.pbo
+        retention-days: 1
