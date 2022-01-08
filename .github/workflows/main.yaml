@@ -30,7 +30,6 @@ jobs:
     - uses: team-gsri/actions-make-pbo@master
       with:
         mission: ${{ matrix.mission }}
-        briefingName: ${{ matrix.mission }}-${{ github.run_number }}
 
     - run: ls -lahF
     - run: echo $PWD
