@@ -1,4 +1,4 @@
-on: workflow_dispatch
+on: [push, workflow_dispatch]
 
 jobs:
 
@@ -27,7 +27,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - run: echo "${{ matrix }}"
+    - run: echo "${{ matrix.mission }}"
     - uses: team-gsri/actions-make-pbo@master
       with:
         mission: "${{ matrix.mission }}"
