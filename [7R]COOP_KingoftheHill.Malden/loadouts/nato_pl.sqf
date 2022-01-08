@@ -35,12 +35,12 @@ for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Role";
 _unit addItemToVest "ACRE_PRC152";
-_unit addItemToVest "SmokeShell";
 _unit addItemToVest "SmokeShellGreen";
 _unit addItemToVest "SmokeShellRed";
 _unit addItemToVest "H_MilCap_wdl";
 _unit addItemToBackpack "ACE_HuntIR_monitor";
 _unit addItemToBackpack "ACE_SpraypaintGreen";
+for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 5 do {_unit addItemToVest "1Rnd_HE_Grenade_shell";};
 for "_i" from 1 to 3 do {_unit addItemToVest "30Rnd_65x39_caseless_black_mag_Tracer";};
 for "_i" from 1 to 3 do {_unit addItemToVest "30Rnd_65x39_caseless_black_mag";};

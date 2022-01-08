@@ -35,7 +35,7 @@ for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 
 comment "Role";
-_unit addItemToVest "SmokeShell";
+for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 5 do {_unit addItemToVest "1Rnd_HE_Grenade_shell";};
 for "_i" from 1 to 6 do {_unit addItemToVest "30Rnd_65x39_caseless_black_mag";};
 for "_i" from 1 to 3 do {_unit addItemToBackpack "30Rnd_65x39_caseless_black_mag";};
