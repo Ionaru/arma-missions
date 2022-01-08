@@ -85,7 +85,9 @@ Capture the designated towns, destroy the Russian equipment and force them off t
 _sit = player createDiaryRecord ["diary", ["Situation","
 <br/>
 Malden served as the location of a large NATO FOB. From the island, the recapturing of Altis and Stratis were executed and supported.
-Unfortunately, the island was captured by Russian forces while most local forces were deployed during the Altis offensive.
+Unfortunately, the island was attacked by Russian forces while most local forces were deployed during the Altis offensive.
+<br/>
+NATO withdrew from Malden because winning on two fronts was impossible and Altis took priority over this small island.
 <br/><br/>
 Now, eight weeks later, the Russians have complete control of the island and have begun rebuilding the military infrastructure.
 Not wanting to wait, NATO command has decided to send a small force to the island to attempt a recapture before all the infrastructure is operational.
