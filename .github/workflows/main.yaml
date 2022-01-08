@@ -15,7 +15,7 @@ jobs:
         node-version: lts/*
     - id: set-matrix
       run: |
-        echo "::set-output name=matrix::{\"mission\":[\"[7R]COOP_KingoftheHill.Malden\"]}"
+        echo "::set-output name=matrix::{\"mission\":$(node -r fs -p 'JSON.stringify(fs.readdirSync(".").filter((path) => !path.startsWith(".")))')}"
 
   build_missions:
     needs: get_mission_folders
