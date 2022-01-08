@@ -37,6 +37,6 @@ jobs:
     - run: echo "${{ matrix.mission }}"
     - uses: actions/upload-artifact@v2
       with:
-        name: ${{ matrix.mission }}-${{ github.run_number }}.pbo
+        name: ${{ matrix.mission }}.pbo
         path: ${{ github.workspace }}/*.pbo
         retention-days: 1
