@@ -587,14 +587,14 @@ class Mission
 		overviewText="Drive Russian forces off Malden";
 		timeOfChanges=5400;
 		startWeather=0;
-		startFog=0.25;
-		startWind=0.050000001;
+		startFog=0.4;
+		startWind=0.02;
 		startWaves=0.1;
 		forecastWeather=0;
-		forecastFog=0.050000001;
-		forecastWind=0.050000001;
+		forecastFog=0.4;
+		forecastWind=0.02;
 		forecastWaves=0.1;
-		forecastLightnings=0.84310412;
+		forecastLightnings=0;
 		rainForced=1;
 		lightningsForced=1;
 		wavesForced=1;
@@ -606,8 +606,8 @@ class Mission
 		minute=-30;
 		startFogBase=250;
 		forecastFogBase=250;
-		startFogDecay=0.0099999998;
-		forecastFogDecay=0;
+		startFogDecay=0.01;
+		forecastFogDecay=0.01;
 	};
 	class Entities
 	{
