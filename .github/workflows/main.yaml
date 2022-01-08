@@ -4,6 +4,10 @@ jobs:
 
   get_mission_folders:
     runs-on: ubuntu-latest
+
+    outputs:
+        matrix: ${{ steps.set-matrix.outputs.matrix }}
+
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
@@ -11,22 +15,19 @@ jobs:
         node-version: lts/*
     - id: set-matrix
       run: |
-        echo "::set-output name=matrix::TESTVALUE"
+        echo "::set-output name=matrix::{\"include\":[{\"project\":\"foo\",\"config\":\"Debug\"},{\"project\":\"bar\",\"config\":\"Release\"}]}"
 
-    outputs:
-        matrix: ${{ steps.set-matrix.outputs.matrix }}
-
-  build_mission:
+  build_missions:
     needs: get_mission_folders
 
     runs-on: ubuntu-latest
 
     strategy:
-      matrix:
-        mission: ${{ fromJson(needs.get_mission_folders.outputs.matrix) }}
+      matrix: ${{ fromJson(needs.get_mission_folders.outputs.matrix) }}
 
     steps:
     - uses: actions/checkout@v2
+    - run: echo "${{ matrix }}"
     - uses: team-gsri/mission-make-pbo@master
       with:
         mission: "${{ matrix.mission }}"
