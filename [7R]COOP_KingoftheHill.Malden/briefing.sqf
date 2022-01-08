@@ -53,7 +53,7 @@ _exe = player createDiaryRecord ["diary", ["Execution","
 <br/><br/>
 <font size='18'>MOVEMENT PLAN</font>
 <br/>
-Insertion by vehicle.
+Insertion and transport by vehicle.
 Reinsertion by FOB.
 <br/><br/>
 <font size='18'>FIRE SUPPORT PLAN</font>
@@ -74,7 +74,7 @@ Fortification supplies: 500
 
 _mis = player createDiaryRecord ["diary", ["Mission","
 <br/>
-Capture the Russian-held towns, destroy their equipment and force them off the island.
+Capture the designated towns, destroy the Russian equipment and force them off the island.
 "]];
 
 // ====================================================================================
@@ -84,11 +84,12 @@ Capture the Russian-held towns, destroy their equipment and force them off the i
 
 _sit = player createDiaryRecord ["diary", ["Situation","
 <br/>
-It's only been 4 weeks since Russian forces drove NATO off Malden and claimed the place as part of the Russian Federation.
-<br/>
-
-<br/>
-Our strategists have deemed that now, while the Russians are busy with rebuilding, that their defences will be insufficient to withstand a NATO counterattack.
+Malden served as the location of a large NATO FOB. From the island, the recapturing of Altis and Stratis were executed and supported.
+Unfortunately, the island was captured by Russian forces while most local forces were deployed during the Altis offensive.
+<br/><br/>
+Now, eight weeks later, the Russians have complete control of the island and have begun rebuilding the military infrastructure.
+Not wanting to wait, NATO command has decided to send a small force to the island to attempt a recapture before all the infrastructure is operational.
+<br/><br/>
 <br/><br/>
 <font size='18'>ENEMY FORCES</font>
 <br/>
@@ -96,7 +97,7 @@ Russian Armed Forces
 <br/><br/>
 <font size='18'>FRIENDLY FORCES</font>
 <br/>
-US Army Rangers
+NATO
 "]];
 
 // ====================================================================================
