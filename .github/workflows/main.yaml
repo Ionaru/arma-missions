@@ -27,7 +27,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: team-gsri/mission-make-pbo
+    - uses: team-gsri/mission-make-pbo@master
       with:
         mission: "${{ matrix.mission }}"
         briefingName: "${{ matrix.mission }}-${{ env.GITHUB_RUN_NUMBER }}"
