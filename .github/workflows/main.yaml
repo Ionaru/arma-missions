@@ -15,7 +15,7 @@ jobs:
         node-version: lts/*
     - id: set-matrix
       run: |
-        echo "::set-output name=matrix::{\"include\":[{\"project\":\"foo\",\"config\":\"Debug\"},{\"project\":\"bar\",\"config\":\"Release\"}]}"
+        echo "::set-output name=matrix::{\"missions\":[\"[7R]COOP_KingoftheHill.Malden\"]}"
 
   build_missions:
     needs: get_mission_folders
@@ -28,7 +28,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: echo "${{ matrix }}"
-    - uses: team-gsri/mission-make-pbo@master
+    - uses: team-gsri/actions-make-pbo@master
       with:
         mission: "${{ matrix.mission }}"
         briefingName: "${{ matrix.mission }}-${{ env.GITHUB_RUN_NUMBER }}"
