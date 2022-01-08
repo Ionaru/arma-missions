@@ -1005,7 +1005,6 @@ class Mission
 				angles[]={6.251193,0,0.075066611};
 			};
 			name="arudy_task";
-			init="[1] spawn fw_fnc_missionManager;";
 			id=1278;
 			type="ModuleTaskCreate_F";
 			class CustomAttributes
