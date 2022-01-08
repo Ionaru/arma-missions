@@ -30,13 +30,13 @@ jobs:
     - uses: team-gsri/actions-make-pbo@master
       with:
         mission: ${{ matrix.mission }}
-        briefingName: ${{ matrix.mission }}-${{ github.run_id }}
+        briefingName: ${{ matrix.mission }}-${{ github.run_number }}
 
     - run: ls -lahF
     - run: echo $PWD
     - run: echo "${{ matrix.mission }}"
     - uses: actions/upload-artifact@v2
       with:
-        name: ${{ matrix.mission }}-${{ github.run_id }}.pbo
+        name: ${{ matrix.mission }}-${{ github.run_number }}.pbo
         path: ${{ github.workspace }}/*.pbo
         retention-days: 1
