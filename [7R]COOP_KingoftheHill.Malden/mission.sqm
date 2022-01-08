@@ -1406,7 +1406,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this addaction [""<t color=""""#00FF00"""">"" +""Spawn Truck"", fw_fnc_vehicleSpawn, [""B_T_Truck_01_transport_F"", v_pad]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn LTV"", fw_fnc_vehicleSpawn, [""B_T_LSV_01_unarmed_F"", v_pad]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Echo Vehicle"", fw_fnc_vehicleSpawn, [""B_T_LSV_01_armed_F"", v_pad]]; " \n "this addaction [""<t color=""""#00FF00"""">"" +""Spawn Foxtrot Vehicle"", fw_fnc_vehicleSpawn, [""B_T_MBT_01_TUSK_F"", v_pad]]; " \n "";
+				init="this addaction [""<t color=""""#00FF00"""">"" +""Spawn Truck"", fw_fnc_vehicleSpawn, [""B_T_Truck_01_transport_F"", v_pad]];this addaction [""<t color=""""#00FF00"""">"" +""Spawn LTV"", fw_fnc_vehicleSpawn, [""B_T_LSV_01_unarmed_F"", v_pad]];this addaction [""<t color=""""#00FF00"""">"" +""Spawn Echo Vehicle"", fw_fnc_vehicleSpawn, [""B_T_LSV_01_armed_F"", v_pad]];this addaction [""<t color=""""#00FF00"""">"" +""Spawn Foxtrot Vehicle"", fw_fnc_vehicleSpawn, [""B_T_MBT_01_TUSK_F"", v_pad]];";
 				disableSimulation=1;
 			};
 			id=1366;
