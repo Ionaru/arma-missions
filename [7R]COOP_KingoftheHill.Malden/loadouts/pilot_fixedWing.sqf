@@ -26,6 +26,7 @@ _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "Chemlight_green";
 _unit addItemToUniform "ACRE_PRC343";
 _unit addItemToUniform "16Rnd_9x21_Mag";
+for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Role";
