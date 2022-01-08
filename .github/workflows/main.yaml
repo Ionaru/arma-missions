@@ -27,16 +27,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - run: echo "${{ matrix.mission }}"
     - uses: team-gsri/actions-make-pbo@master
       with:
         mission: "${{ matrix.mission }}"
         briefingName: "${{ matrix.mission }}-${{ env.GITHUB_RUN_NUMBER }}"
 
-    - run: ls -lahF "${{ matrix.mission }}"
-    - run: ls -lahF
     - uses: actions/upload-artifact@v2
       with:
-        name: "${{ matrix.mission }}"
-        path: ${{ matrix.mission }}/*.pbo
+        name: "${{ matrix.mission }}-${{ env.GITHUB_RUN_NUMBER }}.pbo"
+        path: "${{ matrix.mission }}.pbo"
         retention-days: 1
