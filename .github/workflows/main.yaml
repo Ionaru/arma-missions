@@ -33,9 +33,10 @@ jobs:
         briefingName: "${{ matrix.mission }}-${{ env.GITHUB_RUN_NUMBER }}"
 
     - run: ls -lahF
+    - run: echo $PWD
     - run: echo "${{ matrix.mission }}"
     - uses: actions/upload-artifact@v2
       with:
         name: "${{ matrix.mission }}-${{ env.GITHUB_RUN_NUMBER }}.pbo"
-        path: "${{ matrix.mission }}.pbo"
+        path: "./${{ matrix.mission }}.pbo"
         retention-days: 1
