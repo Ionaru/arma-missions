@@ -11,7 +11,7 @@ jobs:
         node-version: lts/*
     - id: set-matrix
       run: |
-        echo "::set-output name=matrix::$(node -r fs -p 'fs.readdirSync(".").filter((path) => !path.startsWith("."))')"
+        echo "::set-output name=matrix::TESTVALUE"
 
     outputs:
         matrix: ${{ steps.set-matrix.outputs.matrix }}
