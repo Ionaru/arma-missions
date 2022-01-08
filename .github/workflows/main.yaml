@@ -33,6 +33,7 @@ jobs:
         mission: "${{ matrix.mission }}"
         briefingName: "${{ matrix.mission }}-${{ env.GITHUB_RUN_NUMBER }}"
 
+    - run: ls -lahF "${{ matrix.mission }}"
     - uses: actions/upload-artifact@v2
       with:
         name: "${{ matrix.mission }}"
