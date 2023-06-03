@@ -69,7 +69,7 @@ switch (_nbr) do {
 
 		sleep 10;
 
-		_handle = ["roadblock_vic_reinf_spawn", "VEHICLE", 7, ["roadblock_rally", false, ["roadblock_rally", "R"]]] spawn fw_fnc_spawnTemplate;
+		_handle = ["roadblock_vic_reinf_spawn", "VEHICLE", 5, ["roadblock_rally", false, ["roadblock_rally", "R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
         sleep 120;
@@ -163,7 +163,7 @@ switch (_nbr) do {
 
 		sleep 60;
 
-		_handle = ["depot_reinf_2", "VEHICLE", 7, ["depot_rally", false, ["depot_rally", "R"]]] spawn fw_fnc_spawnTemplate;
+		_handle = ["depot_reinf_2", "VEHICLE", 5, ["depot_rally", false, ["depot_rally", "R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
 		sleep 30;
@@ -288,6 +288,12 @@ switch (_nbr) do {
 		_handle = ["admin_zone", "PATROL", 2, ["admin_zone", "P"]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 		_handle = ["admin_road", "PATROL", 2, ["admin_road", "P"]] spawn fw_fnc_spawnTemplate;
+		waitUntil {scriptDone _handle};
+		_handle = ["admin_bunker", "GARRISON", 4, [0]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
+		_handle = ["admin_bunker_2", "GARRISON", 4, [0]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
+		_handle = ["admin_bunker_3", "GARRISON", 4, [0]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
+		_handle = ["admin_bunker_4", "GARRISON", 4, [0]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
+		_handle = ["admin_bunker_patrol", "PATROL", 1, ["admin_bunker_patrol", "P"]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 		_handle = ["admin_zone", "GARRISON", 1, [0]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
 		_handle = ["admin_zone", "GARRISON", 1, [0]] spawn fw_fnc_spawnTemplate; waitUntil {scriptDone _handle};
@@ -420,7 +426,7 @@ switch (_nbr) do {
 
 		sleep 10;
 
-		_handle = ["oil_reinf", "VEHICLE", 7, ["oil_rally", false, ["oil_rally", "R"]]] spawn fw_fnc_spawnTemplate;
+		_handle = ["oil_reinf", "VEHICLE", 5, ["oil_rally", false, ["oil_rally", "R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
 		sleep 20;
@@ -430,12 +436,12 @@ switch (_nbr) do {
 
 		sleep 10;
 
-		_handle = ["oil_reinf", "VEHICLE", 7, ["oil_rally", false, ["oil_rally", "R"]]] spawn fw_fnc_spawnTemplate;
+		_handle = ["oil_reinf", "VEHICLE", 5, ["oil_rally", false, ["oil_rally", "R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
 		sleep 10;
 
-		_handle = ["oil_reinf", "VEHICLE", 7, ["oil_rally", false, ["oil_rally", "R"]]] spawn fw_fnc_spawnTemplate;
+		_handle = ["oil_reinf", "VEHICLE", 5, ["oil_rally", false, ["oil_rally", "R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
 		sleep 20;
@@ -518,11 +524,11 @@ switch (_nbr) do {
 		waitUntil {scriptDone _handle};
         sleep 10;
 
-		_handle = ["airfield_reinf_2", "VEHICLE", 7, ["oil_reinf", false, ["oil_reinf", "R"]]] spawn fw_fnc_spawnTemplate;
+		_handle = ["airfield_reinf_2", "VEHICLE", 5, ["oil_reinf", false, ["oil_reinf", "R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
         sleep 10;
 
-		_handle = ["airfield_reinf_2", "VEHICLE", 7, ["oil_reinf", false, ["oil_reinf", "R"]]] spawn fw_fnc_spawnTemplate;
+		_handle = ["airfield_reinf_2", "VEHICLE", 5, ["oil_reinf", false, ["oil_reinf", "R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
         sleep 10;
 

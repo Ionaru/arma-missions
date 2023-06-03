@@ -13,4 +13,8 @@ if(isServer) then {
 	this addWeaponcargoGlobal ["UK3CB_BAF_NLAW_Launcher", 10];
 	this additemcargoGlobal ["SatchelCharge_Remote_Mag", 6];
 	this additemcargoGlobal ["DemoCharge_Remote_Mag", 12];
+	if (isNil "SR_Night") then {SR_Night = false};
+    if (SR_Night) then {
+    this addItemCargoGlobal ["ACE_IR_Strobe_Item", 50];
+    };
 };

@@ -40,6 +40,7 @@ _unit addPrimaryWeaponItem "UK3CB_BAF_TA648_308";
 _unit addPrimaryWeaponItem "UK3CB_underbarrel_acc_fgrip_bipod";
 _unit addWeapon "UK3CB_BAF_L117A2";
 _unit addHandgunItem "UK3CB_BAF_L105A1_LLM_IR_G";
+_unit addHandgunItem "hlc_muzzle_Octane9";
 _unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 
 comment "Add items";

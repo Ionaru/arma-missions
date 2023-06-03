@@ -43,16 +43,6 @@ switch (_nbr) do {
 		waitUntil {scriptDone _spawn}; sleep 2;
 		_spawn = ["mike_patrol","PATROL",1,["mike_patrol", "P"]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _spawn}; sleep 2;
-		_spawn = ["mike_patrol","PATROL",1,["mike_patrol", "P"]] spawn fw_fnc_spawnTemplate;
-		waitUntil {scriptDone _spawn}; sleep 2;
-		_spawn = ["mike_patrol","PATROL",1,["mike_patrol", "P"]] spawn fw_fnc_spawnTemplate;
-		waitUntil {scriptDone _spawn}; sleep 2;
-		_spawn = ["mike_spawn","GARRISON",1,[250]] spawn fw_fnc_spawnTemplate;
-		waitUntil {scriptDone _spawn}; sleep 2;
-		_spawn = ["mike_spawn","GARRISON",1,[250]] spawn fw_fnc_spawnTemplate;
-		waitUntil {scriptDone _spawn}; sleep 2;
-		_spawn = ["mike_spawn","GARRISON",1,[250]] spawn fw_fnc_spawnTemplate;
-		waitUntil {scriptDone _spawn}; sleep 2;
 		_spawn = ["mike_spawn","GARRISON",1,[250]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _spawn}; sleep 2;
 		_spawn = ["mike_spawn","GARRISON",1,[250]] spawn fw_fnc_spawnTemplate;
@@ -68,7 +58,7 @@ switch (_nbr) do {
 	case 2: {
 
 		// Mike-26 cleared
-		[[blufor, "HQ"], "Well done, PL-1. AAF troops are on their way to Mike-26 to fortify the position."] remoteExec ["sideChat", 0];
+		[[blufor, "HQ"], "Well done, PL-1. AAF troops are on their way to Mike-26 to fortify the position, continue to your next objective."] remoteExec ["sideChat", 0];
 
 		_spawn=["spawn_maxwell_r_3","VEHICLE",7,["spawn_maxwell_r_1",true,["maxwell_zone","R"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _spawn}; sleep 2;

@@ -35,6 +35,7 @@ for "_i" from 1 to 5 do {_unit addItemToBackpack "SR_BloodIV_Pack";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SR_Utility_Pack";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellBlue";};
+_unit addItemToBackpack "SR_ItemMedBag";
 _unit addItemToBackpack "H_Booniehat_khk_hs";
 _unit addHeadgear "rhsusf_opscore_fg";
 _unit addGoggles "PBW_shemagh_beige";
@@ -43,6 +44,7 @@ comment "Add weapons";
 _unit addWeapon "UK3CB_BAF_L119A1_CQB";
 _unit addWeapon "UK3CB_BAF_L117A2";
 _unit addHandgunItem "UK3CB_BAF_L105A1_LLM_IR_G";
+_unit addHandgunItem "hlc_muzzle_Octane9";
 _unit addWeapon "Binocular";
 
 comment "Add items";

@@ -21,19 +21,21 @@ for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
-for "_i" from 1 to 2 do {_unit addItemToUniform "UK3CB_BAF_9_15Rnd";};
 _unit addVest "UK3CB_BAF_V_Osprey_MG_B";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
 _unit addHeadgear "rhsusf_opscore_fg_pelt";
 _unit addGoggles "rhs_googles_clear";
 _unit addBackpack "UK3CB_BAF_B_Bergen_MTP_Rifleman_L_D";
+for "_i" from 1 to 2 do {_unit addItemToUniform "UK3CB_BAF_9_15Rnd";};
 
 comment "Add weapons";
 _unit addWeapon "UK3CB_BAF_L110_762";
 _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_Flashlight_Black";
+_unit addPrimaryWeaponItem "rhsusf_acc_ELCAN_ard";
 _unit addWeapon "UK3CB_BAF_L117A2";
 _unit addHandgunItem "UK3CB_BAF_L105A1_LLM_IR_G";
+_unit addHandgunItem "hlc_muzzle_Octane9";
 _unit addWeapon "Binocular";
 
 comment "Add items";

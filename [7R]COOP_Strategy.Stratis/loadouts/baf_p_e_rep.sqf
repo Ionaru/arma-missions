@@ -39,6 +39,7 @@ _unit addWeapon "SPS_hk417_13_vfg_black_f";
 _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_Flashlight_Black";
 _unit addWeapon "UK3CB_BAF_L117A2";
 _unit addHandgunItem "UK3CB_BAF_L105A1_LLM_IR_G";
+_unit addHandgunItem "hlc_muzzle_Octane9";
 _unit addWeapon "ACE_Vector";
 
 comment "Add items";
@@ -48,7 +49,7 @@ _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
 for "_i" from 1 to 8 do {_unit addItemToVest "20Rnd_762x51_Mag";};
-for "_i" from 1 to 4 do {_unit addItemToBackpack "20Rnd_762x51_Mag";};
+for "_i" from 1 to 2 do {_unit addItemToBackpack "20Rnd_762x51_Mag";};
 
 _unit addItemToUniform "ACRE_PRC343";
 _unit addItemToVest "ACRE_PRC152";

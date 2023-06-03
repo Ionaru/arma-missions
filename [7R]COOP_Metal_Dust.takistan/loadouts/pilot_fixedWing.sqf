@@ -14,18 +14,22 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "rhs_uniform_afghanka_winter_boots_moldovan_ttsko";
+_unit forceAddUniform "U_B_PilotCoveralls";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 _unit addItemToUniform "ACE_Flashlight_XL50";
 for "_i" from 1 to 2 do {_unit addItemToUniform "SmokeShellPurple";};
+_unit addItemToUniform "Chemlight_green";
 _unit addItemToUniform "ACE_HandFlare_Green";
-_unit addVest "rhs_vest_pistol_holster";
-_unit addHeadgear "rhs_zsh7a_alt";
+_unit addItemToUniform "ACE_microDAGR";
+for "_i" from 1 to 3 do {_unit addItemToUniform "rhsusf_mag_15Rnd_9x19_JHP";};
+
+_unit addHeadgear "H_PilotHelmetFighter_B";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_makarov_pm";
+_unit addWeapon "rhsusf_weap_m9";
+_unit addHandgunItem "acc_flashlight_pistol";
 
 comment "Add items";
 _unit linkItem "ItemMap";
@@ -33,8 +37,8 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
+_unit addItemToUniform "ACRE_PRC343";
 _unit addItemToUniform "ACRE_PRC152";
-for "_i" from 1 to 3 do {_unit addItemToUniform "rhs_mag_9x18_8_57N181S";};
 
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {

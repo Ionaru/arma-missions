@@ -48,6 +48,11 @@ if (_type == 1) then {
 	_box addItemCargoGlobal ["SR_Bandage_Pack", 5];
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 5];
 	_box addItemCargoGlobal ["SR_BloodIV_Pack", 5];
+	if (isNil "SR_Night") then {SR_Night = false};
+    if (SR_Night) then {
+    _box addItemCargoGlobal ["ACE_IR_Strobe_Item", 50];
+    };
+	
 };
 
 // Vehicle Supply
@@ -55,14 +60,13 @@ if (_type == 2) then {
 
 };
 
-// Special Supply
+// Sierra Supply
 if (_type == 3) then {
-	_box addmagazinecargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Shells", 24];
-	_box addmagazinecargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White", 12];
-	_box addWeaponcargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube", 2];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33", 2];
 	_box addmagazinecargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211", 1];
 	_box addmagazinecargoGlobal ["UK3CB_BAF_338_5Rnd", 8];
+	_box addmagazinecargoGlobal ["rhsusf_mag_17Rnd_9x19_JHP", 8];
+	_box additemcargoGlobal ["Laserbatteries", 2];
 };
 
 // Small Squad Supply
@@ -86,6 +90,10 @@ if (_type == 4) then {
 	_box addItemCargoGlobal ["SR_Bandage_Pack", 2];
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 2];
 	_box addItemCargoGlobal ["SR_BloodIV_Pack", 2];
+	if (isNil "SR_Night") then {SR_Night = false};
+    if (SR_Night) then {
+    _box addItemCargoGlobal ["ACE_IR_Strobe_Item", 25];
+    };
 };
 
 // Small Special Supply
@@ -110,8 +118,16 @@ If (_type == 7) then {
 
 // Mortar Supply Drop
 If (_type == 8) then {
-	_box addmagazinecargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Shells", 32];
-	_box addmagazinecargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White", 12];
+    if (isNil "SR_Night") then {SR_Night = false};
+    if (SR_Night) then {
+    _box addmagazinecargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Shells", 20];
+    _box addmagazinecargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White", 10];
+    _box addmagazinecargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Flare_White", 10];
+    }
+     else {
+    _box addmagazinecargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Shells", 32];
+    _box addmagazinecargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White", 12];
+    };
 };
 
 // HAT Supply Drop

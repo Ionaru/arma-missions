@@ -48,8 +48,8 @@ We'll approach Mike-26 from the eastern side of the island. After which we'll mo
 <br/><br/>
 <font size='18'>MOVEMENT PLAN</font>
 <br/>
-Myvement by foot<br/>
-Reinsertion by FOB.
+Movement by foot<br/>
+Reinsertion by FOB or Rally Point.
 <br/><br/>
 <font size='18'>FIRE SUPPORT PLAN</font>
 <br/>
@@ -77,7 +77,7 @@ Recapture Air Station Mike-26, Camp Maxwell and the small town of Girna.
 
 _sit = player createDiaryRecord ["diary", ["Situation","
 <br/>
-It has been months since NATO drove CSAT forces off Altis and Stratis and declared 'job done' on the islands. Thinking the AAF would be able to restore order by themselves, NATO focused its peacekeeping efforts on other parts of the world.
+It has been a few months since NATO drove CSAT forces off Altis and Stratis and declared 'job done' on the islands. Thinking the AAF would be able to restore order by themselves, NATO pulled back and focused its peacekeeping efforts on other parts of the world.
 <br/>
 
 <br/>

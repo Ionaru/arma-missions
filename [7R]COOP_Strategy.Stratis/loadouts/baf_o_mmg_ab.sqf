@@ -38,6 +38,7 @@ _unit addWeapon "UK3CB_BAF_L119A1_FG";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";
 _unit addWeapon "UK3CB_BAF_L117A2";
 _unit addHandgunItem "UK3CB_BAF_L105A1_LLM_IR_G";
+_unit addHandgunItem "hlc_muzzle_Octane9";
 _unit addWeapon "ACE_VectorDay";
 
 comment "Add items";
@@ -46,7 +47,7 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 12 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
 
 _unit addItemToUniform "ACRE_PRC343";
 

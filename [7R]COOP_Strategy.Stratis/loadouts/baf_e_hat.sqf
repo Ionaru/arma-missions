@@ -35,6 +35,7 @@ _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";
 _unit addWeapon "UK3CB_BAF_Javelin_Slung_Tube";
 _unit addWeapon "UK3CB_BAF_L117A2";
 _unit addHandgunItem "UK3CB_BAF_L105A1_LLM_IR_G";
+_unit addHandgunItem "hlc_muzzle_Octane9";
 _unit addWeapon "UK3CB_BAF_Javelin_CLU";
 
 comment "Add items";
@@ -43,7 +44,7 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 12 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 10 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
 
 _unit addItemToUniform "ACRE_PRC343";
 

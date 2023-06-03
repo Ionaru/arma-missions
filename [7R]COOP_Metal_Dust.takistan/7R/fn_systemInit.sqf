@@ -42,10 +42,10 @@ SR_SupplyBoxes = [["SR_Supply_Crate_Empty","Infantry Supplies",1,3],["ACE_Constr
 
 
 */
-SR_Support_Assets = ["RHS_C130J","globemaster_c17","RHS_Mi8AMT_vdv","RHS_Su25SM_vvs","RHS_Mi8AMT_vdv"];
+SR_Support_Assets = ["RHS_C130J","globemaster_c17","RHS_CH_47F","RHS_A10","RHS_CH_47F"];
 
 // Vehicle Supply Drop Setup [Display Name, Vehicle Class, Loadout Number]
-SR_Vehicle_Drop = [["BRDM","rhsgref_BRDM2UM_vdv",2]];
+SR_Vehicle_Drop = [["Humvee","rhsusf_m1165a1_gmv_m2_m240_socom_d",2]];
 
 // ======================================================================================
 /*

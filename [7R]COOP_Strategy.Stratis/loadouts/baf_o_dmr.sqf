@@ -39,6 +39,7 @@ _unit addPrimaryWeaponItem "UK3CB_BAF_TA648";
 _unit addPrimaryWeaponItem "UK3CB_BAF_LLM_Flashlight_Black";
 _unit addWeapon "UK3CB_BAF_L117A2";
 _unit addHandgunItem "UK3CB_BAF_L105A1_LLM_IR_G";
+_unit addHandgunItem "hlc_muzzle_Octane9";
 _unit addWeapon "Binocular";
 
 comment "Add items";
@@ -48,7 +49,7 @@ _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
 for "_i" from 1 to 7 do {_unit addItemToVest "30Rnd_556x45_Stanag";};
-for "_i" from 1 to 5 do {_unit addItemTobackpack "30Rnd_556x45_Stanag";};
+for "_i" from 1 to 3 do {_unit addItemTobackpack "30Rnd_556x45_Stanag";};
 
 _unit addItemToUniform "ACRE_PRC343";
 

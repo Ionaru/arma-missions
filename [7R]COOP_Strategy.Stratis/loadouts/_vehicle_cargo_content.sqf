@@ -35,8 +35,12 @@ switch (_index) do {
 		_vehicle addItemCargoGlobal ["SR_PAK", 4];
 		_vehicle addWeaponcargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube", 1];
 		_vehicle addMagazineCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Shells", 20];
-        _vehicle addMagazineCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White", 20];
+        _vehicle addMagazineCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White", 10];
         _vehicle addWeaponcargoGlobal ["UK3CB_BAF_M6", 1];
+		if (isNil "SR_Night") then {SR_Night = false};
+        if (SR_Night) then {
+	    _vehicle addMagazineCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Flare_White", 10];
+        };
 		// _vehicle addMagazineCargoGlobal ["UK3CB_BAF_762_200Rnd", 10];
 		// _vehicle addMagazineCargoGlobal ["UK3CB_BAF_1Rnd_Milan", 6];
 		// _vehicle addMagazineCargoGlobal ["UK3CB_BAF_127_100Rnd", 10];
