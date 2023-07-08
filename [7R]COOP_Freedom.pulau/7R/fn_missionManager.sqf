@@ -34,8 +34,9 @@ switch (_nbr) do {
 		"Mission loading..." remoteExec ["systemChat", 0];
 
 		// Civilians
-		_handle = ["kinandal_zone", _civilians, 30, 0, 0, 10] spawn fw_fnc_civSpawn;
-		waitUntil {scriptDone _handle};
+		_handle = ["kinandal_civ_1", _civilians, 10, 0, 0, 3] spawn fw_fnc_civSpawn; waitUntil {scriptDone _handle};
+		_handle = ["kinandal_civ_2", _civilians, 10, 0, 0, 3] spawn fw_fnc_civSpawn; waitUntil {scriptDone _handle};
+		_handle = ["kinandal_civ_3", _civilians, 8, 0, 0, 3] spawn fw_fnc_civSpawn; waitUntil {scriptDone _handle};
 
 		// Patrols
 		_handle = ["kinandal_patrol_west", "PATROL", 1, ["kinandal_patrol_west", "P"]] spawn fw_fnc_spawnTemplate;
@@ -92,7 +93,7 @@ switch (_nbr) do {
 		phase = 0;
 		publicVariable "phase";
 
-		"Mission Loaded, enjoy!" remoteExec ["systemChat", 0];
+		"Mission Loaded!" remoteExec ["systemChat", 0];
 	};
 
     case 2: {
@@ -412,8 +413,14 @@ switch (_nbr) do {
 		_handle = ["beach_town", "PATROL", 3, ["beach_town", "P"]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
-		_handle = ["beach_town", _civilians, 15, 0, 0, 25] spawn fw_fnc_civSpawn;
-		waitUntil {scriptDone _handle};
+		_handle = ["beach_civ_1", _civilians, 1, 0, 0, 1] spawn fw_fnc_civSpawn; waitUntil {scriptDone _handle};
+		_handle = ["beach_civ_2", _civilians, 1, 0, 0, 1] spawn fw_fnc_civSpawn; waitUntil {scriptDone _handle};
+		_handle = ["beach_civ_3", _civilians, 1, 0, 0, 1] spawn fw_fnc_civSpawn; waitUntil {scriptDone _handle};
+		_handle = ["beach_civ_4", _civilians, 1, 0, 0, 1] spawn fw_fnc_civSpawn; waitUntil {scriptDone _handle};
+		_handle = ["beach_civ_5", _civilians, 1, 0, 0, 2] spawn fw_fnc_civSpawn; waitUntil {scriptDone _handle};
+		_handle = ["beach_civ_6", _civilians, 2, 0, 0, 3] spawn fw_fnc_civSpawn; waitUntil {scriptDone _handle};
+		_handle = ["beach_civ_7", _civilians, 2, 0, 0, 4] spawn fw_fnc_civSpawn; waitUntil {scriptDone _handle};
+		_handle = ["beach_civ_8", _civilians, 2, 0, 0, 3] spawn fw_fnc_civSpawn; waitUntil {scriptDone _handle};
 
 	};
 

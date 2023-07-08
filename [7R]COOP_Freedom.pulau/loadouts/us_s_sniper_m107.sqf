@@ -32,12 +32,11 @@ _unit addItemToVest "rhsusf_acc_premier_anpvs27";
 _unit addBackpack "rhsusf_falconii_coy";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_M107_d";
+_unit addWeapon "rhs_weap_M107_wd";
 _unit addPrimaryWeaponItem "rhsusf_acc_premier_low";
 _unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_acc_omega9k";
-_unit addHandgunItem "hlc_acc_DBALPL";
 
 comment "Add items";
 _unit linkItem "ItemMap";

@@ -1,6 +1,7 @@
 /*
 	Parameters:
 		<-- Unit as Object
+		<-- Panic as Boolean (default: true)
 		
 	Description:
 		Applies a killed Eventhandler tracking civilian casualties.
@@ -11,19 +12,12 @@
 */
 
 // Parameter Init
-params ["_unit"];
+params ["_unit",["_panic",true]];
 
 // Killed Eventhandler
-_unit addEventHandler ["Killed", {
-	// Parameter Init
-	params ["_dead"];
+[_unit] spawn fw_fnc_civKilledEH;
 
-	// Find Killer and create info string
-	private _killer = name (_dead getVariable ["ace_medical_lastDamageSource", objNull]);
-	private _victim = name _dead;
-	private _str = format [SR_CC + "<br/>" + _victim + " has been killed by " + _killer + "."];
-
-	// Publish info string
-	SR_CC = _str;
-	publicVariable "SR_CC";
-}]; 
+// Panic Eventhandler
+if (_panic) then {
+	[_unit] spawn fw_fnc_civPanicEH;
+};

@@ -32,14 +32,12 @@ _unit addBackpack "rhsusf_falconii_coy";
 _unit addItemToBackpack "ACE_Tripod";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_d_mstock";
+_unit addWeapon "rhs_weap_m4a1_wd_mstock";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip3";
-_unit addPrimaryWeaponItem "RH_spr_mbs_des";
 _unit addWeapon "ACE_Vector";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_acc_omega9k";
-_unit addHandgunItem "hlc_acc_DBALPL";
 
 comment "Add items";
 _unit linkItem "ItemMap";

@@ -15,7 +15,7 @@ if (!(handgunWeapon _unit isEqualTo "hgun_Pistol_01_F")) exitWith {};
 // Remove Killed echo
 _unit removeAllEventHandlers "killed";
 
-// Delay
+// Delay 
 sleep (5 + (random 3));
 
 // Check if Armed

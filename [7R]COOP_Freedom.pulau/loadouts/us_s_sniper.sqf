@@ -31,14 +31,13 @@ _unit addItemToVest "Laserbatteries";
 _unit addItemToVest "rhsusf_acc_premier_anpvs27";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_XM2010_d";
+_unit addWeapon "rhs_weap_XM2010_wd";
 _unit addPrimaryWeaponItem "rhsusf_acc_premier_low";
 _unit addPrimaryWeaponItem "rhsusf_acc_harris_bipod";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15side_bk";
 _unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_acc_omega9k";
-_unit addHandgunItem "hlc_acc_DBALPL";
 
 comment "Add items";
 _unit linkItem "ItemMap";

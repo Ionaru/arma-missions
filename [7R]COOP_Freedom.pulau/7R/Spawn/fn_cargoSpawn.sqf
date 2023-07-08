@@ -1,15 +1,15 @@
 /*
-
+		
 	Parameters:
 		<-- Type as Integer
 		<-- SpawnPos as Object (Helipad invisible)
-
+	
 	Description:
 		Spawns Box on Cargo Load Point.
-
+	
 	Example:
 		nul = [1,slingpad] spawn fw_fnc_cargoSpawn;
-
+	
 */
 
 // Parameter init

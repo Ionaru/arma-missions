@@ -1,17 +1,19 @@
 /*
 	Parameters:
 		<-- Unit as Object
-
+		
 	Description:
 		Manages Suicide Bombers.
 
 */
 // Parmeter Init
-params ["_unit"];
+params ["_unit","_zone"];
 
-// Diasble Lamps Danger.doFSM
-group _unit setVariable ["lambs_danger_disableGroupAI",true];
-_unit setVariable ["lambs_danger_disableAI",true];
+// Add Grenade
+_unit addItem "rhs_mag_rgd5";
+
+// Set Patrol
+[group _unit, _zone, 4] spawn fw_fnc_civPatrol;
 
 //Per Frame Handler
 [{
@@ -33,12 +35,12 @@ _unit setVariable ["lambs_danger_disableAI",true];
 		{
 			if(!(side _x == SR_Side)) then {_near = _near - [_x];};
 		} forEach _near;
-
-		// If players are close change to chacing
+		
+		// If players are close change to chacing	
 		if (count _near > 0) then {
 			_target = _near select 0;
 			_unit setVariable ["sb_target",_target,true];
-		};
+		};	
 	} else {
 		// Exit the script when the unit is moving to its target
 		if (_unit getVariable ["is_exploding", false]) exitWith {};
@@ -54,8 +56,8 @@ _unit setVariable ["lambs_danger_disableAI",true];
 		if (_unit distance2d _target < 25) then {
 			// Sets the exploding var to true (prevents multiple explosion)
 			_unit setVariable ["is_exploding", true];
-
+			
 			[_unit,_handle] spawn fw_fnc_civBomberAction;
-		};
+		};	
 	};
 } , 2, [_this select 0]] call CBA_fnc_addPerFrameHandler;

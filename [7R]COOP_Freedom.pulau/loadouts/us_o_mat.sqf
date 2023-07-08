@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "rhs_uniform_g3_mc";
+_unit forceAddUniform "rhs_uniform_g3_rgr";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
@@ -22,16 +22,16 @@ _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
-_unit addVest "milgp_v_mmac_assaulter_belt_mc";
+_unit addVest "milgp_v_mmac_assaulter_belt_rgr";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 _unit addBackpack "rhsusf_assault_eagleaiii_ocp";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "MRAWS_HEAT_F";};
-_unit addHeadgear "rhsusf_opscore_mc_cover";
+_unit addHeadgear "rhsusf_opscore_rg_cover";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_blockII_d";
+_unit addWeapon "rhs_weap_m4a1_blockII_wd";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip3";
 _unit addWeapon "launch_MRAWS_sand_F";

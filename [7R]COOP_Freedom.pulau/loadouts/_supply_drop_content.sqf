@@ -20,9 +20,9 @@ if (_type == 1) then {
 	_box addmagazinecargoGlobal ["rhsusf_mag_17Rnd_9x19_JHP", 36];
 	_box addmagazinecargoGlobal ["rhsusf_200Rnd_556x45_M855_mixed_soft_pouch_coyote", 12];
 	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 8];
-	_box addmagazinecargoGlobal ["prpl_6Rnd_12Gauge_Pellets", 12];
-	_box addmagazinecargoGlobal ["prpl_6Rnd_12Gauge_Slug", 12];
-	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 10];
+	_box addmagazinecargoGlobal ["rhsusf_5Rnd_00Buck", 12];
+	_box addmagazinecargoGlobal ["rhsusf_5Rnd_Slug", 12];
+	_box addmagazinecargoGlobal ["rhs_mag_20Rnd_SCAR_762x51_m80_ball", 12];
 	_box addmagazinecargoGlobal ["MRAWS_HEAT_F", 5];
 	_box addmagazinecargoGlobal ["MRAWS_HE_F", 3];
 	_box addWeaponcargoGlobal ["rhs_weap_M136_hedp", 2];
@@ -93,10 +93,10 @@ if (_type == 4) then {
 // Small Special Supply
 if (_type == 5) then {
 	_box addWeaponcargoGlobal ["rhs_weap_M136_hedp", 2];
-	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 8];
+	_box addmagazinecargoGlobal ["rhs_mag_20Rnd_SCAR_762x51_m80_ball", 8];
 	_box addmagazinecargoGlobal ["rhsusf_100Rnd_762x51", 5];
-	_box addmagazinecargoGlobal ["prpl_6Rnd_12Gauge_Pellets", 3];
-	_box addmagazinecargoGlobal ["prpl_6Rnd_12Gauge_Slug", 3];
+	_box addmagazinecargoGlobal ["rhsusf_5Rnd_00Buck", 3];
+	_box addmagazinecargoGlobal ["rhsusf_5Rnd_Slug", 3];
 	_box addmagazinecargoGlobal ["MRAWS_HEAT_F", 2];
 	_box addmagazinecargoGlobal ["MRAWS_HE_F", 1];
 	_box additemcargoGlobal ["DemoCharge_Remote_Mag", 2];

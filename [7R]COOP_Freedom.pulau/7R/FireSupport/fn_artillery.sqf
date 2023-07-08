@@ -3,7 +3,7 @@
 		<-- Target Marker Name as String
 		<-- Mission Type as String
 		<-- Optional: Traveltime as Integer (Default: 10)
-
+		
 	Description:
 		Handles simulated artillery support.
 
@@ -36,22 +36,22 @@ private _removal = true;
 switch _type do {
     case "concentrated": {
 		//_ammo = "M_Mo_155mm_AT";
-		_rounds = 18;
+		_rounds = 18; 
 		_cost = 3;
 		_multipler = 4;
 		_dispersion = 30;
 		_safezone = 0;
 	};
     case "area": {
-		_rounds = 24;
-		_cost = 4;
+		_rounds = 24; 
+		_cost = 4; 
 		_multipler = 6;
 		_dispersion = 150;
 		_delay = [0.75,1.5];
 	};
     case "medium": {
-		_rounds = 16;
-		_cost = 2;
+		_rounds = 16; 
+		_cost = 2; 
 		_multipler = 3;
 		_dispersion = 80;
 	};
@@ -65,7 +65,7 @@ switch _type do {
 	};
     case "smoke": {
 		_ammo = "SR_ArtillerySmoke_120mm";
-		_rounds = 9;
+		_rounds = 9; 
 		_cost = 0;
 		_multipler = 1.5;
 		_dispersion = 80;
@@ -97,7 +97,7 @@ publicVariable "ArtilleryFireMissionReady";
 // Fire Mission Confirmation Message with Target and Volume + Create logEntities
 private _feedback = "FS: " + _type + " barrage of " + str (_rounds) + " Rounds to Grid " + (mapGridPosition markerPos _target) + ".";
 [_feedback,_feedback] spawn fw_fnc_info;
-["CombatLog", ["Support", _feedback]] spawn CBA_fnc_globalEvent;
+["CombatLog", ["Support", _feedback]] spawn CBA_fnc_globalEvent; 
 
 // Delay
 sleep random 3;

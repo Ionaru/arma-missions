@@ -29,8 +29,7 @@ for "_i" from 1 to 2 do {_unit addItemToVest "rhsusf_mag_15Rnd_9x19_JHP";};
 _unit addHeadgear "rhsusf_hgu56p_visor_mask_skull";
 
 comment "Add weapons";
-_unit addWeapon "hlc_smg_mp5a3";
-_unit addPrimaryWeaponItem "hlc_acc_Surefiregrip";
+_unit addWeapon "UK3CB_MP5A3";
 _unit addWeapon "rhsusf_weap_m9";
 _unit addWeapon "Binocular";
 
@@ -39,7 +38,6 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
-
 
 for "_i" from 1 to 5 do {_unit addItemToVest "30Rnd_9x21_Mag";};
 _unit addItemToVest "ACRE_PRC343";

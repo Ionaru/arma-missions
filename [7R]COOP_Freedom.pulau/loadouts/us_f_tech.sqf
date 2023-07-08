@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "rhs_uniform_g3_mc";
+_unit forceAddUniform "rhs_uniform_g3_rgr";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 _unit addItemToUniform "ACE_Flashlight_MX991";
@@ -26,7 +26,7 @@ for "_i" from 1 to 3 do {_unit addItemToVest "ACE_SmokeShellCableTie";};
 _unit addItemToVest "SmokeShell";
 _unit addItemToVest "ACE_microDAGR";
 for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
-_unit addBackpack "rhsusf_falconii_mc";
+_unit addBackpack "rhsusf_falconii_rgr";
 _unit addItemToBackpack "ToolKit";
 _unit addHeadgear "rhsusf_cvc_alt_helmet";
 _unit addGoggles "rhs_googles_clear";

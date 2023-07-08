@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "rhs_uniform_g3_mc";
+_unit forceAddUniform "rhs_uniform_g3_rgr";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
@@ -22,18 +22,18 @@ _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
-_unit addVest "milgp_v_mmac_marksman_belt_mc";
+_unit addVest "milgp_v_mmac_marksman_belt_rgr";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
-_unit addBackpack "milgp_bp_pointman_mc";
+_unit addBackpack "milgp_bp_pointman_rgr";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addHeadgear "rhsusf_opscore_mc_cover";
+_unit addHeadgear "rhsusf_opscore_rg_cover";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
-_unit addWeapon "SMA_Mk17";
-_unit addPrimaryWeaponItem "SMA_SFPEQ_SCARTOP_BLK";
+_unit addWeapon "rhs_weap_mk17_LB";
+_unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk_top";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "acc_flashlight_pistol";
 _unit addWeapon "Binocular";
@@ -44,7 +44,8 @@ _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemGPS";
 
-for "_i" from 1 to 12 do {_unit addItemToVest "20Rnd_762x51_Mag";};
+for "_i" from 1 to 6 do {_unit addItemToVest "rhs_mag_20Rnd_SCAR_762x51_m80_ball";};
+for "_i" from 1 to 6 do {_unit addItemToBackpack "rhs_mag_20Rnd_SCAR_762x51_m80_ball";};
 
 _unit addItemToUniform "ACRE_PRC343";
 

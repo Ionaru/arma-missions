@@ -96,7 +96,7 @@ private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_Stat
                 };
             };
         } forEach [SR_Flee, SR_Surrender];
-
+        
         // Execute selected Option
         switch (_index) do {
             // Flee
@@ -104,12 +104,12 @@ private _combatStateMachine = [{SR_PatrolUnits select {(_x getVariable ["SR_Stat
                 _this setVariable ["SR_Depressed", true];
                 _this allowFleeing 1;
                 // Debug
-                if (SR_Debug) then {systemChat format ["%1 is fleeing", _this];};
+                if (SR_Debug) then {systemChat format ["%1 is fleeing", _this];};         
             };
             // Surrender
             case 1: {
                 _this setVariable ["SR_Depressed", true];
-                {
+                {   
                     [_x] spawn fw_fnc_surrender;
                 }forEach (units _this);
                 // Debug
@@ -133,7 +133,7 @@ private _supportStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_De
     // Get Unit Target Querry
     private _leader = leader _this;
     private _group = _this;
-
+  
     // Find Target
     _target = _leader findNearestEnemy position _leader;
     if (_target == objNull) exitWith {};
@@ -150,7 +150,7 @@ private _supportStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_De
 
         // Request Flares
             [_artillery,2,_target] spawn fw_fnc_artilleryCall;
-
+                
     // Daytime Evaluation
     } else {
 
@@ -174,6 +174,8 @@ private _supportStateMachine = [{SR_PatrolUnits select {!(_x getVariable ["SR_De
     },objNull, 5] call CBA_fnc_waitAndExecute;
 
     // Debug
-    if (SR_Debug) then {systemChat format ["%1 providing artillery to %2", _artillery, (mapGridPosition _targetPos)];};
+    if (SR_Debug) then {systemChat format ["%1 providing artillery to %2", _artillery, (mapGridPosition _targetPos)];}; 
 
 }, {}, {}, "SupportLoop"] call CBA_statemachine_fnc_addState;
+
+

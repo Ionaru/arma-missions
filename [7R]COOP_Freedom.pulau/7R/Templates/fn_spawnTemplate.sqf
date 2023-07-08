@@ -117,7 +117,7 @@ if (_type isEqualTo "BUNKER") Then {
 	// Find and Populate Bunkers
 	{
 		private _bunkers = _spawnPos nearObjects [_x, _radius];
-
+		
 		// Populate Bunkers
 		{
 			// Find Slots available

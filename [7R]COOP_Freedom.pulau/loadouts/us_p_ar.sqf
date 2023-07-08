@@ -14,7 +14,7 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "rhs_uniform_g3_mc";
+_unit forceAddUniform "rhs_uniform_g3_rgr";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
@@ -22,12 +22,12 @@ _unit addItemToUniform "ACE_Flashlight_MX991";
 _unit addItemToUniform "SmokeShell";
 _unit addItemToUniform "Chemlight_green";
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhsusf_mag_17Rnd_9x19_JHP";};
-_unit addVest "milgp_v_mmac_hgunner_mc";
+_unit addVest "milgp_v_mmac_hgunner_rgr";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_mk84";};
-_unit addBackpack "milgp_bp_tomahawk_mc";
+_unit addBackpack "milgp_bp_tomahawk_rgr";
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_CableTie";};
-_unit addHeadgear "rhsusf_opscore_mc";
+_unit addHeadgear "rhsusf_opscore_rg_cover";
 _unit addGoggles "rhs_googles_clear";
 
 comment "Add weapons";

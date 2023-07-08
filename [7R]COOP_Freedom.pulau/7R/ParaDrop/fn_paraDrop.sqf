@@ -8,13 +8,13 @@
 
 		Static-Line Drop will ignore Height and fly on default height.
 		RHS C-130 Hardcoded
-
+		
 	Decription:
 		Spawns plane and teleport players into in order to autodrop them at a drop zone. Either high altitude or static line.
 		For Static Line do not equip parachute.
-
+		
 	Example:
-		this addAction ["<t color='#FF0000'>Start Paradrop All Near Units</t>",{nul = _this spawn fw_fnc_paraDrop}, ["dz","paraStart",2500,"Windrunner 1-1",true], 0, true, true, "", "leader player == player", 3];
+		this addAction ["<t color='#FF0000'>Start Paradrop All Near Units</t>",{nul = _this spawn fw_fnc_paraDrop}, ["dz","paraStart",2500,"Windrunner 1-1",true], 0, true, true, "", "leader player == player", 3];  
 
 */
 

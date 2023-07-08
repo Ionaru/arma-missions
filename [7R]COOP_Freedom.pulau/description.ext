@@ -4,6 +4,9 @@ enableDebugConsole = 2;
 // Disable AI
 disabledAI = 1;
 
+author			= "Ionaru";
+onLoadName		= "[7R] Operation Freedom";
+onLoadMission	= "Liberate Pulau Gurun";
 
 class CfgDebriefing
 {
@@ -57,6 +60,10 @@ class CfgRemoteExec
 		mode = 2;
 		jip = 1;
 		class fw_fnc_exfilAction {
+			allowedTargets = 0;
+			jip = 1;
+		};
+		class fw_fnc_exfilCall {
 			allowedTargets = 0;
 			jip = 1;
 		};

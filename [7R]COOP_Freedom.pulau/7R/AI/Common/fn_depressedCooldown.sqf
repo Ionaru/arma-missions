@@ -2,13 +2,13 @@
 	Parameters:
 		<-- Group as Group
 		<-- Cooldown as Integer
-
+	
 	Return:
 	--> None
-
+		
 	Description:
 		Group will recover after cooldown
-
+		
 	Example:
 		[_group] spawn fw_fnc_depressedCooldown;
 */
@@ -24,7 +24,7 @@ params ["_group","_cooldown"];
 	// Reset to offCombat
 	_this setVariable ["SR_State", "PATROL"];
 	// Debug
-	if (SR_Debug) then {systemChat format ["%1 reset depressed", _this];};
+	if (SR_Debug) then {systemChat format ["%1 reset depressed", _this];}; 
 },_group, random [(_cooldown-20),_cooldown,(_cooldown+20)]] call CBA_fnc_waitAndExecute;
 
 // Stop Fleeing

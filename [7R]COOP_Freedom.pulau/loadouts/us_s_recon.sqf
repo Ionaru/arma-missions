@@ -27,14 +27,12 @@ for "_i" from 1 to 3 do {_unit addItemToVest "ACE_CableTie";};
 _unit addBackpack "B_UAV_01_backpack_F";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_m4a1_d_mstock";
+_unit addWeapon "rhs_weap_m4a1_wd_mstock";
 _unit addPrimaryWeaponItem "rhsusf_acc_anpeq15_bk";
 _unit addPrimaryWeaponItem "rhsusf_acc_grip3";
-_unit addPrimaryWeaponItem "RH_spr_mbs_des";
 _unit addWeapon "ACE_MX2A";
 _unit addWeapon "rhsusf_weap_glock17g4";
 _unit addHandgunItem "rhsusf_acc_omega9k";
-_unit addHandgunItem "hlc_acc_DBALPL";
 
 comment "Add items";
 _unit linkItem "ItemMap";
