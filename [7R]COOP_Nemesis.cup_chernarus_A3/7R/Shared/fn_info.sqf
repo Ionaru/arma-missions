@@ -11,7 +11,7 @@
 	["Test"] spawn fw_fnc_info;
 
 */
-	
+
 // Parameter Init
 params [["_text",""],["_hint",""]];
 
@@ -34,3 +34,4 @@ if (count _hint > 0) then {
 	[_hint, _size] call ace_common_fnc_displayTextStructured;
 };
 
+systemChat format ["%1: %2 can't add %1 to uniform, trying vest...", ["WARNING", "#FFA500"] call fw_fnc_makeColor, _item];

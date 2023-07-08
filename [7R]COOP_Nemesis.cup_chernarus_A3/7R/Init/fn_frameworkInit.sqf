@@ -2,7 +2,7 @@
 
 	Parameters:
 		<-- none
-	
+
 	Description:
 		System Init, both static variables and EventHandlers as preInit
 */
@@ -29,3 +29,4 @@ ReifLock = false;
 SR_RespawnWave = false;
 SR_RespawnForce = false;
 SR_RespawnLock = false;
+phase = 0;
