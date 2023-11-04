@@ -67,7 +67,7 @@ private _uniformsBoxAction = [
         [_box, 0, [_uniformsBoxActionName, _element_name], _uniformAction] call ace_interact_menu_fnc_addActionToObject;
 
         // LEGACY: scroll interaction
-        _box addaction [_uniform, _uniform_file];
+        // _box addaction [_uniform, _uniform_file];
 
     } forEach _element_uniforms;
 
@@ -79,5 +79,5 @@ private _loadAction = ["LoadLoadout", ["Load Loadout", "#ffffff"] call fw_fnc_ma
 [_box, 0, [_uniformsBoxActionName], _loadAction] call ace_interact_menu_fnc_addActionToObject;
 
 // LEGACY: scroll interaction
-_box addaction [["Save Loadout", "#00ffff"] call fw_fnc_makeColor, {(_this select 1) setVariable ["SR_uniform", getUnitLoadout (_this select 1)];}];
-_box addaction [["Load Loadout", "#00ffff"] call fw_fnc_makeColor, {(_this select 1) setUnitLoadout ((_this select 1) getVariable ["SR_uniform", []]);}];
+// _box addaction [["Save Loadout", "#00ffff"] call fw_fnc_makeColor, {(_this select 1) setVariable ["SR_uniform", getUnitLoadout (_this select 1)];}];
+// _box addaction [["Load Loadout", "#00ffff"] call fw_fnc_makeColor, {(_this select 1) setUnitLoadout ((_this select 1) getVariable ["SR_uniform", []]);}];

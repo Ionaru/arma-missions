@@ -496,3 +496,10 @@ switch (_nbr) do {
 };
 
 ["MissionLog", ["Mission", ("Case " + str(_nbr) + " loaded.")]] spawn CBA_fnc_globalEvent;
+
+
+// this addaction ["<t color=""#00FF00"">" +"Spawn Truck", fw_fnc_vehicleSpawn, ["B_T_Truck_01_transport_F", v_pad]];
+// this addaction ["<t color=""#00FF00"">" +"Spawn LTV", fw_fnc_vehicleSpawn, ["B_T_LSV_01_unarmed_F", v_pad]];
+// this addaction ["<t color=""#00FF00"">" +"Spawn Armed LTV", fw_fnc_vehicleSpawn, ["B_T_LSV_01_armed_F", v_pad]];
+// this addaction ["<t color=""#00FF00"">" +"Spawn MBT", fw_fnc_vehicleSpawn, ["B_T_MBT_01_TUSK_F", v_pad]];
+// this addaction ["<t color=""#00FF00"">" +"Spawn Quad Bike", fw_fnc_vehicleSpawn, ["B_T_Quadbike_01_F", v_pad]];

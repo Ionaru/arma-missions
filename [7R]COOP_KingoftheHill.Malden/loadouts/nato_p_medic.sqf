@@ -48,6 +48,7 @@ for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "SmokeShellBlue";};
 _unit addItemToBackpack "ACE_SpraypaintBlue";
 _unit addItemToVest "ACRE_PRC152";
+_unit addItemToBackpack "SR_ItemMedBag";
 
 comment "Add weapons";
 _unit addWeapon "arifle_MX_Black_F";

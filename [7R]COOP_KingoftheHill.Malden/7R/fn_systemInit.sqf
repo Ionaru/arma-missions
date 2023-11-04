@@ -48,7 +48,8 @@ SR_Support_Assets = [
 */
 SR_Vehicle_Drop = [
     // ["Display name", "Vehicle_Class", Loadout number]
-    ["Quad", "B_Quadbike_01_F", 0]
+    ["Quad", "B_Quadbike_01_F", 0],
+    ["LTV", "B_T_LSV_01_unarmed_F", 0]
 ];
 
 /*

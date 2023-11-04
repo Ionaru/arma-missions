@@ -36,10 +36,10 @@ for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 comment "Role";
 for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-for "_i" from 1 to 6 do {_unit addItemToBackpack "prpl_6Rnd_12Gauge_Pellets";};
-for "_i" from 1 to 6 do {_unit addItemToBackpack "prpl_6Rnd_12Gauge_Slug";};
+for "_i" from 1 to 6 do {_unit addItemToBackpack "rhsusf_8Rnd_00Buck";};
+for "_i" from 1 to 6 do {_unit addItemToBackpack "rhsusf_8Rnd_Slug";};
 _unit addItemToBackpack "RH_SFM952V";
-_unit addItemToBackpack "prpl_benelli_14_rail";
+_unit addItemToBackpack "rhs_weap_M590_8RD";
 for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_black_mag";};
 
 comment "Add weapons";

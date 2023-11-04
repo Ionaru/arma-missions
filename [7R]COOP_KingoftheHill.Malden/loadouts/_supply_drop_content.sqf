@@ -18,7 +18,6 @@ clearBackpackCargoGlobal _box;
 if (_type == 1) then {
 	_box addmagazinecargoGlobal ["30Rnd_65x39_caseless_black_mag", 72];
 	_box addmagazinecargoGlobal ["9Rnd_45ACP_Mag", 32];
-	_box addmagazinecargoGlobal ["100Rnd_65x39_caseless_black_mag", 12];
 	_box addmagazinecargoGlobal ["200Rnd_65x39_cased_Box", 10];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 10];
 	_box addmagazinecargoGlobal ["130Rnd_338_Mag", 10];
@@ -47,6 +46,8 @@ if (_type == 1) then {
 	_box addItemCargoGlobal ["SR_Bandage_Pack", 5];
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 5];
 	_box addItemCargoGlobal ["SR_BloodIV_Pack", 5];
+	_box addItemCargoGlobal ["rhsusf_8Rnd_00Buck", 8];
+	_box addItemCargoGlobal ["rhsusf_8Rnd_Slug", 8];
 };
 
 // Vehicle Supply
@@ -66,7 +67,6 @@ if (_type == 3) then {
 if (_type == 4) then {
 	_box addmagazinecargoGlobal ["30Rnd_65x39_caseless_black_mag", 36];
 	_box addmagazinecargoGlobal ["9Rnd_45ACP_Mag", 18];
-	_box addmagazinecargoGlobal ["100Rnd_65x39_caseless_black_mag", 6];
 	_box addmagazinecargoGlobal ["200Rnd_65x39_cased_Box", 5];
 	_box addmagazinecargoGlobal ["20Rnd_762x51_Mag", 5];
 	_box addmagazinecargoGlobal ["130Rnd_338_Mag", 5];
@@ -95,6 +95,8 @@ if (_type == 4) then {
 	_box addItemCargoGlobal ["SR_Bandage_Pack", 2];
 	_box addItemCargoGlobal ["SR_Medicine_Pack", 2];
 	_box addItemCargoGlobal ["SR_BloodIV_Pack", 2];
+    _box addItemCargoGlobal ["rhsusf_8Rnd_00Buck", 6];
+	_box addItemCargoGlobal ["rhsusf_8Rnd_Slug", 6];
 };
 
 // Small Special Supply

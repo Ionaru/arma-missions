@@ -4,6 +4,9 @@ enableDebugConsole = 2;
 // Disable AI
 disabledAI = 1;
 
+author			= "Ionaru";
+onLoadName		= "[7R] King of the Hill";
+onLoadMission	= "Retake Malden";
 
 class CfgDebriefing
 {
@@ -69,19 +72,19 @@ class CfgRemoteExec
 	{
 		class addAction {
 			allowedTargets = 0;
-			jip = 1;	
+			jip = 1;
 		};
 		class diag_log {
 			allowedTargets = 0;
-			jip = 1;	
+			jip = 1;
 		};
 		class createDiarySubject {
 			allowedTargets = 0;
-			jip = 1;	
+			jip = 1;
 		};
 		class createDiaryRecord {
 			allowedTargets = 0;
-			jip = 1;	
+			jip = 1;
 		};
 	};
 };
