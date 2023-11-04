@@ -492,6 +492,7 @@ switch (_nbr) do {
 		} forEach allUnits;
 
 		[[blufor, "HQ"], "Well done, PL-1. Report for debrief."] remoteExec ["sideChat", 0];
+
 	};
 };
 

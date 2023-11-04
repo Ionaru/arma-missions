@@ -6,9 +6,9 @@ SR_Unit_Cap = 200; // Maximum AI unit count, only change if absolutely necessary
 // Night mission settings
 SR_AI_NVG = "";
 SR_AI_removeNVG = false;
-SR_AI_addFlashlight = false;
+SR_AI_addFlashlight = true;
 SR_AI_forceFlashlight = false; // Force AI to turn flashlight on.
-SR_Night = false; // Set to 'true' when the mission is played entirely at night.
+SR_Night = true; // Set to 'true' when the mission is played entirely at night.
 SR_Camo_Coef = 0.75; // For Night Missions, default: 0.75
 
 // Respawn Management

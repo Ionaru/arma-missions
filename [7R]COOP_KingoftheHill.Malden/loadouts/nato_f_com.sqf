@@ -31,18 +31,18 @@ _unit addItemToUniform "16Rnd_9x21_Mag";
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
+comment "Weapons";
+_unit addWeapon "arifle_MXC_Black_F";
+_unit addPrimaryWeaponItem "acc_pointer_IR";
+_unit addWeapon "hgun_P07_F";
+_unit addHandgunItem "16Rnd_9x21_Mag";
+
 comment "Role";
 for "_i" from 1 to 4 do {_unit addItemToVest "30Rnd_65x39_caseless_black_mag";};
 for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellPurple";};
 _unit addItemToVest "ACE_HandFlare_Green";
 _unit addItemToVest "ACE_microDAGR";
 _unit addItemToVest "ACRE_PRC152";
-
-comment "Weapons";
-_unit addWeapon "arifle_MXC_Black_F";
-_unit addPrimaryWeaponItem "acc_pointer_IR";
-_unit addWeapon "hgun_P07_F";
-_unit addHandgunItem "16Rnd_9x21_Mag";
 
 comment "Framework";
 if (isNil "SR_Night") then {SR_Night = false};

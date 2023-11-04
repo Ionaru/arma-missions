@@ -32,17 +32,17 @@ _unit addItemToVest "16Rnd_9x21_Mag";
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
-comment "Role";
-for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
-for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
-for "_i" from 1 to 8 do {_unit addItemToVest "20Rnd_762x51_Mag";};
-
 comment "Add weapons";
 _unit addWeapon "arifle_SPAR_03_blk_F";
 _unit addPrimaryWeaponItem "acc_pointer_IR";
 _unit addWeapon "hgun_P07_F";
 _unit addHandgunItem "16Rnd_9x21_Mag";
 _unit addWeapon "Binocular";
+
+comment "Role";
+for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
+for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
+for "_i" from 1 to 8 do {_unit addItemToVest "20Rnd_762x51_Mag";};
 
 comment "Framework";
 if (isNil "SR_Night") then {SR_Night = false};

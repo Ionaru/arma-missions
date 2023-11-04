@@ -33,6 +33,13 @@ _unit addItemToVest "16Rnd_9x21_Mag";
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
 for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
+comment "Add weapons";
+_unit addWeapon "arifle_MX_GL_Black_F";
+_unit addPrimaryWeaponItem "acc_pointer_IR";
+_unit addWeapon "hgun_P07_F";
+_unit addHandgunItem "16Rnd_9x21_Mag";
+_unit addWeapon "ACE_Vector";
+
 comment "Role";
 _unit addItemToVest "ACRE_PRC152";
 _unit addItemToVest "SmokeShellGreen";
@@ -49,13 +56,6 @@ for "_i" from 1 to 4 do {_unit addItemToBackpack "1Rnd_Smoke_Grenade_shell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
 for "_i" from 1 to 2 do {_unit addItemToBackpack "1Rnd_SmokeYellow_Grenade_shell";};
 for "_i" from 1 to 4 do {_unit addItemToBackpack "ACE_HuntIR_M203";};
-
-comment "Add weapons";
-_unit addWeapon "arifle_MX_GL_Black_F";
-_unit addPrimaryWeaponItem "acc_pointer_IR";
-_unit addWeapon "hgun_P07_F";
-_unit addHandgunItem "16Rnd_9x21_Mag";
-_unit addWeapon "ACE_Vector";
 
 comment "Framework";
 if (isNil "SR_Night") then {SR_Night = false};
