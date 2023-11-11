@@ -45,7 +45,6 @@ for "_i" from 1 to 3 do {_unit addItemToVest "SmokeShell";};
 for "_i" from 1 to 2 do {_unit addItemToVest "HandGrenade";};
 for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_black_mag";};
 for "_i" from 1 to 3 do {_unit addItemToBackpack "ACE_Fortication_Material";};
-for "_i" from 1 to 20 do {_unit addItemToBackpack "30Rnd_65x39_caseless_black_mag";};
 
 comment "Framework";
 if (isNil "SR_Night") then {SR_Night = false};

@@ -50,21 +50,24 @@ Made with F3 (http://www.ferstaberinde.com/f3/en/)
 // The code below creates the execution sub-section of notes.
 
 _exe = player createDiaryRecord ["diary", ["Execution","
+<font size='18'>COMMANDER'S INTENT</font>
+<br/>
+Move east toward Arudy, the first objective.
+Capture the town and destroy any present equipment.
+<br/>
+More objectives will be assigned as you go based on the situation.
 <br/><br/>
 <font size='18'>MOVEMENT PLAN</font>
 <br/>
 Insertion and transport by vehicle.
-Reinsertion by FOB.
+<br/>
+Reinsertion by FOB or RP.
 <br/><br/>
 <font size='18'>FIRE SUPPORT PLAN</font>
 <br/>
-Supply drops:  12
+Supplies, CAS, Artillery and UAV available.
 <br/>
-Artillery ammo: 45
-<br/>
-CAS ammo: 6
-<br/>
-Fortification supplies: 500
+Small vehicles available via airdrop.
 "]];
 
 // ====================================================================================

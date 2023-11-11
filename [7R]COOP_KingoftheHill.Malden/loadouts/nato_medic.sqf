@@ -14,7 +14,7 @@ removeGoggles _unit;
 comment "Uniform";
 _unit forceAddUniform "U_B_CombatUniform_mcam_wdl_f";
 _unit addVest "V_PlateCarrier1_wdl";
-_unit addBackpack "SOG_BAG_med_od";
+_unit addBackpack "UK3CB_B_US_Medic_Backpack";
 _unit addHeadgear "H_HelmetB_plain_wdl";
 _unit addGoggles "rhs_googles_clear";
 
