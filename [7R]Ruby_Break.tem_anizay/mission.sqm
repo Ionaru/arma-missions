@@ -1,0 +1,48 @@
+version=54;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class Camera
+	{
+		pos[]={87.620476,157.43839,5039.4912};
+		dir[]={0.41913038,-0.50663805,0.75343251};
+		up[]={0.24629653,0.86215687,0.44274563};
+		aside[]={0.87388784,-5.2852556e-08,-0.48613888};
+	};
+};
+binarizationWanted=0;
+sourceName="[7R]Ruby_Break";
+class AddonsMetaData
+{
+};
+randomSeed=12885273;
+class ScenarioData
+{
+	author="Ionaru";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.10000001;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
+		year=2018;
+		month=7;
+		day=2;
+		hour=12;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+};
