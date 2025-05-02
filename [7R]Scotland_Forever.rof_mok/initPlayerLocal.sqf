@@ -80,10 +80,10 @@ _ACAF = ["7R_Artillery","Flare Barrage (0)","",{null = ["ArtilleryTarget","flare
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH", "7R_ArtilleryHeader"], _ACAF] call ace_interact_menu_fnc_addActionToClass;
 
 // CAS
-_CAS1 = ["7R_CAS","Call CAS (Gun Run)","",{["CASTarget",2,SR_Support_Assets select 3,0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},{[_player] call fw_fnc_isLeader && CASCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
+_CAS1 = ["7R_CAS","Call CAS (Gun & Missiles Run)","",{["CASTarget",2,SR_Support_Assets select 3,0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},{[_player] call fw_fnc_isLeader && CASCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS1] call ace_interact_menu_fnc_addActionToClass;
-_CAS2 = ["7R_CAS","Call CAS (Bomb)","",{["CASTarget",3,SR_Support_Assets select 3,0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},{[_player] call fw_fnc_isLeader && CASCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
-[(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS2] call ace_interact_menu_fnc_addActionToClass;
+// _CAS2 = ["7R_CAS","Call CAS (Bomb)","",{["CASTarget",3,SR_Support_Assets select 3,0,"STARTSPAWN"] remoteExec ["fw_fnc_CAS",0];},{[_player] call fw_fnc_isLeader && CASCallAmmo > 0}] call ace_interact_menu_fnc_createAction;
+// [(typeOf player), 1, ["ACE_SelfActions", "7R_Header","7R_ArtyH"], _CAS2] call ace_interact_menu_fnc_addActionToClass;
 
 // UAV
 _UAV = ["7R_UAV","Call UAV","",{["UAVTarget","STARTSPAWN",SR_Support_Assets select 5] remoteExec ["fw_fnc_uav",0];},{[_player] call fw_fnc_isLeader && UAVCallAmmo > 0}] call ace_interact_menu_fnc_createAction;

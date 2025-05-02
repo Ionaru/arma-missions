@@ -1,7 +1,7 @@
 /*
 	Mission Parameters.
 */
-SR_Unit_Cap = 200; // Maximum AI unit count, only change if absolutely necessary.
+SR_Unit_Cap = 300; // Maximum AI unit count, only change if absolutely necessary.
 
 // Night mission settings
 SR_AI_NVG = "";
@@ -36,9 +36,9 @@ SR_SupplyBoxes = [
 	Support Asset Class Array.
 */
 SR_Support_Assets = [
-    /* ParaDropPlane (small) */ "UK3CB_BAF_Merlin_HC4_32_MTP", // Alternatives: "UK3CB_BAF_Hercules_C3" (BAF),"UK3CB_BAF_Hercules_C4" (German), "UK3CB_TKA_O_C130J" (Russian, USSR)
-    /* ParaDropPlane (big) */   "UK3CB_BAF_Merlin_HC4_32_MTP",
-    /* SupplyDropPlane */       "UK3CB_BAF_Merlin_HC4_32_MTP", // Alternatives: "UK3CB_BAF_Hercules_C3" (BAF), "UK3CB_BAF_Hercules_C4" (German), "UK3CB_TKA_O_C130J" (Russian, USSR)
+    /* ParaDropPlane (small) */ "UK3CB_BAF_Hercules_C3", // Alternatives: "UK3CB_BAF_Hercules_C3" (BAF),"UK3CB_BAF_Hercules_C4" (German), "UK3CB_TKA_O_C130J" (Russian, USSR)
+    /* ParaDropPlane (big) */   "UK3CB_BAF_Hercules_C3",
+    /* SupplyDropPlane */       "UK3CB_BAF_Hercules_C4_cargo_MTP", // Alternatives: "UK3CB_BAF_Hercules_C3" (BAF), "UK3CB_BAF_Hercules_C4" (German), "UK3CB_TKA_O_C130J" (Russian, USSR)
     /* CASPlane */              "UK3CB_AAF_B_Gripen_G", // Alternatives: "RHS_Su25SM_vvs" (Russian/USSR)
     /* ExfilHelicopter */       "UK3CB_BAF_Merlin_HC4_32_MTP", // Alternatives: "UK3CB_BAF_Merlin_HC3_32_MTP" (BAF), "RHS_Mi8AMT_vvs" (Russian/USSR)
     /* UAV*/                    "UK3CB_BAF_MQ9_Reaper_Generic" // Alternatives: "B_UAV_02_dynamicLoadout_F" / "UK3CB_BAF_MQ9_Reaper_Generic" (BLUEFOR), "rhs_pchela1t_vvs" (Russian/USSR), "O_UAV_02_dynamicLoadout_F" (OPFOR)

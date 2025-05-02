@@ -53,7 +53,7 @@ if (!_forced) then {
 private _dir = _spawn getDir _target;
 private _spawnPos = [_spawn, 2500,(_dir - 180)] call BIS_fnc_relPos;
 
-// Spawn and set up aircraft / crew 
+// Spawn and set up aircraft / crew
 private _aircraftReturn = [_spawnPos, _dir, _type, SR_Side] call bis_fnc_spawnVehicle;
 _aircraftReturn params ["_aircraft","_crew","_group"];
 _aircraft engineOn true;
@@ -90,7 +90,7 @@ if (count _vehicleArray == 0) then {
 		// Apply texture if required
 		if (count "_vehicleTexture" > 0) then {
 			[_vehicle, _vehicleTexture] call BIS_fnc_initVehicle;
-		};	
+		};
 	};
 };
 
@@ -101,7 +101,7 @@ private _str = str(_amount) + "x " + _msg + " Drop to Grid " + (mapGridPosition 
 
 
 // Calculating waypoints drop and end
-private _wpDrop = [_target, 150,_dir] call BIS_fnc_relPos;
+private _wpDrop = [_target, 150, _dir] call BIS_fnc_relPos;
 private _wpEnd = [_target, 3500, _dir] call BIS_fnc_relPos;
 
 

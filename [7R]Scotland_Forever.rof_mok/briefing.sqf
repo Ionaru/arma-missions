@@ -46,7 +46,7 @@ _exe = player createDiaryRecord ["diary", ["Execution","
 <br/>
 FOB Highlander will be our first objective, it is used as a storage facility for ground vehicles. We will need those to reach the other locations captured by the British.
 <br/>
-We'll use our one functional helicopter to insert into the AO and recapture FOB Highlander.
+We'll use our one functional helicopter to reach the nearest friendly airport and insert into the AO via HALO.
 <br/><br/>
 <font size='18'>MOVEMENT PLAN</font>
 <br/>
@@ -91,7 +91,7 @@ Seeing the exploitation of our beautiful land, the Scottish people have intensif
 <br/><br/>
 In a bid to maintain the union and prevent an independent Scotland from seeking NATO or EU membership, the British Government has taken the drastic step of declaring war on Scotland.
 <br/><br/>
-In a swift and aggressive move, British Forces have landed on Scottish soil. Our Armed Forces were in the midst of re-establishing command when key strategic locations on the Kintyre peninsula were seized by the enemy. Communication lines with our other bases have been severed, and we must prepare for the worst-case scenario.
+In a swift and aggressive move, British Forces with support of the US Army, have landed on Scottish soil. Our Armed Forces were in the midst of re-establishing command when key strategic locations on the Kintyre peninsula were seized by the enemy. Communication lines with our other bases have been severed, and we must prepare for the worst-case scenario.
 <br/><br/>
 Now, we stand as the troops of FOB Braveheart. It falls upon us to resist this invasion, to reclaim our territory, and to safeguard our nation's freedom.
 <br/><br/>
