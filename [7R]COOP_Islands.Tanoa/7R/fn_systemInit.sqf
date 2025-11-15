@@ -64,7 +64,7 @@ SR_vehicle_drop = [];
 Available support assets.
 */
 Supplydropammo = 20;
-Artillerycallammo = 3;
-CAScallammo = 6;
-UAVcallammo = 3;
+Artillerycallammo = 0;
+CAScallammo = 10;
+UAVcallammo = 5;
 ace_trenches_trenchSupplies = 500;
