@@ -9,8 +9,8 @@ jobs:
         matrix: ${{ steps.set-matrix.outputs.matrix }}
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - uses: actions/checkout@v5
+    - uses: actions/setup-node@v6
       with:
         node-version: lts/*
     - id: set-matrix
@@ -26,7 +26,7 @@ jobs:
       matrix: ${{ fromJson(needs.get_mission_folders.outputs.matrix) }}
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v5
     - uses: team-gsri/actions-make-pbo@master
       with:
         mission: ${{ matrix.mission }}
@@ -34,7 +34,7 @@ jobs:
     - run: ls -lahF
     - run: echo $PWD
     - run: echo "${{ matrix.mission }}"
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v5
       with:
         name: ${{ matrix.mission }}.pbo
         path: ${{ github.workspace }}/*.pbo
