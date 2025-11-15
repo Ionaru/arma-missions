@@ -15,6 +15,7 @@ disabledAI = 1;
 author			  = "Ionaru";
 onLoadName		= "[7R] Operation Palm Shield";
 onLoadMission	= "Restore freedom around Tanoa";
+loadScreen    = "palm_shield.paa";
 
 class CfgDebriefing
 {
