@@ -113,4 +113,4 @@ _uc2 = ["7R_UC","Exit Undercover","a3\ui_f\data\IGUI\Cfg\simpleTasks\types\rifle
 
 // Hacking
 //Example: SR_Hack = [hack1,hack2]; both hack1 and hack2 being variable names of the area triggers
-SR_Hack = [];
+SR_Hack = [hack1, hack2, hack3];

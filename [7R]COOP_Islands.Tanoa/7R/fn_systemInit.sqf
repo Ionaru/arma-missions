@@ -58,15 +58,13 @@ Example:
 Available vehicle drops.
 [Display name, vehicle Class, vehicle loadout Number, texture Array]
 */
-SR_vehicle_drop = [
-    ["Quad", "B_Quadbike_01_F", 0]
-];
+SR_vehicle_drop = [];
 
 /*
 Available support assets.
 */
 Supplydropammo = 20;
-Artillerycallammo = 0;
+Artillerycallammo = 3;
 CAScallammo = 6;
 UAVcallammo = 3;
 ace_trenches_trenchSupplies = 500;
