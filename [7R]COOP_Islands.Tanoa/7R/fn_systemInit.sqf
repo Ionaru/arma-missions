@@ -65,7 +65,7 @@ SR_vehicle_drop = [
 /*
 Available support assets.
 */
-Supplydropammo = 12;
+Supplydropammo = 20;
 Artillerycallammo = 0;
 CAScallammo = 6;
 UAVcallammo = 3;
