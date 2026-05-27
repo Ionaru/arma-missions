@@ -33,10 +33,11 @@ CASFireMissionLock = false;
 UAVCallAmmo = 5;
 UAVFireMissionLock = false;
 ExfilReady = 0;
+SR_HeliLiftoff = false;
 ReifLock = false;
-SR_RespawnWave = false;
 SR_RespawnForce = false;
 SR_RespawnLock = false;
+SR_SpawnCount = 0;
 phase = 0;
 
 SR_lockBlacklist = [ 

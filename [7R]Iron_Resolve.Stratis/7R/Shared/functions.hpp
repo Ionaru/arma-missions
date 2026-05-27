@@ -18,9 +18,13 @@
 		class clearArea {};
 		class sortUnitsByGroup{};
 		class removeNVG{};
+		class recall{};
+		class zeus {};
 		class info{};
 		class findLocation{};
 		class debrief{};
+		class forceRespawn{};
+		class spawnMessageHandler{};
 	};
 	class template
 	{

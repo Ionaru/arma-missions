@@ -9,12 +9,10 @@ SR_AI_removeNVG = false;
 SR_AI_addFlashlight = false;
 SR_AI_forceFlashlight = false; // Force AI to turn flashlight on.
 SR_Night = false; // Set to 'true' when the mission is played entirely at night.
-SR_Camo_Coef = 1; // For Night Missions, default: 1
+SR_Camo_Coef = 0.75; // For Night Missions, default: 0.75
 
 // Respawn Management
-SR_Respawn_Max = 600; // Maximum wait time for respawn.
-SR_Wave_Size = 2; // Minimum players needed to start a respawn wave.
-SR_Spawn_Height = 0; // Height above ground the player should respawn (for respawning on ships).
+SR_Spawn_Height = 0; // Height above ground the player should respawn (for respawning on ships). (check height in editor with: hint format ["%1", (getPosASL player) select 2])
 
 /*
 	Available supply boxes.
@@ -41,7 +39,7 @@ SR_Support_Assets = [
     /* ParaDropPlane */         "RHS_C130J", // Alternatives: "UK3CB_BAF_Hercules_C3" (BAF),"UK3CB_BAF_Hercules_C4" (German), "UK3CB_TKA_O_C130J" (Russian, USSR)
     /* SupplyDropPlane */       "RHS_C130J", // Alternatives: "UK3CB_BAF_Hercules_C3" (BAF), "UK3CB_BAF_Hercules_C4" (German), "UK3CB_TKA_O_C130J" (Russian, USSR)
     /* CASPlane */              "RHS_A10", // Alternatives: "RHS_Su25SM_vvs" (Russian/USSR)
-    /* ExfilHelicopter */       "RHS_CH_47F", // Alternatives: "UK3CB_BAF_Merlin_HC3_32_MTP" (BAF), "RHS_Mi8AMT_vvs" (Russian/USSR)
+    /* ExfilHelicopter */       "RHS_CH_47F_10", // Alternatives: "UK3CB_BAF_Merlin_HC3_32_MTP" (BAF), "RHS_Mi8AMT_vvs" (Russian/USSR)
     /* UAV*/                    "UK3CB_BAF_MQ9_Reaper_Generic" // Alternatives: "B_UAV_02_dynamicLoadout_F" / "UK3CB_BAF_MQ9_Reaper_Generic" (BLUEFOR), "rhs_pchela1t_vvs" (Russian/USSR), "O_UAV_02_dynamicLoadout_F" (OPFOR)
 ];
 /*
