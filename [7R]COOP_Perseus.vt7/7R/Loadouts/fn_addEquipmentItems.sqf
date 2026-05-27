@@ -15,11 +15,13 @@
 
 params ["_terminal", "_tier"];
 
-if (_tier <= 2) then {
-    _terminal addaction ["<t color=""#FF0000"">UAV Terminal", "7R\Loadouts\7R_EQ.sqf", ["B_UavTerminal"]];
+if (_tier <= 3) then {
+    _terminal addaction ["<t color=""#FF0000"">Compact Drone", "7R\Loadouts\7R_EQ.sqf", ["7r_compact_drone"]];
+    SR_SupplyBoxes = SR_SupplyBoxes + [["SR_Support_Box_Empty", "Compact Drone Supplies", 11]];
 };
 
-if (_tier <= 3) then {
+if (_tier <= 3.5) then {
+    _terminal addaction ["<t color=""#FF0000"">UAV Terminal", "7R\Loadouts\7R_EQ.sqf", ["B_UavTerminal"]];
     _terminal addaction ["<t color=""#FF0000"">GPS", "7R\Loadouts\7R_EQ.sqf", ["ItemGPS"]];
     _terminal addaction ["<t color=""#FF0000"">Vector", "7R\Loadouts\7R_EQ.sqf", ["ACE_Vector"]];
     _terminal addaction ["<t color=""#FF0000"">Laser Designator", "7R\Loadouts\7R_EQ.sqf", ["Laserdesignator"]];
@@ -27,5 +29,5 @@ if (_tier <= 3) then {
 
 _terminal addaction ["<t color=""#FF0000"">Lockpicks", "7R\Loadouts\7R_EQ.sqf", ["ACE_key_lockpick"]];
 _terminal addaction ["<t color=""#FF0000"">Entrenching Tool", "7R\Loadouts\7R_EQ.sqf", ["ACE_EntrenchingTool"]];
-_terminal addaction ["<t color=""#FF0000"">Wirecutter", "7R\Loadouts\7R_EQ.sqf", ["ACE_wirecutter"]];
+_terminal addaction ["<t color=""#FF0000"">Breaching Kit", "7R\Loadouts\7R_EQ.sqf", ["ACE_wirecutter"]];
 _terminal addaction ["<t color=""#FF0000"">Mine Detector", "7R\Loadouts\7R_EQ.sqf", ["MineDetector"]];

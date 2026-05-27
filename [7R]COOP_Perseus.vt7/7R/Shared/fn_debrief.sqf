@@ -12,7 +12,6 @@
 // Parameter Init
 params [["_noDelete",false]];
 
-
 // Exit when debrief already in progress
 if (phase == 9999) exitWith {
 	["DEBRIEF IN PROGRESS", 1.5] spawn ace_common_fnc_displayTextStructured;
@@ -21,23 +20,29 @@ if (phase == 9999) exitWith {
 // Message
 ["DEBRIEF STARTED", 1.5] spawn ace_common_fnc_displayTextStructured;
 
-// Server Only
-if (isServer) then {
-	// Stop recording
-	["WMT_fnc_EndMission", _this] call CBA_fnc_localEvent;
+// Save OCAP Recording
+["ocap_exportData", [SR_Side, "Operation Completed"]] call CBA_fnc_serverEvent;
 
+// Server only execute or HC if present
+if (isServer || (!hasInterface && !isDedicated)) then {
 	// Remove Hostiles
 	if (!_noDelete) then {
 		// Deny new spawns
 		SR_Unit_Cap = 0;
 		publicVariable "SR_Unit_Cap";
-		// Remove Hostiles
+		// Delete existing units
 		{
 			if ([SR_Side, (side _x)] call BIS_fnc_sideIsEnemy && !(_x setVariable ["SR_NoRemoval", false])) then {
 				deleteVehicle _x;
 			};
 		} forEach (allUnits-allPlayers);
 	};
+};
+
+// Server Only
+if (isServer) exitWith {
+	// Stop recording
+	["WMT_fnc_EndMission", _this] call CBA_fnc_localEvent;
 
 	// Set Variables
 	phase = 9999;
@@ -57,18 +62,6 @@ if (isServer) then {
 	} , 1, []] call CBA_fnc_addPerFrameHandler;
 };
 
-// Debrief Diary Records
-// Create Category
-[player,["Debrief", "Debrief"]] remoteExec ["createDiarySubject",0];
-// KIAs
-[player,["Debrief",["Casualties",SR_KIA]]] remoteExec ["createDiaryRecord",0];
-// Civilian Casualties
-[player,["Debrief",["Civilian Casualties",SR_CC]]] remoteExec ["createDiaryRecord",0];
-// War Crimes
-[player,["Debrief",["War Crimes",SR_WC]]] remoteExec ["createDiaryRecord",0];
-// Friendly Fire
-[player,["Debrief",["Friendly Fire",SR_FF]]] remoteExec ["createDiaryRecord",0];
-
 // Unload Weapons
 {
 	player setAmmo [_x, 0];
@@ -76,3 +69,20 @@ if (isServer) then {
 
 // Full Heal Player
 [player] call ace_medical_treatment_fnc_fullHealLocal;
+
+// Individual Score Calculation
+(getPlayerScores player) params ["_infKills","_vicKills","_armorKills", "_airKills", "_deaths", "_totalScore"];
+private _scoreRecord = format ["Your Score:" + "<br/>" + "Kills: " + str(_infKills) + "<br/>" + "Vehicle Kills: " + str(_vicKills) + "<br/>" + "Armor Kills: " + str(_armorKills) + "<br/>" + "Air Kills: " + str(_airKills) + "<br/>" + "Deaths: " + str(_deaths) + "<br/>" + "Total Score: " + str(_totalScore)];
+
+// Debrief Diary Records
+// Create Category
+player createDiarySubject ["Debrief","Debrief"];
+// Records
+player createDiaryRecord ["Debrief", ["Casualties", SR_KIA]];
+player createDiaryRecord ["Debrief", ["Civilian Casulties", SR_CC]];
+player createDiaryRecord ["Debrief", ["War Crimes", SR_WC]];
+player createDiaryRecord ["Debrief", ["Friendly Fire", SR_FF]];
+player createDiaryRecord ["Debrief", ["Score", _scoreRecord]];
+
+// Force Respawn
+[] spawn fw_fnc_forceRespawn;

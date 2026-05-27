@@ -18,14 +18,13 @@
 		class clearArea {};
 		class sortUnitsByGroup{};
 		class removeNVG{};
-		class zeus{};
 		class recall{};
+		class zeus {};
 		class info{};
 		class findLocation{};
-		class supplyDropAction{};
-		class supplySlingAction{};
-		class supplySpawnAction{};
 		class debrief{};
+		class forceRespawn{};
+		class spawnMessageHandler{};
 	};
 	class template
 	{
@@ -48,33 +47,43 @@
 		class civBomberAction{};
 		class civUnitSpawn{};
 	};
+	class support {
+		file = "7R\Support";
+		class supportStatusReport{};
+	};
+	
+	
+
 	class arty
 	{
-		file = "7R\FireSupport";
+		file = "7R\Support\FireSupport";
 		class artillery{};
 		class artilleryReadyCheck{};
 		class CAS{};
+		class UAV{};
 	};
 	class supply
 	{
-		file = "7R\Supplies";
+		file = "7R\Support\Supplies";
 		class supplyDropInit{};
 		class supplyDropBox{};
 		class supplyDropEject{};
 		class supplyDropLanding{};
-		class supplyDropReport{};
 		class canCallVehicleDrop{};
 		class vehicleDropAction{};
 		class supplyLoad{};
 		class supplySpawn{};
+		class supplyDropAction{};
+		class supplySlingAction{};
+		class supplySpawnAction{};
 	};
 	class exfil {
-		file = "7R\Exfil";
+		file = "7R\Support\Exfil";
 		class exfilAction{};
 		class exfilCall{};
 	};
 	class reinf {
-		file = "7R\REINF";
+		file = "7R\Support\REINF";
 		class reinfInit{};
 		class reinfMove{};
 		class reinfAction{};
@@ -95,7 +104,7 @@
 		file = "7R\ParaDrop";
 		class paraDrop{};
 		class paraDropPlane{};
-		class paraDropPlaneSelection{};
+		class freefallDrop{};
 	};
 	class teleport {
 		file = "7R\Teleport";
@@ -107,6 +116,7 @@
 		class vehicleSpawn{};
 		class heloSpawn{};
 		class cargoSpawn{};
+		class changePylons{};
 	};
 	class special {
 		file = "7R";
@@ -160,6 +170,7 @@
 		class civKilledEH{};
 		class civPanicEH{};
 		class powKilledEH{};
+		class garrisonKilledEH{};
 	};
 	class Loadouts {
 		file = "7R\Loadouts";
@@ -167,5 +178,14 @@
 		class addEquipmentRadios{};
 		class addEquipmentItems{};
 		class conditionEquipment{};
-	}
+		class addUniformsToBox{};
+	};
+	class Text {
+		file = "7R\Text";
+		class makeColor{};
+	};
+	class Breach {
+		file = "7R\Breach";
+		class lockAreaDoors{};
+	};
 };
