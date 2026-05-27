@@ -13,8 +13,10 @@ removeBackpack _unit;
 removeHeadgear _unit;
 removeGoggles _unit;
 
+// 1 - Echo | 2 - Squad | 3 - Platoon | 4 - Sierra
+[_unit, 4] call compile preprocessFileLineNumbers "loadouts\aUniformCall.sqf";
+
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "U_B_HeliPilotCoveralls";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
@@ -22,34 +24,39 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "ACE_Flashlight_XL50";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
-    _unit addItemToUniform "ACRE_PRC152";
-    _unit addItemToUniform "ACE_microDAGR";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
+
 comment "Add Vest/Items";
-    _unit addVest "rhsusf_spc_crewman";
+_unit addVest "VSM_LBT6094_operator_OGA_OD";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_an_m8hc";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_m18_green";};
-    _unit addBackpack "UK3CB_B_Invisible";
-    _unit addItemToBackpack "ToolKit";
+    _unit addItemToVest "rhs_mag_an_m8hc";
+    _unit addItemToVest "rhs_mag_m18_red";
+
+comment "Add Backpack/Items";
+    _unit addBackpack "B_Kitbag_invisible";
+    _unit addItemToBackpack "ACE_Kestrel4500";
+    _unit addItemToBackpack "ACE_RangeCard";
+    _unit addItemToBackpack "ACE_Tripod";
+    _unit addItemToBackpack "ACRE_PRC117F";
 
 comment "Add Drip";
-    _unit addHeadgear "rhsusf_hgu56p";
 
 comment "Add Primary/Attachments";
-    _unit addWeapon "rhs_weap_m4_carryhandle";
+    _unit addWeapon "rhs_weap_m4a1_carryhandle_mstock";
+    _unit addPrimaryWeaponItem "rhsusf_acc_nt4_tan";
+    _unit addPrimaryWeaponItem "rhsusf_acc_ACOG_RMR";
 
 comment "Add Secondary/Attachments";
     _unit addWeapon "UK3CB_P320_DES";
     _unit addHandgunItem "UK3CB_P320_9x19_17Rnd";
-    _unit addHandgunItem "acc_flashlight_pistol";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "Binocular";
+    _unit addWeapon "ACE_Vector";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 1 do {_unit addItemToUniform "UK3CB_P320_9x19_17Rnd";};
-    for "_i" from 1 to 3 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_MK318_Stanag";};
+    for "_i" from 1 to 3 do {_unit addItemToUniform "UK3CB_P320_9x19_17Rnd";};
+    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_mag_30Rnd_556x45_MK318_Stanag";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
@@ -61,10 +68,11 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_GPNVG18_WP_GM_BLK", "USP_GPNVG18_WP_GM_TAR_BLK"];
-    _unit setUnitTrait ["camouflageCoef",1];
+    _unit linkItem selectRandom ["USP_PVS31_WP_BLK", "USP_PVS31_WP_TAN","USP_PVS31_WP_HIGH_BLK","USP_PVS31_WP_HIGH_TAN","USP_PVS31_WP_MID_BLK","USP_PVS31_WP_MID_TAN","USP_PVS31_WP_TAR_BLK", "USP_PVS31_WP_TAR_TAN","USP_PVS31_WP_TAR_HIGH_BLK","USP_PVS31_WP_TAR_HIGH_TAN","USP_PVS31_WP_TAR_MID_BLK","USP_PVS31_WP_TAR_MID_TAN"];
+    _unit addItem "ACE_IR_Strobe_Item";
+    _unit setUnitTrait ["camouflageCoef",0.9];
 };
-_unit setVariable ["SR_Class","Pilot", true];
+_unit setVariable ["SR_Class","Sniper", true];
 _unit setVariable ["ace_isEngineer",0, true];
 _unit setVariable ["ace_medical_medicClass",0,true];
 _unit setVariable ["ACE_isEOD",false,true];
