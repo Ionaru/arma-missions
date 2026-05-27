@@ -21,7 +21,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-    _unit addItemToUniform "ACE_Flashlight_XL50";
+    _unit addItemToUniform "ACE_Flashlight_MX991";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiGreen";};
@@ -30,9 +30,8 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
     _unit addVest selectRandomWeighted [
-		"7r_ttsko_d_modvest_recon",2,
-		"7r_ttsko_d_modvest_compact",2,
-		"7r_ttsko_d_modvest_combat",2];
+		"rhs_6b3_VOG",1,
+		"rhs_6b3_VOG_2",1];
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     _unit addItemToVest "rhs_mag_nspn_green";
     _unit addItemToVest "rhs_mag_nspn_red";
@@ -40,7 +39,7 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "7r_fieldpack_ttsko_d";
+    _unit addBackpack "rhs_sidor";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 
 comment "Add Drip";
@@ -53,7 +52,7 @@ comment "Add Primary/Attachments";
 comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "ACE_Vector";
+    _unit addWeapon "ACE_VectorDay";
 
 comment "Add Ammunition";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "rhs_GRD40_Red";};
@@ -63,14 +62,12 @@ comment "Add Navigation";
     _unit linkItem "ItemCompass";
     _unit linkItem "ItemWatch";
     _unit linkItem "ItemRadioAcreFlagged";
-    _unit linkItem "ItemGPS";
+    
     
 
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_PVS14_WP", "USP_PVS14_WP_TAR"];
-    _unit addItem "ACE_IR_Strobe_Item";
     _unit addItem "rhs_VG40OP_white";
     _unit addItem "rhs_VG40OP_white";
     _unit addItem "rhs_VG40OP_white";

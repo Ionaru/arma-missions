@@ -14,12 +14,12 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add Uniforms/Items";
-    _unit forceAddUniform "rhsgref_uniform_para_ttsko_mountain";
+    _unit forceAddUniform "rhsgref_uniform_ttsko_mountain";
     _unit addItemToUniform "ACE_MapTools";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-    _unit addItemToUniform "ACE_Flashlight_XL50";
+    _unit addItemToUniform "ACE_Flashlight_MX991";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
@@ -27,28 +27,28 @@ comment "Add Uniforms/Items";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
-    _unit addVest "7r_ttsko_modvest_compact";
+    _unit addVest "rhs_6sh46";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_nspn_green";};
     _unit addBackpack "UK3CB_B_Invisible";
     _unit addItemToBackpack "ToolKit";
 
 comment "Add Drip";
-    _unit addHeadgear selectRandom ["rhsusf_hgu56p_visor_black","rhsusf_hgu56p_black","rhsusf_hgu56p","rhsusf_hgu56p_visor","rhsusf_hgu56p","rhsusf_hgu56p_visor"];
+    _unit addHeadgear "rhs_zsh7a_mike_green_alt";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_aks74un";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "rhs_weap_makarov_pm";
-    _unit addHandgunItem "rhs_mag_9x18_8_57N181S";
+    _unit addWeapon "rhs_weap_tt33";
+    _unit addHandgunItem "rhs_mag_762x25_8";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "Binocular";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 1 do {_unit addItemToUniform "rhs_mag_9x18_8_57N181S";};
-    for "_i" from 1 to 3 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_plum_AK";};
+    for "_i" from 1 to 1 do {_unit addItem "rhs_mag_762x25_8";};
+    for "_i" from 1 to 3 do {_unit addItem "rhs_30Rnd_545x39_7N6_AK";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
@@ -60,7 +60,7 @@ comment "Add Navigation";
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_PVS14_WP", "USP_PVS14_WP_TAR"];
+    _unit linkItem "rhsusf_ANPVS_14";
     _unit setUnitTrait ["camouflageCoef",1];
 };
 _unit setVariable ["SR_Class","Pilot", true];

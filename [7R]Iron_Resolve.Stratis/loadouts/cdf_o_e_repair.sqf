@@ -21,22 +21,22 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-    _unit addItemToUniform "ACE_Flashlight_XL50";
+    _unit addItemToUniform "ACE_Flashlight_MX991";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     for "_i" from 1 to 3 do {_unit addItemToUniform "ACE_CableTie";};
 
 comment "Add Vest/Items";
     _unit addVest selectRandomWeighted [
-		"7r_ttsko_d_modvest_recon",2,
-		"7r_ttsko_d_modvest_compact",2,
-		"7r_ttsko_d_modvest_combat",2];
+		"rhs_6b3_AK",1,
+		"rhs_6b3_AK_2",1,
+		"rhs_6b3_AK_3",1];
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rgd5";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "7r_kitbag_ttsko_d";
+    _unit addBackpack "UK3CB_CHC_C_B_HIKER";
     _unit addItemToBackpack "ToolKit";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     _unit addItemToBackpack "ACE_SpraypaintGreen";
@@ -59,14 +59,12 @@ comment "Add Navigation";
     _unit linkItem "ItemCompass";
     _unit linkItem "ItemWatch";
     _unit linkItem "ItemRadioAcreFlagged";
-    _unit linkItem "ItemGPS";
+    
     
 
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_PVS14_WP", "USP_PVS14_WP_TAR"];
-    _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","E", true];

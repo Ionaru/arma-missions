@@ -21,7 +21,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-    _unit addItemToUniform "ACE_Flashlight_XL50";
+    _unit addItemToUniform "ACE_Flashlight_MX991";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
@@ -44,32 +44,30 @@ comment "Add Primary/Attachments";
     _unit addPrimaryWeaponItem "rhsusf_acc_grip1";
     _unit addPrimaryWeaponItem "rhs_acc_tgpa";
     _unit addPrimaryWeaponItem "rhs_acc_perst1ik";
-    _unit addPrimaryWeaponItem "rhsusf_acc_acog3_usmc";
+    _unit addPrimaryWeaponItem "rhsusf_acc_acog_usmc";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "rhs_weap_makarov_pm";
-    _unit addHandgunItem "rhs_mag_9x18_8_57N181S";
+    _unit addWeapon "rhs_weap_tt33";
+    _unit addHandgunItem "rhs_mag_762x25_8";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "ACE_MX2A";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 3 do {_unit addItemToUniform "rhs_mag_9x18_8_57N181S";};
-    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_30Rnd_545x39_7N10_plum_AK";};
+    for "_i" from 1 to 3 do {_unit addItemToUniform "rhs_mag_762x25_8";};
+    for "_i" from 1 to 12 do {_unit addItemToVest "rhs_30Rnd_545x39_7N6_AK";};
 
 comment "Add Navigation";
     _unit linkItem "ItemMap";
     _unit linkItem "ItemCompass";
     _unit linkItem "ItemWatch";
     _unit linkItem "ItemRadioAcreFlagged";
-    _unit linkItem "ItemGPS";
+    
     _unit linkItem "B_UavTerminal";
 
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_PVS14_WP", "USP_PVS14_WP_TAR"];
-    _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",0.9];
 };
 _unit setVariable ["SR_Class","Sniper", true];

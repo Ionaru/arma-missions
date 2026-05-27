@@ -30,37 +30,30 @@
     //Echo
     if (_Class == 1) then{
         _uniformArray = [
-            "7r_combatsmocks_ttsko_d",2,
-            "7r_combatsmocks_ttsko_d_gloves",2,
-            "7r_combatsmocks_ttsko_d_khk",3,
-            "7r_combatsmocks_ttsko_d_khk_gloves",3
+            "rhsgref_uniform_ttsko_mountain",1
         ];
     };
 
     //Squad
     if (_Class == 2) then{
         _uniformArray = [
-            "7r_combatsmocks_ttsko_d",2,
-            "7r_combatsmocks_ttsko_d_gloves",2,
-            "7r_combatsmocks_ttsko_d_khk",3,
-            "7r_combatsmocks_ttsko_d_khk_gloves",3
+            "rhsgref_uniform_ttsko_mountain",1
         ];
     };
 
     //Platoon 
     if (_Class == 3) then{
         _uniformArray = [
-            "7r_combatsmocks_ttsko_d",2,
-            "7r_combatsmocks_ttsko_d_gloves",2,
-            "7r_combatsmocks_ttsko_d_khk",3,
-            "7r_combatsmocks_ttsko_d_khk_gloves",3
+            "rhsgref_uniform_ttsko_mountain",1
         ];
     };
 
     //Sierra
     if (_Class == 4) then{
         _uniformArray = [
-            "U_B_FullGhillie_ard",1
+            "rhsgref_uniform_gorka_1_f",3,
+            "rhs_uniform_gorka_1_a",1,
+            "rhs_uniform_gorka_1_green",1
         ];
     };
     
@@ -70,58 +63,25 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
 //Appends array of hats with desired uniforms based on _Class
     //Echo
     if (_Class == 1) then{
-        _hatArray = [
-            "7r_khk_wz2005_ess",
-            "7r_khk_wz2005_ess",
-            "7r_khk_wz2005_headset",
-            "7r_khk_wz2005_headset",
-            "7r_khk_wz2005_headset",
-            "7r_khk_wz2005_headset_ess",
-            "7r_khk_wz2005_headset_ess",
-            "7r_khk_wz2005",
-            "7r_khk_wz2005",
-            "7r_khk_wz2005"
-        ];
+        _hatArray = ["UK3CB_H_SSH60_Helmet_Covered_TAN"];
     };
 
     //Squad
     if (_Class == 2) then{
-        _hatArray = [
-            "7r_ttsko_d_wz2005_ess",
-            "7r_ttsko_d_wz2005_ess",
-            "7r_ttsko_d_wz2005_headset",
-            "7r_ttsko_d_wz2005_headset",
-            "7r_ttsko_d_wz2005_headset_ess",
-            "7r_ttsko_d_wz2005_headset_ess",
-            "7r_ttsko_d_wz2005",
-            "7r_ttsko_d_wz2005",
-            "7r_ttsko_d_wz2005"
-        ];
+        _hatArray = ["UK3CB_H_SSH60_Helmet_Covered_CDF"];
     };
 
     //Platoon 
     if (_Class == 3) then{
-        _hatArray = [
-            "7r_khk_wz2005_ess",
-            "7r_khk_wz2005_ess",
-            "7r_khk_wz2005_headset",
-            "7r_khk_wz2005_headset",
-            "7r_khk_wz2005_headset",
-            "7r_khk_wz2005_headset_ess",
-            "7r_khk_wz2005_headset_ess",
-            "7r_khk_wz2005",
-            "7r_khk_wz2005",
-            "7r_khk_wz2005"
-        ];
+        _hatArray = ["UK3CB_H_SSH60_Helmet_Covered_TAN"];
     };
 
     //Sierra
     if (_Class == 4) then{
         _hatArray = [
-            "VSM_OGA_OD_OPS",
-            "VSM_OD_spray_OPS",
-            "VSM_OGA_OD_OPS_2",
-            "VSM_OD_spray_OPS_2"
+            "rhs_beanie_green",
+            "rhs_beanie",
+            "rhs_headband"
         ];
     };
     //Selects random hat from determined array, runs
@@ -129,50 +89,31 @@ _unit forceAddUniform selectRandomWeighted _uniformArray;
 _helmet = selectRandom _hatArray;
 _unit addHeadgear _helmet;
 
-_goggleList = [
-    "7r_khk_wz2005_ess",
-    "7r_khk_wz2005_headset_ess",
-    "7r_ttsko_d_wz2005_headset_ess",
-    "7r_ttsko_d_wz2005_ess"
-];
-
-_goggles = false;
-if (_helmet in _goggleList) then {_goggles = true;};
-
 //Appends array of goggleswith desired values
     //Appends array of goggleswith desired values
-    if (_Class > 2) then{
-        if _goggles then {
-            _goggleArray = [
-                "rhs_googles_clear", 0.325,
-                "rhs_scarf", 0.25,
-                "", 0.325
-            ];
-        } else {
-            _goggleArray = [
-                "rhs_googles_clear", 0.325,
-                "rhs_scarf", 0.25,
-                "rhsusf_oakley_goggles_clr", 0.1625,
-                "rhsusf_oakley_goggles_blk", 0.1625
-            ];
-        };
-    } else {
-        if _goggles then {
-            _goggleArray = [
-                "7r_scrim_arid", 0.4,
-                "rhs_googles_clear", 0.2,
-                "rhs_scarf", 0.2,
-                "", 0.2
-            ];
-        } else {
-            _goggleArray = [
-                "7r_scrim_arid", 0.4,
-                "rhs_googles_clear", 0.2,
-                "rhs_scarf", 0.2,
-                "rhsusf_oakley_goggles_clr", 0.1,
-                "rhsusf_oakley_goggles_blk", 0.1
-            ];
-        };
+    if (_Class <= 3) then{
+        _goggleArray = [
+            "UK3CB_G_Neck_Shemag_Tan",0.0625,
+            "rhs_balaclava",0.0625,
+            "G_Squares",0.0625,
+            "rhs_scarf",0.0625,
+            "UK3CB_G_Gloves_Black",0.125,
+            "UK3CB_G_Gloves_Black_Shemagh_Tan",0.125,
+            "",0.25
+        ];
+    };
+
+    //Sierra
+    if (_Class == 4) then{
+        _goggleArray = [
+            "UK3CB_G_Neck_Shemag_Tan",0.0625,
+            "rhs_balaclava",0.0625,
+            "G_Squares",0.0625,
+            "rhs_scarf",0.0625,
+            "UK3CB_G_Gloves_Black",0.125,
+            "UK3CB_G_Gloves_Black_Shemagh_Tan",0.125,
+            "",0.25
+        ];
     };
 
     //Selects random googles from determined array

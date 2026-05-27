@@ -21,7 +21,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-    _unit addItemToUniform "ACE_Flashlight_XL50";
+    _unit addItemToUniform "ACE_Flashlight_MX991";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiGreen";};
@@ -30,18 +30,20 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
     _unit addVest selectRandomWeighted [
-		"7r_ttsko_d_modvest_recon",2,
-		"7r_ttsko_d_modvest_compact",2,
-		"7r_ttsko_d_modvest_combat",2];
+		"rhs_6b3_AK",1,
+		"rhs_6b3_AK_2",1,
+		"rhs_6b3_AK_3",1];
     for "_i" from 1 to 4 do {_unit addItemToVest "rhs_mag_rdg2_white";};
-    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_nspd";};
+    for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_nspn_yellow";};
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "7r_carryall_ttsko_d";
+    _unit addBackpack "UK3CB_CHC_C_B_HIKER";
     _unit addItemToBackpack "ACE_Clacker";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     _unit addItemToBackpack "ACE_DefusalKit";
+    for "_i" from 1 to 2 do {_unit addItemToBackpack "iedd_item_notebook";};
+    for "_i" from 1 to 5 do {_unit addItemToBackpack "ace_marker_flags_red";};
     _unit addItemToBackpack "MineDetector";
     _unit addItemToBackpack "ACE_EntrenchingTool";
     _unit addItemToBackpack "ACE_SpraypaintRed";
@@ -49,7 +51,7 @@ comment "Add Backpack/Items";
     for "_i" from 1 to 2 do {_unit addItemToBackpack "DemoCharge_Remote_Mag";};
 
 comment "Add Drip";
-    _unit addItemToBackpack "H_MilCap_grn";
+    _unit addItemToBackpack "rhs_fieldcap_m88_ttsko";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
@@ -58,7 +60,7 @@ comment "Add Primary/Attachments";
 comment "Add Secondary/Attachments";
 
 comment "Add Tertiary equipment";
-    _unit addWeapon "ACE_Vector";
+    _unit addWeapon "ACE_VectorDay";
 
 comment "Add Ammunition";
 
@@ -67,14 +69,12 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemRadioAcreFlagged";
-_unit linkItem "ItemGPS";
+
 
 
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_PVS14_WP", "USP_PVS14_WP_TAR"];
-    _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","PE", true];

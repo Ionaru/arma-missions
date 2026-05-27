@@ -21,7 +21,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-    _unit addItemToUniform "ACE_Flashlight_XL50";
+    _unit addItemToUniform "ACE_Flashlight_MX991";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_Chemlight_HiGreen";};
@@ -30,9 +30,7 @@ comment "Add Uniforms/Items";
 
 comment "Add Vest/Items";
     _unit addVest selectRandomWeighted [
-		"7r_ttsko_d_modvest_recon",2,
-		"7r_ttsko_d_modvest_compact",2,
-		"7r_ttsko_d_modvest_combat",2];
+		"rhs_6b3_R148",1];
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_rdg2_white";};
     _unit addItemToVest "rhs_mag_nspn_green";
     _unit addItemToVest "rhs_mag_nspn_red";
@@ -40,12 +38,12 @@ comment "Add Vest/Items";
     for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_plamyam";};
 
 comment "Add Backpack/Items";
-    _unit addBackpack "UK3CB_ION_I_B_RadioBag_DES";
+    _unit addBackpack "UK3CB_ION_B_B_RadioBag_OLI";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACRE_PRC117F";
 
 comment "Add Drip";
-    _unit addItemToBackpack "H_MilCap_grn";
+    _unit addItemToBackpack "rhs_fieldcap_m88_ttsko";
 
 comment "Add Primary/Attachments";
     // 1 - Rifle 1 | 2 - Rifle 2 | 3 - Grenadier | 4 - BattleRifle | 5 - AutoRifle | 6 - MMG
@@ -64,14 +62,12 @@ _unit linkItem "ItemMap";
 _unit linkItem "ItemCompass";
 _unit linkItem "ItemWatch";
 _unit linkItem "ItemRadioAcreFlagged";
-_unit linkItem "ItemGPS";
+
 
 
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_PVS14_WP", "USP_PVS14_WP_TAR"];
-    _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",SR_Camo_Coef];
 };
 _unit setVariable ["SR_Class","FAC", true];

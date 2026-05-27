@@ -14,11 +14,11 @@ removeHeadgear _unit;
 removeGoggles _unit;
 
 comment "Add containers";
-_unit forceAddUniform "U_B_PilotCoveralls";
+_unit forceAddUniform "U_I_pilotCoveralls";
 _unit addItemToUniform "ACE_MapTools";
 _unit addItemToUniform "SR_PAK";
 for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-_unit addItemToUniform "ACE_Flashlight_XL50";
+_unit addItemToUniform "ACE_Flashlight_MX991";
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_rdg2_white";};
 for "_i" from 1 to 2 do {_unit addItemToUniform "rhs_mag_nspn_green";};
 _unit addItemToUniform "ACE_Chemlight_HiGreen";
@@ -27,13 +27,13 @@ _unit addVest "UK3CB_V_Invisible";
 _unit addItemToVest "ACE_microDAGR";
 _unit addItemToVest "ToolKit";
 _unit addItemToVest "G_Aviator";
-for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_9x18_8_57N181S";};
-_unit addHeadgear "H_PilotHelmetFighter_O";
+for "_i" from 1 to 2 do {_unit addItemToVest "rhs_mag_762x25_8";};
+_unit addHeadgear "rhs_zsh7a_alt";
 _unit addBackpack "UK3CB_B_Invisible";
 _unit addItemToBackpack "ToolKit";
 
 comment "Add weapons";
-_unit addWeapon "rhs_weap_makarov_pm";
+_unit addWeapon "rhs_weap_tt33";
 _unit addWeapon "Binocular";
 
 comment "Add items";

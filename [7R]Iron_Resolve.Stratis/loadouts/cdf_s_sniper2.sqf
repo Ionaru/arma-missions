@@ -21,7 +21,7 @@ comment "Add Uniforms/Items";
     _unit addItemToUniform "SR_PAK";
     _unit addItemToUniform "CBRN_gasmaskFilter";
     for "_i" from 1 to 2 do {_unit addItemToUniform "ACE_tourniquet";};
-    _unit addItemToUniform "ACE_Flashlight_XL50";
+    _unit addItemToUniform "ACE_Flashlight_MX991";
     _unit addItemToUniform "ACE_Chemlight_HiGreen";
     _unit addItemToUniform "ACRE_PRC343";
     _unit addItemToUniform "ACRE_PRC152";
@@ -37,24 +37,25 @@ comment "Add Backpack/Items";
     _unit addBackpack "B_Carryall_invisible";
     _unit addItemToBackpack "Laserbatteries";
     _unit addItemToBackpack "ACE_RangeCard";
-    _unit addItemToBackpack "uk3cb_baf_maxikite";
+    _unit addItemToBackpack "rhs_acc_1pn93_2";
 
 comment "Add Drip";
+    _unit addGoggles "VSM_Shemagh_OD";
 
 comment "Add Primary/Attachments";
     _unit addWeapon "rhs_weap_m82a1";
-    _unit addPrimaryWeaponItem "rhsusf_acc_M8541_mrds";
+    _unit addPrimaryWeaponItem "rhsusf_acc_m8541_mrds";
 
 comment "Add Secondary/Attachments";
-    _unit addWeapon "rhs_weap_makarov_pm";
-    _unit addHandgunItem "rhs_mag_9x18_8_57N181S";
+    _unit addWeapon "rhs_weap_tt33";
+    _unit addHandgunItem "rhs_mag_762x25_8";
 
 comment "Add Tertiary equipment";
     _unit addWeapon "UK3CB_BAF_Soflam_Laserdesignator";
     _unit addMagazine "Laserbatteries";
 
 comment "Add Ammunition";
-    for "_i" from 1 to 4 do {_unit addItemToUniform "rhs_mag_9x18_8_57N181S";};
+    for "_i" from 1 to 4 do {_unit addItemToUniform "rhs_mag_762x25_8";};
     for "_i" from 1 to 4 do {_unit addItem "rhsusf_mag_10Rnd_STD_50BMG_M33";};
     for "_i" from 1 to 2 do {_unit addItem "rhsusf_mag_10Rnd_STD_50BMG_mk211";};
 
@@ -63,13 +64,11 @@ comment "Add Navigation";
     _unit linkItem "ItemCompass";
     _unit linkItem "ItemWatch";
     _unit linkItem "ItemRadioAcreFlagged";
-    _unit linkItem "ItemGPS";
+    
 
 comment "Other Variables";
 if (isNil "SR_Night") then {SR_Night = false};
 if (SR_Night) then {
-    _unit linkItem selectRandom ["USP_PVS14_WP", "USP_PVS14_WP_TAR"];
-    _unit addItem "ACE_IR_Strobe_Item";
     _unit setUnitTrait ["camouflageCoef",0.9];
 };
 _unit setVariable ["SR_Class","Sniper", true];

@@ -41,21 +41,19 @@
         _primaryArray = [
             "rhs_weap_ak74n",
             "rhs_weap_ak74n_2",
-            "rhs_weap_aks74n",
-            "rhs_weap_aks74n_2"
+            "rhs_weap_ak74n_2"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N6_AK";
     };
 
     //2 - Rifle 2
     if (_Rifle == 2) then{
         _primaryArray = [
-            "rhs_weap_ak74n",
-            "rhs_weap_ak74n_2",
             "rhs_weap_aks74n",
+            "rhs_weap_aks74n_2",
             "rhs_weap_aks74n_2"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N6_AK";
     };
 
     //3 - Grenadier
@@ -63,27 +61,24 @@
         _primaryArray = [
             "rhs_weap_aks74n_gp25",
             "rhs_weap_ak74n_gp25",
-            "rhs_weap_aks74n_gp25",
-            "rhs_weap_ak74n_gp25",
             "rhs_weap_ak74n_2_gp25",
             "rhs_weap_ak74n_2_gp25"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N6_AK";
     };
 
     //4 - BattleRifle
     if (_Rifle == 4) then{
         _primaryArray = [
-            "rhs_weap_m14_rail",
-            "rhs_weap_m14_rail_fiberglass"
+            "rhs_weap_akmn"
         ];
-        _primaryAmmo = "20Rnd_762x51_Mag";
+        _primaryAmmo = "rhs_30Rnd_762x39mm";
     };
 
     //5 - AutoRifle
     if (_Rifle == 5) then{
         _primaryArray = [
-            "rhs_weap_rpk74m_npz"
+            "rhs_weap_rpk74_wood"
         ];
         _primaryAmmo = "rhs_60Rnd_545X39_7N10_AK_mixed";
     };
@@ -91,9 +86,9 @@
     //6 - MMG
     if (_Rifle == 6) then{
         _primaryArray = [
-            "7r_weap_ukm2013p"
+            "rhs_weap_pkm"
         ];
-        _primaryAmmo = "rhsusf_100Rnd_762x51_m80a1epr";
+        _primaryAmmo = "rhs_100Rnd_762x54mmR";
     };
 
     //7 - SPC
@@ -107,28 +102,26 @@
     //8 - DMR
     if (_Rifle == 8) then{
         _primaryArray = [
-            "rhs_weap_ak74m_zenitco01"
+            "rhs_weap_vss_grip"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
+        _primaryAmmo = "rhs_20rnd_9x39mm_SP6";
     };
 
     //9 - PDMR
     if (_Rifle == 9) then{
         _primaryArray = [
-            "UK3CB_SVD_OLD_NPZ"
+            "UK3CB_SVD_OLD"
         ];
-        _primaryAmmo = "10Rnd_762x54_Mag";
+        _primaryAmmo = "rhs_10Rnd_762x54mmR_7N1";
     };
 
     //10 - Breacher
     if (_Rifle == 10) then{
         _primaryArray = [
-            "rhs_weap_ak74n",
-            "rhs_weap_ak74n_2",
             "rhs_weap_aks74n",
             "rhs_weap_aks74n_2"
         ];
-        _primaryAmmo = "rhs_30Rnd_545x39_7N10_plum_AK";
+        _primaryAmmo = "rhs_30Rnd_545x39_7N6_AK";
     };
 
 //Selects random weapon from determined array, runs
@@ -138,22 +131,20 @@
     
     if ( _Rifle <= 5 or _Rifle == 10 or _Rifle == 8) then{
         _attachmentArray = [
-            "rhs_acc_perst1ik"
+            "rhs_acc_2dpZenit"
         ];
     };
     
-    if (_Rifle in [6,7]) then{
+    if (_Rifle == 7) then{
         _attachmentArray = [
-            "rhs_acc_perst1ik_ris"
+            "rhs_acc_2dpZenit_ris"
         ];
     };
 
     if (_Rifle == 7) then{
         _gripArray = [
             "",
-            "rhsusf_acc_grip2",
-            "rhsusf_acc_kac_grip",
-            "rhsusf_acc_rvg_blk"
+            "rhs_acc_grip_rk2"
         ];
     };
 //Selects random weapon attachment from determined array if rifle critera met, runs
@@ -192,9 +183,9 @@
     };
 
 //Adds sidearm, secondary as well as ammunition, attachments
-    _unit addWeapon "rhs_weap_makarov_pm";
-    _unit addHandgunItem "rhs_mag_9x18_8_57N181S";
-    _unit addItem "rhs_mag_9x18_8_57N181S";
-    _unit addItem "rhs_mag_9x18_8_57N181S";
+    _unit addWeapon "rhs_weap_tt33";
+    _unit addHandgunItem "rhs_mag_762x25_8";
+    _unit addItem "rhs_mag_762x25_8";
+    _unit addItem "rhs_mag_762x25_8";
 
     

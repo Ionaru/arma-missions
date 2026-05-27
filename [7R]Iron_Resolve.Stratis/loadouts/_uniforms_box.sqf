@@ -2,7 +2,7 @@ _uniforms = [
 
 	["Platoon", "#ffff00", "a3\ui_f\data\Map\Markers\NATO\b_hq.paa",
 		[["Platoon Leader", "loadouts\cdf_p_pl.sqf"],
-		["Platoon FAC", "loadouts\cdf_p_fac.sqf"],
+		["Platoon Forward Observer", "loadouts\cdf_p_fac.sqf"],
 		["Platoon Engineer (Demo)", "loadouts\cdf_p_e_demo.sqf"],
 		["Platoon Engineer (EOD)", "loadouts\cdf_p_e_eod.sqf"],
 		["Platoon Engineer (Fortification)", "loadouts\cdf_p_e_fort.sqf"],
@@ -59,9 +59,7 @@ _uniforms = [
 
 	["Sierra", "#ff0000", "a3\ui_f\data\Map\Markers\NATO\b_recon.paa",
 		[["Sierra Spotter", "loadouts\cdf_s_spotter.sqf"],
-		["Sierra Sniper", "loadouts\cdf_s_sniper.sqf"],
-		["Sierra Sniper (M82A1)", "loadouts\cdf_s_sniper2.sqf"],
-		["Sierra Recon", "loadouts\cdf_s_recon.sqf"]
+		["Sierra Sniper", "loadouts\cdf_s_sniper.sqf"]
 	]],
 
 	["Air", "#ff0000", "a3\ui_f\data\Map\Markers\NATO\b_air.paa",
