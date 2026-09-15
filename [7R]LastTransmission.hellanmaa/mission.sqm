@@ -11584,7 +11584,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="We believe a small listening outpost has been set up in <marker name='marker_intel'>Luoma</marker> to keep taps on the civilian population, raid it for intel about further enemy operations.";
+							value="We believe a small listening outpost has been set up in <marker name='marker_intel'>Luoma</marker> to keep tabs on the civilian population, raid it for intel about further enemy operations.";
 						};
 					};
 				};
@@ -11771,7 +11771,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="Hack the Radio Tower";
+							value="Hack the First Radio Tower";
 						};
 					};
 				};
@@ -11970,7 +11970,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="Destroy the FOB";
+							value="Capture the FOB";
 						};
 					};
 				};
@@ -11983,7 +11983,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="The intel we gathered shows the location of the 2 radio towers the militia uses for communications and also hints at an FOB set up in an abandoned industrial complex." \n "" \n "This <marker name='marker_fob'>abandoned industrial complex</marker> is likely in use as an FOB my the militia. Expect added defences and a strong garrison.";
+							value="The intel we gathered shows the location of the 2 radio towers the militia uses for communications and also hints at an FOB set up in an abandoned industrial complex." \n "" \n "This <marker name='marker_fob'>abandoned industrial complex</marker> is likely in use as an FOB by the militia. Expect added defences and a strong garrison.";
 						};
 					};
 				};
@@ -11996,7 +11996,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="destroy";
+							value="fob";
 						};
 					};
 				};
@@ -12169,7 +12169,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="Hack Radio Tower";
+							value="Hack the Second Radio Tower";
 						};
 					};
 				};
@@ -12182,7 +12182,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="The intel we gathered shows the location of the 2 radio towers the militia uses for communications and also hints at an FOB set up in an abandoned industrial complex." \n "" \n "This <marker name='marker_hack1'>radio tower</marker> is one of two towers handling the enemy communications. Hack it to disrupt their ability to coordinate. This one is located deep within enemy territory, they will not give it up easily. Expect a strong defence and counter-attacks from all directions.";
+							value="The intel we gathered shows the location of the 2 radio towers the militia uses for communications and also hints at an FOB set up in an abandoned industrial complex." \n "" \n "This <marker name='marker_hack2'>radio tower</marker> is one of two towers handling the enemy communications. Hack it to disrupt their ability to coordinate. This one is located deep within enemy territory, they will not give it up easily. Expect a strong defence and counter-attacks from all directions.";
 						};
 					};
 				};
@@ -12381,7 +12381,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="Radio logs uncovered during the hacking of the last radio tower, indicate the commander is located in a <marker name='marker_hvt'>nearby compound</marker>. Neutralize him to deal a decisive blow to this militia group.";
+							value="Radio logs uncovered during the hacking of the last radio tower indicate the VDV advisor is located in a <marker name='marker_hvt'>nearby compound</marker>. Neutralize him to deal a decisive blow to this militia group.";
 						};
 					};
 				};
@@ -12770,7 +12770,7 @@ class Mission
 			dataType="Marker";
 			position[]={4976.3398,57.146999,6946.9561};
 			name="marker_hack1";
-			text="Hack the radio tower";
+			text="Hack the first radio tower";
 			type="hd_objective";
 			colorName="ColorEAST";
 			alpha=0;
@@ -12782,7 +12782,7 @@ class Mission
 			dataType="Marker";
 			position[]={1672.8781,59.513,5319.9189};
 			name="marker_hack2";
-			text="Hack the radio tower";
+			text="Hack the second radio tower";
 			type="hd_objective";
 			colorName="ColorEAST";
 			alpha=0;
@@ -12821,7 +12821,7 @@ class Mission
 			{
 				text="TASK 2";
 				condition="""intel"" call BIS_fnc_taskCompleted;";
-				onActivation="marker_hack1 setMarkerAlpha 1;" \n "marker_hack2 setMarkerAlpha 1;" \n "merker_fob setMarkerAlpha 1;";
+				onActivation="""marker_hack1"" setMarkerAlpha 1;" \n """marker_hack2"" setMarkerAlpha 1;" \n """marker_fob"" setMarkerAlpha 1;";
 				sizeA=0;
 				sizeB=0;
 				triggerInterval=3;
@@ -12837,7 +12837,7 @@ class Mission
 			{
 				text="TASK 3";
 				condition="""hack2"" call BIS_fnc_taskCompleted;";
-				onActivation="marker_hvt setMarkerAlpha 1;";
+				onActivation="""marker_hvt"" setMarkerAlpha 1;";
 				sizeA=0;
 				sizeB=0;
 				triggerInterval=3;
