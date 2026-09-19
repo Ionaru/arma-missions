@@ -60,5 +60,5 @@ Local militia, Russian-equipped infantry and light vehicles
 <br/><br/>
 <font size='18'>FRIENDLY FORCES</font>
 <br/>
-Finnish Defence Forces jaeger company
+Finnish Defence Forces jaeger platoon
 "]];

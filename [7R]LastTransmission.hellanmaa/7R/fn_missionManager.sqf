@@ -44,9 +44,6 @@ _civs = [
 	"C_Farmer_01_enoch_F"
 ];
 
-phase = _nbr;
-publicVariable "phase";
-
 // Phase Case means Phase
 switch (_nbr) do {
     case 0: { // Populate roadblock
@@ -383,6 +380,12 @@ switch (_nbr) do {
 
 		"Mission Complete" remoteExec ["systemChat", 0];
 	};
+};
+
+// 9999 is the debrief sentinel set by fw_fnc_debrief, never overwrite it
+if (phase != 9999) then {
+	phase = _nbr;
+	publicVariable "phase";
 };
 
 ["MissionLog", ["Mission", ("Case " + str(_nbr) + " loaded.")]] spawn CBA_fnc_globalEvent; 
