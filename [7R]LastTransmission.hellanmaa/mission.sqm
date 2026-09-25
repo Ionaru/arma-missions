@@ -6,6 +6,10 @@ class EditorData
 	scaleGridStep=1;
 	autoGroupingDist=10;
 	toggles=1;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
 	class ItemIDProvider
 	{
 		nextID=3629;
@@ -16,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=8;
+		nextID=12;
 	};
 	class Camera
 	{
@@ -642,7 +646,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=48;
+				items=47;
 				class Item0
 				{
 					dataType="Object";
@@ -2386,20 +2390,6 @@ class Mission
 				};
 				class Item38
 				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={7304.7202,39.220345,5415.6816};
-						angles[]={0.14399676,0,6.2058401};
-					};
-					name="HC2";
-					isPlayable=1;
-					description="HC";
-					id=255;
-					type="HeadlessClient_F";
-				};
-				class Item39
-				{
 					dataType="Object";
 					class PositionInfo
 					{
@@ -2415,7 +2405,7 @@ class Mission
 					type="ACE_FOB_Terminal";
 					atlOffset=0.17601776;
 				};
-				class Item40
+				class Item39
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -2548,7 +2538,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item41
+				class Item40
 				{
 					dataType="Object";
 					class PositionInfo
@@ -2581,7 +2571,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item42
+				class Item41
 				{
 					dataType="Object";
 					class PositionInfo
@@ -2614,7 +2604,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item43
+				class Item42
 				{
 					dataType="Group";
 					side="West";
@@ -2898,7 +2888,7 @@ class Mission
 					id=275;
 					atlOffset=-44.23;
 				};
-				class Item44
+				class Item43
 				{
 					dataType="Object";
 					class PositionInfo
@@ -2915,7 +2905,7 @@ class Mission
 					type="OmniDirectionalAntenna_01_olive_F";
 					atlOffset=-0.00051498413;
 				};
-				class Item45
+				class Item44
 				{
 					dataType="Object";
 					class PositionInfo
@@ -2932,7 +2922,7 @@ class Mission
 					id=284;
 					type="SatelliteAntenna_01_Small_Olive_F";
 				};
-				class Item46
+				class Item45
 				{
 					dataType="Object";
 					class PositionInfo
@@ -2949,7 +2939,7 @@ class Mission
 					id=285;
 					type="SatelliteAntenna_01_Olive_F";
 				};
-				class Item47
+				class Item46
 				{
 					dataType="Object";
 					class PositionInfo
@@ -10620,7 +10610,7 @@ class Mission
 					alpha=0;
 					a=57.23;
 					b=346.905;
-					angle=343.78793;
+					angle=343.7879;
 					id=3606;
 					atlOffset=15.562233;
 				};
@@ -10647,7 +10637,7 @@ class Mission
 					alpha=0;
 					a=50;
 					b=50;
-					angle=42.625992;
+					angle=42.625988;
 					id=2676;
 					atlOffset=-0.00016403198;
 				};
@@ -27334,7 +27324,7 @@ class Mission
 			position[]={1708.243,59.198002,6401.8291};
 			name="reinf_hack2_vic_north";
 			type="Empty";
-			angle=101.58298;
+			angle=101.58297;
 			id=2906;
 			atlOffset=-1.1444092e-05;
 		};
@@ -29272,7 +29262,7 @@ class Mission
 			position[]={524.716,47.789001,7511.4512};
 			name="reinf_hvt_vic";
 			type="Empty";
-			angle=171.55898;
+			angle=171.55896;
 			id=3623;
 			atlOffset=0.00020217896;
 		};

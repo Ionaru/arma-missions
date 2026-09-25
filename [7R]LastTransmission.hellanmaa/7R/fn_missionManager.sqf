@@ -85,9 +85,9 @@ switch (_nbr) do {
 		waitUntil {scriptDone _handle};
 
 		{
-			_handle = [_x, "PATROL", _ar4, ["marker_roadblock", "P"]] spawn fw_fnc_spawnTemplate;
+			_handle = [_x, "PATROL", _ar4, ["patrol_roadblock", "P"]] spawn fw_fnc_spawnTemplate;
 			waitUntil {scriptDone _handle};
-			_handle = [_x, "PATROL", _at2, ["marker_roadblock", "P"]] spawn fw_fnc_spawnTemplate;
+			_handle = [_x, "PATROL", _at2, ["patrol_roadblock", "P"]] spawn fw_fnc_spawnTemplate;
 			waitUntil {scriptDone _handle};
 		} forEach ["reinf_roadblock_east", "reinf_roadblock_west", "reinf_roadblock_intel"];
 
@@ -99,7 +99,7 @@ switch (_nbr) do {
 		// Spawn a patrol to run into
 		_handle = ["reinf_roadblock_intel", "PATROL", _ar4, ["reinf_roadblock_intel", "P"]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
-		_handle = ["reinf_roadblock_town", "PATROL", _ar4, ["marker_roadblock", "R"]] spawn fw_fnc_spawnTemplate;
+		_handle = ["reinf_roadblock_town", "PATROL", _ar4, ["patrol_roadblock", "R"]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
 		// Spawn a vehicle to run into
@@ -288,45 +288,45 @@ switch (_nbr) do {
 	};
 	case 11: { // Hack2 reinforcement
 		{
-			_handle = [_x, "PATROL", _special4, ["marker_hack2", "RP"]] spawn fw_fnc_spawnTemplate;
+			_handle = [_x, "PATROL", _special4, ["patrol_hack2_left", "RP"]] spawn fw_fnc_spawnTemplate;
 			waitUntil {scriptDone _handle};
-			_handle = [_x, "PATROL", _special4, ["marker_hack2", "RP"]] spawn fw_fnc_spawnTemplate;
+			_handle = [_x, "PATROL", _special4, ["patrol_hack2_left", "RP"]] spawn fw_fnc_spawnTemplate;
 			waitUntil {scriptDone _handle};
 		} forEach ["reinf_hack2_southwest", "reinf_hack2_south", "reinf_hack2_southeast"];
 
-		_handle = ["reinf_hack2_vic_north", "VEHICLE", _truck9, ["patrol_hack2_east", false, ["marker_hack2", "RP"]]] spawn fw_fnc_spawnTemplate;
+		_handle = ["reinf_hack2_vic_north", "VEHICLE", _truck9, ["patrol_hack2_east", false, ["patrol_hack2_left", "RP"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 	};
 	case 12: { // Hack2 reinforcement 2
 		{
-			_handle = [_x, "PATROL", _ar4, ["marker_hack2", "RP"]] spawn fw_fnc_spawnTemplate;
+			_handle = [_x, "PATROL", _ar4, ["patrol_hack2_left", "RP"]] spawn fw_fnc_spawnTemplate;
 			waitUntil {scriptDone _handle};
-			_handle = [_x, "PATROL", _ar4, ["marker_hack2", "RP"]] spawn fw_fnc_spawnTemplate;
+			_handle = [_x, "PATROL", _ar4, ["patrol_hack2_left", "RP"]] spawn fw_fnc_spawnTemplate;
 			waitUntil {scriptDone _handle};
-			_handle = [_x, "PATROL", _ar4, ["marker_hack2", "RP"]] spawn fw_fnc_spawnTemplate;
+			_handle = [_x, "PATROL", _ar4, ["patrol_hack2_left", "RP"]] spawn fw_fnc_spawnTemplate;
 			waitUntil {scriptDone _handle};
-			_handle = [_x, "PATROL", _ar4, ["marker_hack2", "RP"]] spawn fw_fnc_spawnTemplate;
+			_handle = [_x, "PATROL", _ar4, ["patrol_hack2_left", "RP"]] spawn fw_fnc_spawnTemplate;
 			waitUntil {scriptDone _handle};
 		} forEach ["reinf_hack2_north", "reinf_hack2_northwest"];
 
-		_handle = ["reinf_hack2_vic_south", "VEHICLE", _truck9, ["patrol_hack2_south", false, ["marker_hack2", "RP"]]] spawn fw_fnc_spawnTemplate;
+		_handle = ["reinf_hack2_vic_south", "VEHICLE", _truck9, ["patrol_hack2_south", false, ["patrol_hack2_left", "RP"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
 	};
 	case 13: { // Hack2 reinforcement 3
 		{
-			_handle = [_x, "PATROL", _rifle8, ["marker_hack2", "RP"]] spawn fw_fnc_spawnTemplate;
+			_handle = [_x, "PATROL", _rifle8, ["patrol_hack2_left", "RP"]] spawn fw_fnc_spawnTemplate;
 			waitUntil {scriptDone _handle};
-			_handle = [_x, "PATROL", _ar4, ["marker_hack2", "RP"]] spawn fw_fnc_spawnTemplate;
+			_handle = [_x, "PATROL", _ar4, ["patrol_hack2_left", "RP"]] spawn fw_fnc_spawnTemplate;
 			waitUntil {scriptDone _handle};
-			_handle = [_x, "PATROL", _special4, ["marker_hack2", "RP"]] spawn fw_fnc_spawnTemplate;
+			_handle = [_x, "PATROL", _special4, ["patrol_hack2_left", "RP"]] spawn fw_fnc_spawnTemplate;
 			waitUntil {scriptDone _handle};
 		} forEach ["reinf_hack2_north", "reinf_hack2_south"];
 
-		_handle = ["reinf_hack2_vic_north", "VEHICLE", _carDshkm, ["patrol_hack2_left", false, ["marker_hack2", "RP"]]] spawn fw_fnc_spawnTemplate;
+		_handle = ["reinf_hack2_vic_north", "VEHICLE", _carDshkm, ["patrol_hack2_left", false, ["patrol_hack2_left", "RP"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 
-		_handle = ["reinf_hack2_vic_south", "VEHICLE", _carDshkm, ["patrol_hack2_left", false, ["marker_hack2", "RP"]]] spawn fw_fnc_spawnTemplate;
+		_handle = ["reinf_hack2_vic_south", "VEHICLE", _carDshkm, ["patrol_hack2_left", false, ["patrol_hack2_left", "RP"]]] spawn fw_fnc_spawnTemplate;
 		waitUntil {scriptDone _handle};
 	};
 	case 14: { // Populate HVT
